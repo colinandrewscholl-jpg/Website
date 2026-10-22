@@ -60,7 +60,7 @@
             
             <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
-                <a href="#home" id="nav-home" onclick="navigateTo('home'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Overview</a>
+                <a href="#home" id="nav-home" onclick="navigateTo('home'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Home</a>
                 <a href="#research" id="nav-research" onclick="navigateTo('research'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Research Areas</a>
                 <a href="#publications" id="nav-publications" onclick="navigateTo('publications'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications & Talks</a>
                 <a href="#demos" id="nav-demos" onclick="navigateTo('demos'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition flex items-center gap-1.5">Interactive Demos</a>
@@ -75,7 +75,7 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-utep-darkblue border-b border-slate-800 px-4 pt-2 pb-4 space-y-1">
-            <a href="#home" onclick="navigateTo('home'); toggleMobileMenu(); return false;" id="mob-nav-home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Overview</a>
+            <a href="#home" onclick="navigateTo('home'); toggleMobileMenu(); return false;" id="mob-nav-home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Home</a>
             <a href="#research" onclick="navigateTo('research'); toggleMobileMenu(); return false;" id="mob-nav-research" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Research Areas</a>
             <a href="#publications" onclick="navigateTo('publications'); toggleMobileMenu(); return false;" id="mob-nav-publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications & Talks</a>
             <a href="#demos" onclick="navigateTo('demos'); toggleMobileMenu(); return false;" id="mob-nav-demos" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Interactive Demos</a>
@@ -87,12 +87,12 @@
     <main class="flex-grow">
 
         <!-- ================================================================= -->
-        <!-- PAGE 1: HOME / OVERVIEW PAGE (#home) -->
+        <!-- PAGE 1: HOME PAGE (#home) -->
         <!-- ================================================================= -->
         <section id="page-home" class="page-section active">
-            <!-- HEADER / HERO SECTION -->
+            <!-- HEADER / HERO SECTION (Width set to max-w-7xl) -->
             <header id="about" class="py-12 sm:py-16 bg-gradient-to-b from-slate-100/70 to-slate-50 border-b border-slate-200">
-                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
                         <!-- PROFILE IMAGE SECTION -->
                         <div class="flex-shrink-0 relative group">
@@ -251,10 +251,11 @@
         <!-- PAGE 2: RESEARCH AREAS DEEP DIVE (#research) -->
         <!-- ================================================================= -->
         <section id="page-research" class="page-section">
+            <!-- CENTER-ALIGNED BANNER -->
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
-                <div class="max-w-7xl mx-auto text-center md:text-left">
+                <div class="max-w-4xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Research Program & Paradigms</h1>
-                    <p class="text-slate-400 text-base max-w-2xl">Detailed breakdown of my active research program, including the empirical frameworks and experimental paradigms I employ.</p>
+                    <p class="text-slate-400 text-base max-w-2xl mx-auto">Detailed breakdown of my active research program, including the empirical frameworks and experimental paradigms I employ.</p>
                 </div>
             </div>
             
@@ -360,10 +361,11 @@
         <!-- PAGE 3: PUBLICATIONS & TALKS (#publications) -->
         <!-- ================================================================= -->
         <section id="page-publications" class="page-section">
+            <!-- CENTER-ALIGNED BANNER -->
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
-                <div class="max-w-4xl mx-auto text-center md:text-left">
+                <div class="max-w-4xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Publications & Presentations</h1>
-                    <p class="text-slate-400 text-base max-w-xl">Selected peer-reviewed publications and conference talks.</p>
+                    <p class="text-slate-400 text-base max-w-xl mx-auto">Selected peer-reviewed publications and conference talks.</p>
                 </div>
             </div>
 
@@ -515,10 +517,11 @@
         <!-- PAGE 4: INTERACTIVE DEMOS (#demos) -->
         <!-- ================================================================= -->
         <section id="page-demos" class="page-section">
+            <!-- CENTER-ALIGNED BANNER -->
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
-                <div class="max-w-6xl mx-auto text-center md:text-left">
+                <div class="max-w-6xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Interactive Psycholinguistic Demonstrations</h1>
-                    <p class="text-slate-400 text-base max-w-xl">Demonstrations of sentence processing and psycholinguistic research paradigms.</p>
+                    <p class="text-slate-400 text-base max-w-xl mx-auto">Demonstrations of sentence processing and psycholinguistic research paradigms.</p>
                 </div>
             </div>
 
@@ -690,7 +693,7 @@
                                 <div class="p-3 bg-blue-50 text-utep-blue rounded-xl"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <p class="text-xs text-slate-500 font-medium">Office Location</p>
-                                    <p class="font-semibold text-slate-800">Psychology Building, Room 204</p>
+                                    <p class="font-semibold text-slate-800">Psychology Building, Room 215</p>
                                     <p class="text-xs text-slate-500">University of Texas at El Paso</p>
                                 </div>
                             </div>
@@ -698,8 +701,8 @@
                             <div class="flex items-start gap-4">
                                 <div class="p-3 bg-purple-50 text-purple-600 rounded-xl"><i class="fa-solid fa-clock"></i></div>
                                 <div>
-                                    <p class="text-xs text-slate-500 font-medium">Lab Hours</p>
-                                    <p class="font-semibold text-slate-800">Mon - Thu: 9:00 AM - 4:00 PM</p>
+                                    <p class="text-xs text-slate-500 font-medium">Office Hours</p>
+                                    <p class="font-semibold text-slate-800">Mondays: 2:00 PM - 3:00 PM</p>
                                 </div>
                             </div>
                         </div>
