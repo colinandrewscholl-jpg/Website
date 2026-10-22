@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin Scholl, M.A. | Ph.D. Candidate in Experimental Psychology</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utep: {
+                            blue: '#041E42',
+                            orange: '#FF8200',
+                            darkblue: '#021229',
+                            slate: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        /* CSS-only fallback for environments that restrict embedded JavaScript */
+        .page-section:target { display: block !important; }
+        body:has(.page-section:target) #page-home { display: none !important; }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-utep-orange selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-[#041E42]/95 backdrop-blur-md border-b border-slate-800 text-white transition-all shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-16 h-auto py-3 flex flex-wrap items-center justify-between gap-3">
+            <a href="#page-home" id="logo-nav" class="flex items-center gap-3 group cursor-pointer">
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-utep-orange shadow-md group-hover:scale-105 transition-transform shrink-0">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/15Goxy2HJhApfxD2I8Cs66ewXMgFlLiKz" 
+                        alt="Colin Scholl Headshot" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/100x100/041E42/ffffff?text=CS';"
+                    >
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight block text-white group-hover:text-utep-orange transition-colors">Colin Scholl, M.A.</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <nav class="flex flex-wrap items-center gap-1 text-sm font-medium">
+                <a href="#page-home" id="nav-home" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Overview</a>
+                <a href="#page-research" id="nav-research" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Research Areas</a>
+                <a href="#page-publications" id="nav-publications" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications & Talks</a>
+                <a href="#page-demos" id="nav-demos" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition flex items-center gap-1.5">Interactive Demos</a>
+                <a href="#page-contact" id="nav-contact" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-utep-darkblue border-b border-slate-800 px-4 pt-2 pb-4 space-y-1">
+            <a href="#page-home" id="mob-nav-home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Overview</a>
+            <a href="#page-research" id="mob-nav-research" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Research Areas</a>
+            <a href="#page-publications" id="mob-nav-publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications & Talks</a>
+            <a href="#page-demos" id="mob-nav-demos" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Interactive Demos</a>
+            <a href="#page-contact" id="mob-nav-contact" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow">
+
+        <!-- ================================================================= -->
+        <!-- PAGE 1: HOME / OVERVIEW PAGE (#home) -->
+        <!-- ================================================================= -->
+        <section id="page-home" class="page-section active">
+            
+            <!-- BANNER IMAGE SECTION -->
+            <div class="w-full bg-slate-900 border-b border-slate-200 shadow-inner">
+                <div class="max-w-6xl mx-auto">
+                    <img 
+                        src="https://media.licdn.com/dms/image/v2/D5616AQEiFPT_kcZGGw/profile-displaybackgroundimage-shrink_350_1400/B56Z_ig74HJsAY-/0/1786211712802?e=1794441600&v=beta&t=UFAoT4U82GciacgHAgoBAyLT40njFQCVQyjf43oBNLI" 
+                        alt="Colin Scholl Research Banner" 
+                        class="w-full h-40 sm:h-56 md:h-64 object-cover"
+                        id="site-banner-image"
+                    >
+                </div>
+            </div>
+
+            <!-- HEADER / HERO SECTION -->
+            <header id="about" class="py-12 sm:py-16 bg-gradient-to-b from-slate-100/70 to-slate-50 border-b border-slate-200">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+                        <!-- PROFILE IMAGE SECTION -->
+                        <div class="flex-shrink-0 relative group">
+                            <div class="absolute -inset-0.5 bg-gradient-to-r from-utep-orange to-blue-900 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300"></div>
+                            <img 
+                                src="https://lh3.googleusercontent.com/d/15Goxy2HJhApfxD2I8Cs66ewXMgFlLiKz" 
+                                alt="Colin Scholl Profile Photo" 
+                                class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover shadow-lg border-4 border-white"
+                                onerror="this.onerror=null; this.src='https://placehold.co/300x300/041E42/ffffff?text=Colin+Scholl';"
+                            >
+                        </div>
+                        <!-- BIO & TITLE SECTION -->
+                        <div class="text-center md:text-left space-y-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-orange-100 text-utep-orange text-xs font-semibold tracking-wider uppercase rounded-full mb-2">
+                                    Ph.D. Candidate
+                                </span>
+                                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                                    Colin Scholl, M.A.
+                                </h1>
+                                <p class="text-lg text-slate-600 font-medium mt-1">
+                                    Ph.D. Candidate in Experimental Psychology
+                                </p>
+                                <p class="text-sm text-slate-500 font-medium">
+                                    <i class="fa-solid fa-building-columns mr-1 text-slate-400 hover:text-utep-orange transition-colors"></i> University of Texas at El Paso (UTEP)
+                                </p>
+                            </div>
+                            <p class="text-slate-700 max-w-2xl leading-relaxed">
+                                I am a Ph.D. Candidate specializing in <strong>Psycholinguistics</strong> and bilingualism at UTEP. My research focuses on discourse comprehension, bilingual language control, and bilingual language experiences.
+                            </p>
+                            <p class="text-slate-600 text-sm max-w-2xl leading-relaxed">
+                                I combine behavioral eye-tracking, EEG, and statistical modeling to explore how bilingual reading comprehension is modulated by relative language proficiency across languages.
+                            </p>
+                            <!-- CONTACT & CV QUICK LINKS -->
+                            <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+                                <a href="mailto:cascholl@miners.utep.edu" class="inline-flex items-center gap-2 px-4 py-2 bg-utep-blue text-white text-sm font-medium rounded-lg shadow hover:bg-slate-800 transition-colors group">
+                                    <i class="fa-regular fa-envelope group-hover:text-utep-orange transition-colors"></i> Email Me
+                                </a>
+                                <a href="https://drive.google.com/file/d/1mZxpVw9hMC7sslplfqGJv6cruxG9TnY7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-slate-700 border border-slate-300 text-sm font-medium rounded-lg shadow-sm hover:bg-slate-50 transition-colors group">
+                                    <i class="fa-regular fa-file-pdf text-red-500 group-hover:scale-110 transition-transform"></i> Download CV
+                                </a>
+                                <a href="https://github.com" target="_blank" class="inline-flex items-center p-2 text-slate-600 hover:text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm group">
+                                    <i class="fa-brands fa-github text-lg group-hover:text-utep-orange transition-colors"></i>
+                                </a>
+                                <a href="https://orcid.org/0009-0003-5155-4812" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-slate-700 border border-slate-300 text-sm font-medium rounded-lg shadow-sm hover:bg-slate-50 transition-colors group" title="ORCID iD">
+                                    <i class="fa-brands fa-orcid text-emerald-600 group-hover:scale-110 transition-transform"></i> ORCID
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Home Content Overview Grid -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- Core Research Areas Grid on Main Page -->
+                <div class="mb-14">
+                    <div class="flex items-center justify-between mb-8">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Core Research Program</h2>
+                            <p class="text-sm text-slate-600">Select any research domain below for a comprehensive deep dive</p>
+                        </div>
+                        <a href="#" id="view-all-research-link" class="hidden sm:inline-flex items-center text-sm font-semibold text-utep-orange hover:underline cursor-pointer">
+                            View all details <i class="fa-solid fa-chevron-right text-xs ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Card 1: Discourse -->
+                        <div id="card-discourse" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-orange/50 transition-all cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-orange-50 text-utep-orange flex items-center justify-center text-xl font-bold mb-4 group-hover:bg-utep-orange group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-utep-orange transition-colors">Discourse Comprehension</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                    Examining how bilingual readers construct situation models and integrate global discourse context across languages.
+                                </p>
+                            </div>
+                            <span class="text-xs font-semibold text-utep-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+
+                        <!-- Card 2: Bilingualism -->
+                        <div id="card-bilingual" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-blue/50 hover:bg-blue-50/25 transition-all cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-blue-50 text-utep-blue flex items-center justify-center text-xl font-bold mb-4 group-hover:bg-utep-blue group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-sliders"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-utep-blue transition-colors">Bilingual Language Control</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                    Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
+                                </p>
+                            </div>
+                            <span class="text-xs font-semibold text-utep-blue flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+
+                        <!-- Card 3: Quantitative Methods -->
+                        <div id="card-quant" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">Quantitative Methods</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                    Utilizing linear mixed-effects modeling (LMMs/GLMMs), Bayesian data analysis, and open science practices.
+                                </p>
+                            </div>
+                            <span class="text-xs font-semibold text-purple-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+
+                        <!-- Card 4: Neurocognitive Approach -->
+                        <div id="card-eyetracking" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">Neurocognitive Methods</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                    Capturing eye-movements and brain activity during language comprehension using eye-tracking and EEG.
+                                </p>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Profile & Quick Highlights -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-3 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">About Colin</h2>
+                        <div class="prose prose-slate max-w-none text-slate-600 space-y-4 text-sm sm:text-base leading-relaxed">
+                            <p>
+                                Colin Scholl is a Ph.D. Candidate in Experimental Psychology at the University of Texas at El Paso (UTEP), specializing in psycholinguistics, cognitive psychology, and discourse processing.
+                            </p>
+                            <p>
+                                His primary research examines how readers construct, update, and maintain mental representations (situation models) when reading passages containing evolving character behaviors or unexpected event sequences. By comparing behavioral paradigms with millisecond-accurate eye-tracking metrics, Colin identifies the precise temporal dynamics of memory updating and cognitive conflict resolution.
+                            </p>
+                            <p>
+                                In addition to discourse comprehension, Colin leads empirical projects investigating sentence-level language switching in Spanish-English bilinguals in the El Paso / Juárez border region, evaluating how executive control mechanisms adapt to high-frequency code-switching environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 2: RESEARCH AREAS DEEP DIVE (#research) -->
+        <!-- ================================================================= -->
+        <section id="page-research" class="page-section">
+            <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+                <div class="max-w-7xl mx-auto">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Research Program & Paradigms</h1>
+                    <p class="text-slate-400 text-base max-w-2xl">Detailed breakdown of my active research program, including the empirical frameworks and experimental paradigms I employ.</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+                <!-- Research Anchor 1: Discourse Comprehension -->
+                <div id="research-discourse" class="scroll-mt-24 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-orange-100 text-utep-orange flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">Discourse & Situation Model Updating</h2>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
+                        When individuals read narrative texts, they construct mental representations of the events, characters, and settings described, or <strong>situation models</strong>. Colin's research evaluates how readers reconcile inconsistent trait information (e.g., a character previously described as "vegan" suddenly eating a "steak") in a dominant versus non-dominant language.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-vial text-utep-orange"></i> Primary Research Questions
+                            </h4>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5">
+                                <li>How does initial trait encoding impact downstream character evaluations?</li>
+                                <li>How does situation model updating unfold in bilingual texts?</li>
+                                <li>What language-related factors modulate memory retrieval mechanisms of previously stated information in a text?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-gears text-utep-orange"></i> Methodological Approaches
+                            </h4>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5">
+                                <li>Eye-tracking during free natural reading (First-pass vs. Total time).</li>
+                                <li>Post-reading comprehension and character trait rating probes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Anchor 2: Bilingual Language Control -->
+                <div id="research-bilingual" class="scroll-mt-24 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-100 text-utep-blue flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">Bilingual Language Control & Switch Costs</h2>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
+                        In bilingual communities like the El Paso region, language switching is an everyday natural cognitive phenomenon. Colin's work analyzes the executive control demands associated with switching between Spanish and English in structured sentence contexts compared to unconstrained code-switching environments.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-layer-group text-utep-blue"></i> Key Hypotheses
+                            </h4>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5">
+                                <li>Asymmetrical switch costs: Is switching to the dominant language more costly?</li>
+                                <li>Syntactic alignment effects across English and Spanish clause boundaries.</li>
+                                <li>Individual differences in habitual code-switching frequency.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-microscope text-utep-blue"></i> Experimental Paradigms
+                            </h4>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5">
+                                <li>Cued & Uncued sentence reading switch simulators.</li>
+                                <li>Eye-movement tracking across intra-sentential switch boundaries.</li>
+                                <li>Reaction time LMM modeling of participant language proficiency profiles.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Anchor 3: Quantitative Methods -->
+                <div id="research-quant" class="scroll-mt-24 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">Quantitative Methods & Open Science</h2>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-4 text-sm sm:text-base">
+                        Rigorous behavioral research requires advanced statistical techniques capable of handling nested participant and item variance. Colin utilizes Linear Mixed-Effects Models (LMMs) and Bayesian estimation in R to analyze skewed reaction time distributions without data loss.
+                    </p>
+                </div>
+
+                <!-- Research Anchor 4: Neurocognitive Methods -->
+                <div id="research-eyetracking" class="scroll-mt-24 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">Eye-Tracking & Cognitive Load Measurement</h2>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-4 text-sm sm:text-base">
+                        Utilizing EyeLink 1000 systems to extract early and late eye-tracking metrics (First Fixation Duration, Gaze Duration, Regression Path Duration, and Re-reading Time) to isolate early perceptual processing from later cognitive integration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 3: PUBLICATIONS & TALKS (#publications) -->
+        <!-- ================================================================= -->
+        <section id="page-publications" class="page-section">
+            <div class="py-16 bg-slate-50 border-b border-slate-200">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-3xl mx-auto">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Publications & Presentations</h2>
+                        <p class="text-slate-500 mb-8">Selected peer-reviewed publications and presentations.</p>
+                        
+                        <div class="space-y-6">
+                            <!-- Publication 1 -->
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded">Journal Article</span>
+                                    <span class="text-xs text-slate-400">2025</span>
+                                </div>
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements
+                                </h3>
+                                <p class="text-sm text-slate-600 italic mb-3">
+                                    Schwartz, A., Negron, J., & <strong>Scholl, C.</strong> (2025). <em>Bilingualism: Language & Cognition</em>, 28(2), 415-426.
+                                </p>
+                                <div class="flex gap-4 text-xs font-medium text-utep-orange">
+                                    <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/271ED4EC4B49BD3A16A355CD739E9CEB/S1366728924000567a.pdf/recruitment_of_global_language_inhibitory_control_and_cognitivegeneral_control_mechanisms_in_comprehending_language_switches_evidence_from_eye_movements.pdf" class="hover:underline" target="_blank"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://osf.io/m4ay2/overview" class="hover:underline" target="_blank"><i class="fa-solid fa-database mr-1"></i> Data & Code (OSF)</a>
+                                    <a href="https://doi.org/10.1017/S1366728924000567" class="hover:underline" target="_blank"><i class="fa-solid fa-link mr-1"></i> DOI</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Publication 2 -->
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded">Master's Thesis</span>
+                                    <span class="text-xs text-slate-400">2025</span>
+                                </div>
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    Bilingual Inconsistency Effect
+                                </h3>
+                                <div class="flex gap-4 text-xs font-medium text-utep-orange">
+                                    <a href="https://share.google/doNwVilU4SPUU7y62" class="hover:underline" target="_blank"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
+                                </div>
+                            </div>
+
+                            <!-- Presentation 1 -->
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded">Quant Talk</span>
+                                    <span class="text-xs text-slate-400">2026</span>
+                                </div>
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    Modelling Ordinal Data
+                                </h3>
+                                <p class="text-sm text-slate-600 italic mb-4">
+                                    <strong>Scholl, C.</strong> (2026). UTEP Psychology Department Colloquium.
+                                </p>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                                    <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
+                                        <iframe 
+                                            src="https://docs.google.com/presentation/d/e/2PACX-1vRdbQK_A7KgRo1Gdr93U-swfooQmrO7yAVkA03fAuzH9C24c5lOGyDXVRX1pQbxEA/pubembed?start=true&loop=false&delayms=3000" 
+                                            frameborder="0" 
+                                            class="absolute top-0 left-0 w-full h-full rounded-lg" 
+                                            allowfullscreen="true" 
+                                            mozallowfullscreen="true" 
+                                            webkitallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Presentation 2 -->
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded">Conference Presentation</span>
+                                    <span class="text-xs text-slate-400">2026</span>
+                                </div>
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    Bilingual Inconsistency Effect
+                                </h3>
+                                <p class="text-sm text-slate-600 italic mb-4">
+                                    <strong>Scholl, C.</strong>, & Schwartz, A. (2026). Society for Text and Discourse Conference. Charlotte, NC.
+                                </p>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                                    <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
+                                        <iframe 
+                                            src="https://docs.google.com/presentation/d/e/2PACX-1vTl2NEhgQTICNt-FZXMKuDKxQzHi-QqdlLnzCjhKRfOGsajYipOewG1uDloQseLLg/pubembed?start=true&loop=false&delayms=3000" 
+                                            frameborder="0" 
+                                            class="absolute top-0 left-0 w-full h-full rounded-lg" 
+                                            allowfullscreen="true" 
+                                            mozallowfullscreen="true" 
+                                            webkitallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Presentation 3 -->
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded">Conference Presentation</span>
+                                    <span class="text-xs text-slate-400">2026</span>
+                                </div>
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    Survey of Academic Language Experiences (SALE)
+                                </h3>
+                                <p class="text-sm text-slate-600 italic mb-4">
+                                    Huynh, A., <strong>Scholl, C.</strong>, Morera, O., & Schwartz, A. (2026). Survey of Academic Language Experiences (SALE). BRIDGES Symposium, NYC, NY.
+                                </p>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                                    <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
+                                        <iframe 
+                                            src="https://docs.google.com/presentation/d/e/2PACX-1vR3SAp8qQUesZXlqmS7kiI4wVSR-AMWdd0QXRMr0c5_SPSeb9uSODsezIneJgFsYA/pubembed?start=true&loop=false&delayms=3000" 
+                                            frameborder="0" 
+                                            class="absolute top-0 left-0 w-full h-full rounded-lg" 
+                                            allowfullscreen="true" 
+                                            mozallowfullscreen="true" 
+                                            webkitallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Presentation 4 -->
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded">Data Blitz</span>
+                                    <span class="text-xs text-slate-400">2026</span>
+                                </div>
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    Foreign Language Anxiety-General Scale (FLAGS)
+                                </h3>
+                                <p class="text-sm text-slate-600 italic mb-4">
+                                    <strong>Scholl, C.</strong> (2026). Foreign Language Anxiety-General Scale (FLAGS). Graduate Student Data Blitz, El Paso, TX.
+                                </p>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                                    <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
+                                        <iframe 
+                                            src="https://docs.google.com/presentation/d/e/2PACX-1vTm7Fwg8WnXP9TwCqlLU5kXkG23QpZdHMjDHGCF7znVUV5EvG7Yzx1NuXwcO3xm-g/pubembed?start=true&loop=false&delayms=3000" 
+                                            frameborder="0" 
+                                            class="absolute top-0 left-0 w-full h-full rounded-lg" 
+                                            allowfullscreen="true" 
+                                            mozallowfullscreen="true" 
+                                            webkitallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 4: INTERACTIVE DEMOS (#demos) -->
+        <!-- ================================================================= -->
+        <section id="page-demos" class="page-section">
+            <div class="py-16 bg-white border-b border-slate-200">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Interactive Psycholinguistic Demonstrations</h2>
+                        <p class="text-slate-500 mt-2">Demonstrations of sentence processing and psycholinguistic research paradigms.</p>
+                    </div>
+                    
+                    <!-- STACKED WIDGET LAYOUT -->
+                    <div class="grid grid-cols-1 space-y-8">
+                        
+                        <!-- TOOL 1: Bilingual Language-Switching SPR Simulator -->
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-lg font-bold text-slate-900">1. Bilingual Language-Switching Task</h3>
+                                    <span class="text-xs bg-orange-100 text-utep-orange px-2.5 py-1 rounded font-semibold">Schwartz et al. (2025)</span>
+                                </div>
+                                <p class="text-xs sm:text-sm text-slate-600 mb-4">
+                                    Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
+                                </p>
+                                <!-- Display Box -->
+                                <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl font-mono text-center min-h-[140px] flex flex-col justify-center items-center shadow-inner my-4">
+                                    <div id="spr-sentence-num" class="text-xs text-orange-400 font-semibold mb-1 hidden">Sentence 1 of 3</div>
+                                    <div id="spr-sentence" class="text-lg sm:text-xl tracking-wide text-slate-300 min-h-[40px] flex items-center justify-center">
+                                        Click Start Trial to Begin
+                                    </div>
+                                    <div id="spr-stats" class="text-xs text-slate-400 mt-3 hidden">
+                                        Word RT: <span id="spr-rt" class="text-amber-400 font-bold">0</span> ms | Language: <span id="spr-lang" class="font-bold">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mt-4">
+                                <button id="spr-next-btn" class="flex-1 bg-utep-orange text-white py-2.5 rounded-lg font-medium text-sm hover:bg-orange-600 active:scale-[0.99] transition-all">
+                                    Start Trial (Space)
+                                </button>
+                                <button id="spr-reset-btn" class="px-5 bg-slate-200 text-slate-700 py-2.5 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- TOOL 2: Experimental Passage Explorer -->
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-lg font-bold text-slate-900">2. Experimental Passage Explorer</h3>
+                                    <span class="text-xs bg-slate-200 text-slate-700 px-2.5 py-1 rounded font-semibold">Bilingual Inconsistency Effect</span>
+                                </div>
+                                
+                                <!-- Dynamic Description Text -->
+                                <p id="tool2-description" class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed">
+                                    Select a paradigm and condition below to explore the four experimental versions of the <strong>"Mary the Vegan"</strong> passages. Key <span class="bg-amber-200 text-amber-900 px-1 py-0.5 rounded font-medium">trait manipulation</span> and <span class="bg-rose-200 text-rose-900 px-1 py-0.5 rounded font-medium">target behavior</span> words are highlighted.
+                                </p>
+                                
+                                <!-- Paradigm & Condition Selectors -->
+                                <div class="space-y-4 mb-6">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Experiment Paradigm:</label>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                            <button id="btn-exp1" class="py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all">
+                                                1-Character Paradigm (Exp. 1)
+                                            </button>
+                                            <button id="btn-exp2" class="py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all">
+                                                Secondary Protagonist Paradigm (Exp. 2)
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Experimental Version / Condition:</label>
+                                        <select id="condition-select" class="w-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg p-2.5 focus:ring-utep-orange focus:border-utep-orange">
+                                            <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Meat)</option>
+                                            <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Meat)</option>
+                                            <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Carne)</option>
+                                            <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Carne)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- SIDE-BY-SIDE CONTAINER: PASSAGE + RT VISUALIZATION CHART -->
+                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                                    
+                                    <!-- Left Side: Passage Display Box (7 Cols) -->
+                                    <div class="lg:col-span-7 bg-white p-5 sm:p-6 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-inner flex flex-col justify-between">
+                                        <div id="passage-content-text" class="space-y-2">
+                                            <!-- Injected via JavaScript -->
+                                        </div>
+                                        
+                                        <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
+                                            <div class="flex items-center gap-3">
+                                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-amber-200 border border-amber-400 rounded-sm inline-block"></span> Key Trait</span>
+                                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-rose-200 border border-rose-400 rounded-sm inline-block"></span> Target Behavior</span>
+                                            </div>
+                                            <span id="passage-badge" class="font-mono text-slate-400">Exp 1 • Eng-Incon</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Side: Inconsistency Effect RT Visualization (5 Cols) -->
+                                    <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-slate-200 shadow-inner flex flex-col justify-between">
+                                        <div>
+                                            <div class="flex items-center justify-between mb-2">
+                                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">Total Reading Time (TRT)</h4>
+                                                <span id="rt-delta-badge" class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">+80 ms Penalty</span>
+                                            </div>
+                                            <p class="text-[11px] text-slate-500 mb-4">
+                                                Target sentence reading time latency at <em>"hamburger & fries"</em> comparing Consistent vs. Inconsistent conditions.
+                                            </p>
+                                            
+                                            <!-- Bar Chart Visual Container -->
+                                            <div class="space-y-3 font-mono text-xs pt-1">
+                                                <div>
+                                                    <div class="flex justify-between text-[11px] text-slate-600 mb-1">
+                                                        <span>Inconsistent</span>
+                                                        <span id="rt-val-incon" class="font-bold text-slate-900">1,760 ms</span>
+                                                    </div>
+                                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                                                        <div id="bar-incon" class="bg-rose-500 h-3 rounded-full transition-all duration-500" style="width: 80%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="flex justify-between text-[11px] text-slate-600 mb-1">
+                                                        <span>Consistent</span>
+                                                        <span id="rt-val-con" class="font-bold text-slate-900">1,680 ms</span>
+                                                    </div>
+                                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                                                        <div id="bar-con" class="bg-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 70%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-600 leading-snug">
+                                            <span class="font-semibold text-slate-800">Finding:</span>
+                                            <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 5: CONTACT PAGE (#contact) -->
+        <!-- ================================================================= -->
+        <section id="page-contact" class="page-section">
+            <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Contact & Collaboration</h1>
+                    <p class="text-slate-400 text-base max-w-xl mx-auto">Get in touch regarding psycholinguistic research, manuscripts, or academic inquiries.</p>
+                </div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-6">
+                        <h2 class="text-xl font-bold text-slate-900">Contact Information</h2>
+                        
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-orange-50 text-utep-orange rounded-xl"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Email Address</p>
+                                    <a href="mailto:cscholl@miners.utep.edu" class="font-bold text-slate-800 hover:text-utep-orange transition">cscholl@miners.utep.edu</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-blue-50 text-utep-blue rounded-xl"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Office Location</p>
+                                    <p class="font-semibold text-slate-800">Psychology Building, Room 204</p>
+                                    <p class="text-xs text-slate-500">University of Texas at El Paso</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-purple-50 text-purple-600 rounded-xl"><i class="fa-solid fa-clock"></i></div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Lab Hours</p>
+                                    <p class="font-semibold text-slate-800">Mon - Thu: 9:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                        <h2 class="text-xl font-bold text-slate-900 mb-4">Send a Message</h2>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
+                                <input type="text" required placeholder="Dr. Jane Doe" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-utep-orange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Email</label>
+                                <input type="email" required placeholder="jdoe@university.edu" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-utep-orange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message</label>
+                                <textarea rows="4" required placeholder="Inquiry regarding psycholinguistic data collaboration..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-utep-orange"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-utep-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl shadow transition text-sm">
+                                Send Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-utep-darkblue text-slate-400 border-t border-slate-800 text-xs py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-utep-orange inline-block"></span>
+                <span class="font-bold text-white">Colin Scholl, M.A.</span> - UTEP Psycholinguistics Portfolio
+            </div>
+            <p>&copy; 2026 Colin Scholl. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ROBUST GOOGLE-SITES COMPATIBLE JS CONTROLLER -->
+    <script>
+        (function() {
+            const PAGE_IDS = ['home', 'research', 'publications', 'demos', 'contact'];
+
+            function navigateTo(pageId, anchorId = null) {
+                if (!PAGE_IDS.includes(pageId)) return;
+                
+                const targetSection = document.getElementById('page-' + pageId);
+                if (!targetSection) return;
+
+                // Toggle visibility
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.toggle('active', section.id === 'page-' + pageId);
+                });
+
+                // Update navigation links styling
+                PAGE_IDS.forEach(id => {
+                    const desktopLink = document.getElementById('nav-' + id);
+                    const mobileLink = document.getElementById('mob-nav-' + id);
+                    if (desktopLink) {
+                        desktopLink.className = 'px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition';
+                    }
+                    if (mobileLink) {
+                        mobileLink.className = 'block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800';
+                    }
+                });
+
+                const activeDesktop = document.getElementById('nav-' + pageId);
+                const activeMobile = document.getElementById('mob-nav-' + pageId);
+                if (activeDesktop) {
+                    activeDesktop.className = 'px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold shadow-inner transition';
+                }
+                if (activeMobile) {
+                    activeMobile.className = 'block px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold';
+                }
+
+                // Hide mobile menu
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = document.getElementById('menu-icon');
+                if (mobileMenu) mobileMenu.classList.add('hidden');
+                if (menuIcon) menuIcon.className = 'fa-solid fa-bars text-xl';
+
+                // Scroll handling within iframe
+                setTimeout(() => {
+                    if (anchorId) {
+                        const anchor = document.getElementById(anchorId);
+                        if (anchor) {
+                            anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            return;
+                        }
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 50);
+            }
+
+            // Initialize immediately when this embed is injected after DOMContentLoaded,
+            // otherwise wait for the document to finish parsing.
+            function initPortfolio() {
+                // Logo & Nav bindings
+                const logoNav = document.getElementById('logo-nav');
+                if (logoNav) logoNav.addEventListener('click', (e) => { e.preventDefault(); navigateTo('home'); });
+
+                PAGE_IDS.forEach(id => {
+                    const dLink = document.getElementById('nav-' + id);
+                    if (dLink) dLink.addEventListener('click', (e) => { e.preventDefault(); navigateTo(id); });
+
+                    const mLink = document.getElementById('mob-nav-' + id);
+                    if (mLink) mLink.addEventListener('click', (e) => { e.preventDefault(); navigateTo(id); });
+                });
+
+                // Mobile menu button
+                const mobBtn = document.getElementById('mobile-menu-btn');
+                if (mobBtn) {
+                    mobBtn.addEventListener('click', () => {
+                        const menu = document.getElementById('mobile-menu');
+                        if (menu) menu.classList.toggle('hidden');
+                    });
+                }
+
+                // Core research grid cards on Home page
+                const cardDiscourse = document.getElementById('card-discourse');
+                if (cardDiscourse) cardDiscourse.addEventListener('click', () => navigateTo('research', 'research-discourse'));
+
+                const cardBilingual = document.getElementById('card-bilingual');
+                if (cardBilingual) cardBilingual.addEventListener('click', () => navigateTo('research', 'research-bilingual'));
+
+                const cardQuant = document.getElementById('card-quant');
+                if (cardQuant) cardQuant.addEventListener('click', () => navigateTo('research', 'research-quant'));
+
+                const cardEyetracking = document.getElementById('card-eyetracking');
+                if (cardEyetracking) cardEyetracking.addEventListener('click', () => navigateTo('research', 'research-eyetracking'));
+
+                const viewAllLink = document.getElementById('view-all-research-link');
+                if (viewAllLink) viewAllLink.addEventListener('click', (e) => { e.preventDefault(); navigateTo('research'); });
+
+                // Tool 2 Paradigm buttons
+                const btnExp1 = document.getElementById('btn-exp1');
+                if (btnExp1) btnExp1.addEventListener('click', () => setParadigm('exp1'));
+
+                const btnExp2 = document.getElementById('btn-exp2');
+                if (btnExp2) btnExp2.addEventListener('click', () => setParadigm('exp2'));
+
+                const conditionSelect = document.getElementById('condition-select');
+                if (conditionSelect) conditionSelect.addEventListener('change', updatePassageView);
+
+                // Contact form
+                const contactForm = document.getElementById('contact-form');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        alert('Thank you for reaching out! Your message has been simulated.');
+                    });
+                }
+
+                // Initialize default view
+                navigateTo('home');
+                setParadigm('exp1');
+            }
+
+            // SPR Simulator logic
+            const sentence1 = [
+                { text: "The", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
+                { text: "girl", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 300 },
+                { text: "ate", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 290 },
+                { text: "all", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 260 },
+                { text: "the", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
+                { text: "fruta", lang: "Spanish (LANGUAGE SWITCH!)", class: "text-slate-100 font-bold", baseRt: 600, isSwitch: true },
+                { text: "que", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 270 },
+                { text: "habían.", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 350 }
+            ];
+            const sentence2 = [
+                { text: "La", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 270 },
+                { text: "profesora", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 310 },
+                { text: "vio", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 280 },
+                { text: "al", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 260 },
+                { text: "student", lang: "English (LANGUAGE SWITCH!)", class: "text-slate-100 font-bold", baseRt: 670, isSwitch: true },
+                { text: "in", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
+                { text: "the", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 260 },
+                { text: "library.", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 350 }
+            ];
+            const sentence3 = [
+                { text: "The", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 270 },
+                { text: "student", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 300 },
+                { text: "read", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 290 },
+                { text: "the", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 260 },
+                { text: "libro", lang: "Spanish (LANGUAGE SWITCH!)", class: "text-orange-400 font-bold", baseRt: 510, isSwitch: true },
+                { text: "durante", lang: "Spanish (Non-Switch)", class: "text-orange-400", baseRt: 330 },
+                { text: "la", lang: "Spanish (Non-Switch)", class: "text-orange-400", baseRt: 280 },
+                { text: "clase.", lang: "Spanish (Non-Switch)", class: "text-orange-400", baseRt: 360 }
+            ];
+
+            let currentSentenceNum = 1;
+            let sprIndex = -1;
+
+            function getActiveSentence() {
+                if (currentSentenceNum === 1) return sentence1;
+                if (currentSentenceNum === 2) return sentence2;
+                return sentence3;
+            }
+
+            function advanceSPR() {
+                const sprSentenceNumEl = document.getElementById('spr-sentence-num');
+                const sprSentenceEl = document.getElementById('spr-sentence');
+                const sprStatsEl = document.getElementById('spr-stats');
+                const sprRtEl = document.getElementById('spr-rt');
+                const sprLangEl = document.getElementById('spr-lang');
+                const sprNextBtn = document.getElementById('spr-next-btn');
+
+                if (!sprSentenceEl) return;
+
+                const activeSentence = getActiveSentence();
+                sprIndex++;
+                if (sprIndex < activeSentence.length) {
+                    const currentWord = activeSentence[sprIndex];
+                    const rt = Math.round(currentWord.baseRt + (Math.random() * 40 - 20));
+                    sprRtEl.innerText = rt;
+                    if (currentWord.isSwitch) {
+                        sprLangEl.innerText = currentSentenceNum === 2 ? "ENGLISH — LANGUAGE SWITCH" : "SPANISH — LANGUAGE SWITCH";
+                        sprLangEl.className = currentSentenceNum === 3 ? "text-orange-400 font-bold" : "text-amber-400 font-bold";
+                    } else {
+                        sprLangEl.innerText = currentWord.lang;
+                        sprLangEl.className = currentWord.class;
+                    }
+                    sprStatsEl.classList.remove('hidden');
+                    sprSentenceNumEl.classList.remove('hidden');
+                    
+                    if (currentSentenceNum === 1) {
+                        sprSentenceNumEl.innerText = "Sentence 1 of 3: English → Spanish Switch";
+                    } else if (currentSentenceNum === 2) {
+                        sprSentenceNumEl.innerText = "Sentence 2 of 3: Spanish → English Switch";
+                    } else {
+                        sprSentenceNumEl.innerText = "Sentence 3 of 3: Color-Cued Switch Paradigm";
+                    }
+                    let displayHtml = activeSentence.map((item, idx) => {
+                        if (idx === sprIndex) {
+                            return `<span class="${item.class} underline decoration-2">${item.text}</span>`;
+                        }
+                        return '<span class="text-slate-600">---</span>';
+                    }).join(" ");
+                    
+                    sprSentenceEl.innerHTML = displayHtml;
+                    sprNextBtn.innerText = "Advance Word (Space)";
+                } else {
+                    if (currentSentenceNum === 1) {
+                        currentSentenceNum = 2;
+                        sprIndex = -1;
+                        sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice increased RT for the switch word.</span>';
+                        sprNextBtn.innerText = "Start Sentence 2 (Spanish → English)";
+                        sprStatsEl.classList.add('hidden');
+                    } else if (currentSentenceNum === 2) {
+                        currentSentenceNum = 3;
+                        sprIndex = -1;
+                        sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the largest RT spike when switching back into English (asymmetric switch cost).</span>';
+                        sprNextBtn.innerText = "Start Sentence 3 (Color Cued)";
+                        sprStatsEl.classList.add('hidden');
+                    } else {
+                        sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the reduced asymmetric cost of switching back into English because of the color cue.</span>';
+                        sprNextBtn.innerText = "Trial Finished";
+                        sprNextBtn.disabled = true;
+                        sprNextBtn.classList.add('opacity-50');
+                    }
+                }
+            }
+
+            function resetSPR() {
+                currentSentenceNum = 1;
+                sprIndex = -1;
+                const sprSentenceNumEl = document.getElementById('spr-sentence-num');
+                const sprSentenceEl = document.getElementById('spr-sentence');
+                const sprStatsEl = document.getElementById('spr-stats');
+                const sprNextBtn = document.getElementById('spr-next-btn');
+
+                if (sprSentenceNumEl) sprSentenceNumEl.classList.add('hidden');
+                if (sprSentenceEl) sprSentenceEl.innerText = "Click Start Trial to Begin";
+                if (sprStatsEl) sprStatsEl.classList.add('hidden');
+                if (sprNextBtn) {
+                    sprNextBtn.innerText = "Start Trial (Space)";
+                    sprNextBtn.disabled = false;
+                    sprNextBtn.classList.remove('opacity-50');
+                }
+            }
+
+            setTimeout(() => {
+                const sprNextBtn = document.getElementById('spr-next-btn');
+                const sprResetBtn = document.getElementById('spr-reset-btn');
+                if (sprNextBtn) sprNextBtn.addEventListener('click', advanceSPR);
+                if (sprResetBtn) sprResetBtn.addEventListener('click', resetSPR);
+            }, 300);
+
+            // Tool 2 Data & Controller
+            const paradigmDescriptions = {
+                exp1: `In the <strong>1-Character Paradigm (Experiment 1)</strong>, character traits (e.g., <em>strict vegan</em>) are attributed directly to the primary protagonist (Mary). Readers construct a situation model where Mary eating meat creates a cognitive conflict, yielding a robust <strong>Inconsistency Effect</strong> (elevated total reading times) that is especially pronounced in Spanish.`,
+                exp2: `In the <strong>Secondary Protagonist Paradigm (Experiment 2)</strong>, the key trait (e.g., <em>strict vegans</em>) is attributed to secondary characters (<span class="underline decoration-utep-orange decoration-2 font-medium">Mary's friends</span>). Because the trait model belongs to the friends rather than Mary, Mary's target behavior does not violate her personal trait representation, eliminating the inconsistency cost across both languages.`
+            };
+
+            const rtVisualizationData = {
+                exp1: {
+                    "eng-incon": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "+80 ms Penalty", activeBar: "incon", inconWidth: "80%", conWidth: "70%", summary: "Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English." },
+                    "eng-con": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "80%", conWidth: "70%", summary: "Baseline reading processing when protagonist action aligns with established trait in English." },
+                    "spa-incon": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "+240 ms Penalty (Largest Effect)", activeBar: "incon", inconWidth: "96%", conWidth: "75%", summary: "Greatest Total Reading Time inconsistency effect observed during Spanish L2/bilingual discourse processing." },
+                    "spa-con": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "96%", conWidth: "75%", summary: "Spanish consistent baseline is slightly longer than English consistent baseline, reflecting general cross-linguistic processing costs." }
+                },
+                exp2: {
+                    "eng-incon": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "+10 ms (No Penalty)", activeBar: "incon", inconWidth: "71%", conWidth: "70%", summary: "Attributing the trait to secondary protagonists (friends) eliminates the inconsistency slowdown for Mary in English." },
+                    "eng-con": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "71%", conWidth: "70%", summary: "Equivalent processing speeds when secondary characters hold the trait model in English." },
+                    "spa-incon": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "+15 ms (No Penalty)", activeBar: "incon", inconWidth: "76%", conWidth: "75%", summary: "Secondary protagonist trait boundary prevents cross-linguistic inconsistency costs in Spanish." },
+                    "spa-con": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "76%", conWidth: "75%", summary: "Spanish consistent baseline maintained across secondary protagonist conditions." }
+                }
+            };
+
+            const passageData = {
+                exp1: {
+                    "eng-incon": {
+                        badge: "Exp 1 (1-Char) • English Inconsistent",
+                        html: `Mary is a recent college graduate. Through her college years she found herself becoming more concerned and dedicated to activism for good causes. For example, Mary is a strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegan</span> and attends <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animal rights’</span> advocacy meetings and protests. She even has a podcast on how to eat a <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plant-based</span> diet. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span> Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
+                    },
+                    "eng-con": {
+                        badge: "Exp 1 (1-Char) • English Consistent",
+                        html: `Mary is a recent college graduate. Through her college years she found herself becoming more concerned and dedicated to activism for good causes. For example, Mary is a devout supporter of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">farmers’ rights</span> and protection of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches.</span> She knows the importance of protecting the <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">beef</span> industry for those who depend on it. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span> Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
+                    },
+                    "spa-incon": {
+                        badge: "Exp 1 (1-Char) • Spanish Inconsistent",
+                        html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, Mary es una <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegana</span> estricta y asiste a juntas y protestas en defensa de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animales.</span> Incluso tiene un podcast sobre cómo llevar una dieta basada en <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plantas.</span> Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span> Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Los amigos se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
+                    },
+                    "spa-con": {
+                        badge: "Exp 1 (1-Char) • Spanish Consistent",
+                        html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, Mary es una defensora devota de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> Ella sabe la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span> Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Los amigos se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
+                    }
+                },
+                exp2: {
+                    "eng-incon": {
+                        badge: "Exp 2 (Secondary Protagonist) • English Inconsistent",
+                        html: `Mary is a recent college graduate. Through her college years <span class="underline decoration-utep-orange decoration-2 font-medium">her friends</span> found themselves becoming more concerned and dedicated to activism for good causes. For example, <span class="underline decoration-utep-orange decoration-2 font-medium">Mary’s friends</span> are strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegans</span> and attend <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animal rights’</span> advocacy meetings and protests. <span class="underline decoration-utep-orange decoration-2 font-medium">They</span> even have a podcast on how to eat a <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plant-based</span> diet. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and fries.” Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
+                    },
+                    "eng-con": {
+                        badge: "Exp 2 (Secondary Protagonist) • English Consistent",
+                        html: `Mary is a recent college graduate. Through her college years <span class="underline decoration-utep-orange decoration-2 font-medium">her friends</span> found themselves becoming more concerned and dedicated to activism for good causes. For example, <span class="underline decoration-utep-orange decoration-2 font-medium">Mary’s friends</span> are devout supporters of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">farmers’ rights</span> and protection of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">They</span> know the importance of protecting the <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">beef</span> industry for those who depend on it. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and fries.” Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
+                    },
+                    "spa-incon": {
+                        badge: "Exp 2 (Secondary Protagonist) • Spanish Inconsistent",
+                        html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">veganos</span> estrictos y asisten a juntas y protestas en defensa de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animales.</span> Incluso <span class="underline decoration-utep-orange decoration-2 font-medium">ellos</span> tienen un podcast sobre cómo llevar una dieta basada en <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plantas.</span> Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Los amigos se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
+                    },
+                    "spa-con": {
+                        badge: "Exp 2 (Secondary Protagonist) • Spanish Consistent",
+                        html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son defensores de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">Ellos</span> saben la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Les amis se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
+                    }
+                }
+            };
+
+            let currentParadigm = 'exp1';
+
+            function setParadigm(paradigm) {
+                currentParadigm = paradigm;
+                const btnExp1 = document.getElementById('btn-exp1');
+                const btnExp2 = document.getElementById('btn-exp2');
+                const descEl = document.getElementById('tool2-description');
+                
+                if (!btnExp1 || !btnExp2 || !descEl) return;
+
+                if (paradigm === 'exp1') {
+                    btnExp1.className = "py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all";
+                    btnExp2.className = "py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all";
+                } else {
+                    btnExp2.className = "py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all";
+                    btnExp1.className = "py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all";
+                }
+                descEl.innerHTML = paradigmDescriptions[paradigm];
+                updatePassageView();
+            }
+
+            function updatePassageView() {
+                const conditionSelect = document.getElementById('condition-select');
+                const passageContent = document.getElementById('passage-content-text');
+                const passageBadge = document.getElementById('passage-badge');
+                const rtValIncon = document.getElementById('rt-val-incon');
+                const rtValCon = document.getElementById('rt-val-con');
+                const rtDeltaBadge = document.getElementById('rt-delta-badge');
+                const barIncon = document.getElementById('bar-incon');
+                const barCon = document.getElementById('bar-con');
+                const summaryText = document.getElementById('finding-summary-text');
+                
+                if (!conditionSelect || !passageContent) return;
+
+                const selectedCond = conditionSelect.value;
+                const activePassage = passageData[currentParadigm][selectedCond];
+                const activeRt = rtVisualizationData[currentParadigm][selectedCond];
+                
+                passageContent.innerHTML = activePassage.html;
+                if (passageBadge) passageBadge.innerText = activePassage.badge;
+                if (rtValIncon) rtValIncon.innerText = activeRt.inconRt;
+                if (rtValCon) rtValCon.innerText = activeRt.conRt;
+                if (rtDeltaBadge) rtDeltaBadge.innerText = activeRt.delta;
+                if (barIncon) barIncon.style.width = activeRt.inconWidth;
+                if (barCon) barCon.style.width = activeRt.conWidth;
+                if (summaryText) summaryText.innerText = activeRt.summary;
+                
+                if (rtDeltaBadge && activeRt.delta.includes("Penalty")) {
+                    rtDeltaBadge.className = "text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200";
+                } else if (rtDeltaBadge) {
+                    rtDeltaBadge.className = "text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200";
+                }
+            }
+
+            // Works whether Google Sites runs this script before or after DOMContentLoaded.
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initPortfolio, { once: true });
+            } else {
+                initPortfolio();
+            }
+        })();
+    </script>
+</body>
+</html>
