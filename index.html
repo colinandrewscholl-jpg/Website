@@ -124,7 +124,7 @@
                                 I am a Ph.D. Candidate specializing in <strong>Psycholinguistics</strong> and bilingualism at UTEP. My research focuses on discourse comprehension, bilingual language control, and bilingual language experiences.
                             </p>
                             <p class="text-slate-600 text-sm w-full leading-relaxed">
-                                I combine behavioral eye-tracking, EEG, and statistical modeling to explore how bilingual reading comprehension is modulated by relative language proficiency across languages.
+                                I combine behavioral eye-tracking, EEG, pupillometry, and statistical modeling to explore how bilingual reading comprehension is modulated by relative language proficiency across languages.
                             </p>
                             <!-- CONTACT & CV QUICK LINKS -->
                             <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
@@ -217,7 +217,7 @@
                                 </div>
                                 <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">Neurocognitive Methods</h3>
                                 <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                    Capturing eye-movements and brain activity during language comprehension using eye-tracking and EEG.
+                                    Capturing eye-movements, brain activity, and pupillometry during language comprehension.
                                 </p>
                             </div>
                             <span class="text-xs font-semibold text-emerald-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -416,7 +416,7 @@
                                 <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
                                     <i class="fa-solid fa-eye"></i> Methodological Paradigms
                                 </span>
-                                <h2 class="text-2xl font-bold text-slate-900">Neurocognitive Methods: Eye-Tracking &amp; Electroencephalography (EEG)</h2>
+                                <h2 class="text-2xl font-bold text-slate-900">Neurocognitive Methods: Eye-Tracking, EEG &amp; Pupillometry</h2>
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
@@ -437,14 +437,24 @@
                                         Complementing behavioral tracking, EEG records millisecond-resolution electrical brain activity. We analyze specific ERP components such as the N400 (sensitive to semantic expectancy and lexical integration difficulty) and the P600 (reflecting syntactic reanalysis, structural repair, and conflict resolution), providing neural converging evidence for bilingual discourse processing models.
                                     </p>
                                 </div>
+
+                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">3. Pupillometry &amp; Task-Evoked Pupillary Responses (TEPR)</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        In addition to gaze-position tracking, pupillometry captures autonomic nervous system modulation during language comprehension. Task-Evoked Pupillary Responses (TEPRs), driven primarily by locus coeruleus-norepinephrine (LC-NE) system activation, serve as a sensitive index of cognitive effort, processing load, and surprise during lexical disambiguation and situation model updating (Kahneman, 1973; Beatty, 1982; Winn et al., 2018). By measuring transient pupil dilations time-locked to critical words or code-switches, we quantify the immediate attentional and inhibitory demands imposed by bilingual sentence processing.
+                                    </p>
+                                </div>
                             </div>
 
                             <!-- Footnote References -->
                             <div class="pt-4 border-t border-slate-200">
                                 <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
                                 <ul class="text-xs text-slate-600 space-y-1.5 italic">
+                                    <li>Beatty, J. (1982). Task-evoked pupillary responses, processing load, and the structure of processing resources. <em>Psychological Bulletin</em>, <em>91</em>(2), 276–292. https://doi.org/10.1037/0033-2909.91.2.276</li>
+                                    <li>Kahneman, D. (1973). <em>Attention and effort</em>. Prentice-Hall.</li>
                                     <li>Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. <em>Psychological Bulletin</em>, <em>124</em>(3), 372–422. https://doi.org/10.1037/0033-2909.124.3.372</li>
                                     <li>Rayner, K. (2009). The eye and voice in reading: Eye movements and reading times. <em>Vision Research</em>, <em>49</em>(21), 2488–2517. https://doi.org/10.1016/j.visres.2009.07.005</li>
+                                    <li>Winn, M. B., Wendt, D., Koelewijn, T., &amp; Lunner, T. (2018). Factors and considerations in pupillometry in communication sciences and disorders: A review. <em>Trends in Hearing</em>, <em>22</em>, 1–28. https://doi.org/10.1177/2331216518800568</li>
                                 </ul>
                             </div>
                         </div>
@@ -1022,7 +1032,7 @@
                 const rt = Math.round(currentWord.baseRt + (Math.random() * 40 - 20));
                 sprRtEl.innerText = rt;
                 if (currentWord.isSwitch) {
-                    sprLangEl.innerText = currentSentenceNum === 2 ? "ENGLISH — LANGUAGE SWITCH" : "SPANISH — LANGUAGE SWITCH";
+                    sprLangEl.innerText = currentSentenceNum === 2 || currentSentenceNum === 3 ? "ENGLISH — LANGUAGE SWITCH" : "SPANISH — LANGUAGE SWITCH";
                     sprLangEl.className = currentSentenceNum === 3 ? "text-orange-400 font-bold" : "text-amber-400 font-bold";
                 } else {
                     sprLangEl.innerText = currentWord.lang;
@@ -1062,7 +1072,7 @@
                     sprNextBtn.innerText = "Start Sentence 3 (Spanish → English)";
                     sprStatsEl.classList.add('hidden');
                 } else {
-                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the reduced asymmetric cost of switching back into English because of the color cue.</span>';
+                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the asymmetric cost of switching back into English in sentence structure.</span>';
                     sprNextBtn.innerText = "Trial Finished";
                     sprNextBtn.disabled = true;
                     sprNextBtn.classList.add('opacity-50');
@@ -1149,7 +1159,7 @@
                 },
                 "spa-con": {
                     badge: "Exp 2 (Secondary Protagonist) • Spanish Consistent",
-                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son defensores de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">Ellos</span> saben la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un new local restaurant. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Les amis se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
+                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son defensores de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">Ellos</span> saben la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Les amis se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
                 }
             }
         };
