@@ -183,7 +183,7 @@
                                 <div class="w-12 h-12 rounded-xl bg-blue-50 text-utep-blue flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                                     <i class="fa-solid fa-sliders"></i>
                                 </div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-utep-blue transition-colors">Bilingual Language Control</h3>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-utep-blue hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
                                 <p class="text-sm text-slate-600 leading-relaxed mb-4">
                                     Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
                                 </p>
@@ -247,7 +247,7 @@
             </div>
         </section>
 
-<!-- ================================================================= -->
+        <!-- ================================================================= -->
         <!-- PAGE 2: RESEARCH AREAS (#research) -->
         <!-- ================================================================= -->
         <section id="page-research" class="page-section hidden">
@@ -454,7 +454,7 @@
             </div>
         </section>
 
-<!-- ================================================================= -->
+        <!-- ================================================================= -->
         <!-- PAGE 3: PUBLICATIONS & TALKS (#publications) -->
         <!-- ================================================================= -->
         <section id="page-publications" class="page-section">
@@ -633,7 +633,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -781,6 +780,7 @@
                                             <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -928,9 +928,28 @@
             });
         }
 
+        // Helper function for Research Tab switching
+        function switchResearchTab(tabId) {
+            document.querySelectorAll('.research-tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.querySelectorAll('.research-tab-btn').forEach(btn => {
+                btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
+            });
+            
+            const targetContent = document.getElementById(tabId);
+            const targetBtn = document.getElementById('btn-' + tabId);
+            
+            if (targetContent) targetContent.classList.remove('hidden');
+            if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-utep-blue text-white transition-all shadow-sm';
+        }
+
         function navigateFromHash() {
             const hash = decodeURIComponent(window.location.hash.slice(1));
-            if (hash.startsWith('research-') && document.getElementById(hash)) {
+            if (hash.startsWith('tab-')) {
+                navigateTo('research', hash);
+                switchResearchTab(hash);
+            } else if (hash.startsWith('research-') && document.getElementById(hash)) {
                 navigateTo('research', hash);
             } else if (PAGE_IDS.includes(hash)) {
                 navigateTo(hash, null);
@@ -1017,8 +1036,9 @@
                 } else if (currentSentenceNum === 2) {
                     sprSentenceNumEl.innerText = "Sentence 2 of 3: Spanish → English Switch";
                 } else {
-                    sprSentenceNumEl.innerText = "Sentence 3 of 3: Color-Cued Switch Paradigm";
+                    sprSentenceNumEl.innerText = "Sentence 3 of 3: Spanish → English Switch Paradigm";
                 }
+
                 let displayHtml = activeSentence.map((item, idx) => {
                     if (idx === sprIndex) {
                         return `<span class="${item.class} underline decoration-2">${item.text}</span>`;
@@ -1039,7 +1059,7 @@
                     currentSentenceNum = 3;
                     sprIndex = -1;
                     sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the largest RT spike when switching back into English (asymmetric switch cost).</span>';
-                    sprNextBtn.innerText = "Start Sentence 3 (Color Cued)";
+                    sprNextBtn.innerText = "Start Sentence 3 (Spanish → English)";
                     sprStatsEl.classList.add('hidden');
                 } else {
                     sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the reduced asymmetric cost of switching back into English because of the color cue.</span>';
@@ -1129,17 +1149,19 @@
                 },
                 "spa-con": {
                     badge: "Exp 2 (Secondary Protagonist) • Spanish Consistent",
-                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son defensores de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">Ellos</span> saben la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Les amis se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
+                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son defensores de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">Ellos</span> saben la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un new local restaurant. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Les amis se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
                 }
             }
         };
 
         let currentParadigm = 'exp1';
+
         function setParadigm(paradigm) {
             currentParadigm = paradigm;
             const btnExp1 = document.getElementById('btn-exp1');
             const btnExp2 = document.getElementById('btn-exp2');
             const descEl = document.getElementById('tool2-description');
+            
             if (paradigm === 'exp1') {
                 btnExp1.className = "py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all";
                 btnExp2.className = "py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all";
