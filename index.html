@@ -178,20 +178,20 @@
                         </div>
 
                         <!-- Card 2: Bilingualism -->
-                        <div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-blue/50 transition-all cursor-pointer flex flex-col justify-between group">
-                            <div>
-                                <div class="w-12 h-12 rounded-xl bg-blue-50 text-utep-blue flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-sliders"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-utep-blue hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                    Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
-                                </p>
-                            </div>
-                            <span class="text-xs font-semibold text-utep-blue flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
-                            </span>
-                        </div>
+<div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+    <div>
+        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-sliders"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
+        </p>
+    </div>
+    <span class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+        Deep dive research <i class="fa-solid fa-arrow-right"></i>
+    </span>
+</div>
 
                         <!-- Card 3: Quantitative Methods -->
                         <div onclick="navigateTo('research', 'tab-quant')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between group">
@@ -263,7 +263,7 @@
             <div class="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
                 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <nav class="flex flex-wrap justify-center gap-2 py-3" aria-label="Research Tabs">
-                        <button onclick="switchResearchTab('tab-discourse')" id="btn-tab-discourse" class="research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-utep-blue text-white transition-all shadow-sm">
+                        <button onclick="switchResearchTab('tab-discourse')" id="btn-tab-discourse" class="research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-utep-orange text-white transition-all shadow-sm">
                             Discourse Comprehension
                         </button>
                         <button onclick="switchResearchTab('tab-bilingual')" id="btn-tab-bilingual" class="research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
@@ -285,9 +285,9 @@
 
                     <!-- ================= TAB 1: DISCOURSE ================= -->
                     <div id="tab-discourse" class="research-tab-content space-y-8">
-                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-blue space-y-6">
+                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-orange space-y-6">
                             <div>
-                                <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
+                                <span class="px-2.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
                                     <i class="fa-solid fa-book-open"></i> Theoretical Frameworks
                                 </span>
                                 <h2 class="text-2xl font-bold text-slate-900">Discourse Comprehension: The C-I Model &amp; The Landscape Model</h2>
@@ -328,9 +328,9 @@
 
                     <!-- ================= TAB 2: BILINGUAL CONTROL ================= -->
                     <div id="tab-bilingual" class="research-tab-content space-y-8 hidden">
-                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-blue space-y-6">
+                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-blue-600 space-y-6">
                             <div>
-                                <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
+                                <span class="px-2.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
                                     <i class="fa-solid fa-brain"></i> Theoretical Frameworks
                                 </span>
                                 <h2 class="text-2xl font-bold text-slate-900">Bilingual Language Control: The BIA+ Model &amp; The Adaptive Control Hypothesis</h2>
@@ -924,35 +924,40 @@
             if (mobileMenu) mobileMenu.classList.add('hidden');
             if (menuIcon) menuIcon.className = 'fa-solid fa-bars text-xl';
 
-            requestAnimationFrame(() => {
-                if (anchorId) {
-                    const anchor = document.getElementById(anchorId);
-                    if (anchor) {
-                        anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    } else {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            });
+            if (anchorId && anchorId.startsWith('tab-')) {
+    switchResearchTab(anchorId);
+}
+
+requestAnimationFrame(() => {
+    const anchor = anchorId && !anchorId.startsWith('tab-') ? document.getElementById(anchorId) : null;
+    if (anchor) {
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
         }
 
         // Helper function for Research Tab switching
-        function switchResearchTab(tabId) {
-            document.querySelectorAll('.research-tab-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-            document.querySelectorAll('.research-tab-btn').forEach(btn => {
-                btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
-            });
-            
-            const targetContent = document.getElementById(tabId);
-            const targetBtn = document.getElementById('btn-' + tabId);
-            
-            if (targetContent) targetContent.classList.remove('hidden');
-            if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-utep-blue text-white transition-all shadow-sm';
-        }
+        const TAB_ACTIVE_STYLES = {
+    'tab-discourse': 'bg-utep-orange text-white',
+    'tab-bilingual': 'bg-blue-600 text-white',
+    'tab-quant':     'bg-purple-600 text-white',
+    'tab-neuro':     'bg-emerald-600 text-white'
+};
+
+function switchResearchTab(tabId) {
+    document.querySelectorAll('.research-tab-content').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.research-tab-btn').forEach(btn => {
+        btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
+    });
+
+    const targetContent = document.getElementById(tabId);
+    const targetBtn = document.getElementById('btn-' + tabId);
+
+    if (targetContent) targetContent.classList.remove('hidden');
+    if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg transition-all shadow-sm ' + (TAB_ACTIVE_STYLES[tabId] || 'bg-utep-blue text-white');
+}
 
         function navigateFromHash() {
             const hash = decodeURIComponent(window.location.hash.slice(1));
@@ -1032,12 +1037,13 @@
                 const rt = Math.round(currentWord.baseRt + (Math.random() * 40 - 20));
                 sprRtEl.innerText = rt;
                 if (currentWord.isSwitch) {
-                    sprLangEl.innerText = currentSentenceNum === 2 || currentSentenceNum === 3 ? "ENGLISH — LANGUAGE SWITCH" : "SPANISH — LANGUAGE SWITCH";
-                    sprLangEl.className = currentSentenceNum === 3 ? "text-orange-400 font-bold" : "text-amber-400 font-bold";
-                } else {
-                    sprLangEl.innerText = currentWord.lang;
-                    sprLangEl.className = currentWord.class;
-                }
+    const toLang = currentWord.lang.startsWith('English') ? 'ENGLISH' : 'SPANISH';
+    sprLangEl.innerText = toLang + ' — LANGUAGE SWITCH';
+    sprLangEl.className = toLang === 'ENGLISH' && currentSentenceNum === 3 ? "text-orange-400 font-bold" : "text-amber-400 font-bold";
+} else {
+    sprLangEl.innerText = currentWord.lang;
+    sprLangEl.className = currentWord.class;
+}
                 sprStatsEl.classList.remove('hidden');
                 sprSentenceNumEl.classList.remove('hidden');
                 
