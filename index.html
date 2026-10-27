@@ -162,7 +162,7 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Card 1: Discourse -->
-                        <div onclick="navigateTo('research', 'research-discourse')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-orange/50 transition-all cursor-pointer flex flex-col justify-between group">
+                        <div onclick="navigateTo('research', 'tab-discourse')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-orange/50 transition-all cursor-pointer flex flex-col justify-between group">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-orange-50 text-utep-orange flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                                     <i class="fa-solid fa-book-open"></i>
@@ -178,7 +178,7 @@
                         </div>
 
                         <!-- Card 2: Bilingualism -->
-                        <div onclick="navigateTo('research', 'research-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-blue/50 transition-all cursor-pointer flex flex-col justify-between group">
+                        <div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-utep-blue/50 transition-all cursor-pointer flex flex-col justify-between group">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-blue-50 text-utep-blue flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                                     <i class="fa-solid fa-sliders"></i>
@@ -194,7 +194,7 @@
                         </div>
 
                         <!-- Card 3: Quantitative Methods -->
-                        <div onclick="navigateTo('research', 'research-quant')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+                        <div onclick="navigateTo('research', 'tab-quant')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between group">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                                     <i class="fa-solid fa-chart-line"></i>
@@ -210,7 +210,7 @@
                         </div>
 
                         <!-- Card 4: Neurocognitive Approach -->
-                        <div onclick="navigateTo('research', 'research-eyetracking')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+                        <div onclick="navigateTo('research', 'tab-neuro')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-500/50 transition-all cursor-pointer flex flex-col justify-between group">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                                     <i class="fa-solid fa-eye"></i>
@@ -361,9 +361,8 @@
                                 <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
                                 <ul class="text-xs text-slate-600 space-y-1.5 italic">
                                     <li>Abutalebi, J., &amp; Green, D. W. (2008). Control mechanisms in bilingual language production: Neural evidence from language switching studies. <em>Language and Cognitive Processes</em>, <em>23</em>(4), 557–582. https://doi.org/10.1080/01690960801920675</li>
-                                    <li>Dijkstra, T., &amp; van Heuven, W. J. B. (2002). The architecture of the bilingual word recognition system: From BIA to BIA+. <em>Bilingualism: Language and Cognition</em>, <em>5</em>(3), 175–197. https://doi.org/10.1017/S1366728902003031</li>
-                                    <li>Green, D. W., &amp; Abutalebi, J. (2013). Language control in bilinguals: The adaptive control hypothesis. <em>Journal of Cognitive Psychology</em>, <em>25</em>(5), 515–530. https://doi.org/10.1080/20445911.2013.796377</li>
-                                    <li>Schwartz, A., Negron, J., &amp; Scholl, C. (2025). The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements. <em>Bilingualism: Language and Cognition</em>, <em>28</em>(2), 415–426. https://doi.org/10.1017/S1366728924000567</li>
+                                    <li>Dijkstra, T., &amp; van Heuven, W. J. B. (2002). The architecture of the bilingual word recognition system: From BIA to BIA+. <em>Bilingualism: Language and Cognition</em>, <em>5</em>(3), 175–197.</li>
+                                    <li>Green, D. W., &amp; Abutalebi, J. (2013). Language control in bilinguals: The adaptive control hypothesis. <em>Journal of Cognitive Psychology</em>, <em>25</em>(5), 515–530. https://doi.org/10.1080/20445911.2013.795784</li>
                                 </ul>
                             </div>
                         </div>
@@ -371,36 +370,31 @@
 
                     <!-- ================= TAB 3: QUANTITATIVE METHODS ================= -->
                     <div id="tab-quant" class="research-tab-content space-y-8 hidden">
-                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-blue space-y-6">
+                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-purple-500 space-y-6">
                             <div>
-                                <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
-                                    <i class="fa-solid fa-chart-line"></i> Statistical Modeling
+                                <span class="px-2.5 py-0.5 bg-purple-100 text-purple-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
+                                    <i class="fa-solid fa-chart-line"></i> Analytical Frameworks
                                 </span>
-                                <h2 class="text-2xl font-bold text-slate-900">Quantitative Methods: Generalized Linear Mixed Models &amp; Bayesian Estimation with <code class="text-sm bg-slate-100 px-1.5 py-0.5 rounded text-utep-blue font-mono">brms</code></h2>
+                                <h2 class="text-2xl font-bold text-slate-900">Quantitative Methods: Linear Mixed-Effects &amp; Bayesian Modeling</h2>
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
-                                Psycholinguistic datasets—characterized by crossed random effects of participants and items, non-normal reaction time distributions, and ordinal rating metrics (e.g., Likert scales or acceptability judgments)—require robust statistical machinery.
+                                Psycholinguistic data—particularly eye-tracking fixations and self-paced reading reaction times—present complex hierarchical structures with crossed random effects of participants and items. We utilize advanced statistical techniques to ensure robust, reproducible inferences:
                             </p>
 
                             <div class="space-y-4">
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Why GLMs/LMMs are Ideal for Psycholinguistic Research</h3>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Linear Mixed-Effects Models (LMMs) &amp; Generalized LMMs</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Traditional ANOVA approaches discard item variance or aggregate data, losing critical statistical power. Linear Mixed-Effects Models (LMMs) and Generalized Linear Mixed-Effects Models (GLMMs) handle both participant and item random intercepts and slopes simultaneously (Baayen et al., 2008). Furthermore, using family distributions like log-normal or gamma for reading times, and cumulative probit models for ordinal data, eliminates data transformation artifacts.
+                                        Standard ANOVA approaches often fail to simultaneously account for subject and item variability, leading to inflated Type I error rates (Baayen et al., 2008). Using R (lme4 and lmerTest packages), we fit maximal random-effects structures to estimate fixed experimental manipulations while controlling for individual baseline reading speeds and item-specific lexical idiosyncrasies.
                                     </p>
                                 </div>
 
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Integration with Bayesian Estimation via <code class="text-sm font-mono">brms</code></h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed mb-3">
-                                        Moving beyond frequentist frameworks, Bayesian generalized linear mixed models implemented via the R package <code class="text-xs bg-slate-200 px-1 py-0.5 rounded text-slate-800 font-mono">brms</code> (Bürkner, 2017) leverage Stan for full probabilistic inference. Bayesian estimation provides several distinct advantages for psycholinguistics:
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Bayesian Cumulative Probit &amp; Credible Intervals</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        For ordinal comprehension ratings, accuracy data, and skewed fixation durations, we implement Bayesian regression models using Stan (via the brms package). Bayesian frameworks provide direct probabilistic interpretations of parameter estimates via Posterior Credible Intervals, avoiding dichotomous $p$-value thresholds and allowing the integration of informed priors based on prior psycholinguistic literature.
                                     </p>
-                                    <ul class="list-disc list-inside text-sm text-slate-700 space-y-1.5 pl-2">
-                                        <li><strong>Exact Uncertainty Quantification:</strong> Direct estimation of posterior distributions for parameters without relying on asymptotic assumptions.</li>
-                                        <li><strong>Prior Incorporation:</strong> Ability to integrate informative priors derived from previous meta-analyses or pilot eye-tracking datasets.</li>
-                                        <li><strong>Complex Modeling Flexibility:</strong> Seamless extension to distributional models (estimating effects on both the mean and the variance/precision simultaneously) and non-linear mixed effects.</li>
-                                    </ul>
                                 </div>
                             </div>
 
@@ -408,9 +402,8 @@
                             <div class="pt-4 border-t border-slate-200">
                                 <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
                                 <ul class="text-xs text-slate-600 space-y-1.5 italic">
-                                    <li>Baayen, R. H., Davidson, D. J., &amp; Bates, D. M. (2008). Mixed-effects modeling with crossed random effects for subjects and items. <em>Journal of Memory and Language</em>, <em>59</em>(4), 390–412. https://doi.org/10.1016/j.jml.2007.12.005</li>
+                                    <li>Baayen, R. H., Davidson, D. J., &amp; Bates, D. (2008). Mixed-effects modeling with crossed random effects for subjects and items. <em>Journal of Memory and Language</em>, <em>59</em>(4), 390–412. https://doi.org/10.1016/j.jml.2007.12.005</li>
                                     <li>Bürkner, P.-C. (2017). brms: An R package for Bayesian multilevel models using Stan. <em>Journal of Statistical Software</em>, <em>80</em>(1), 1–28. https://doi.org/10.18637/jss.v080.i01</li>
-                                    <li>Scholl, C. (2026). Modelling ordinal data [Colloquium presentation]. UTEP Psychology Department, El Paso, TX.</li>
                                 </ul>
                             </div>
                         </div>
@@ -418,37 +411,30 @@
 
                     <!-- ================= TAB 4: NEUROCOGNITIVE METHODS ================= -->
                     <div id="tab-neuro" class="research-tab-content space-y-8 hidden">
-                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-blue space-y-6">
+                        <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-emerald-500 space-y-6">
                             <div>
-                                <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
-                                    <i class="fa-solid fa-eye"></i> Experimental Methodologies
+                                <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
+                                    <i class="fa-solid fa-eye"></i> Methodological Paradigms
                                 </span>
-                                <h2 class="text-2xl font-bold text-slate-900">Neurocognitive Methods: Eye-Tracking, EEG, &amp; Future Pupillometry Integration</h2>
+                                <h2 class="text-2xl font-bold text-slate-900">Neurocognitive Methods: Eye-Tracking &amp; Electroencephalography (EEG)</h2>
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
-                                Uncovering the real-time temporal dynamics of reading comprehension and bilingual language switching requires neurocognitive tools capable of capturing millisecond-level cognitive operations.
+                                To capture the real-time temporal dynamics of reading comprehension and language control, our laboratory employs high-precision psychophysiological instrumentation:
                             </p>
 
                             <div class="space-y-4">
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Eye-Tracking During Reading</h3>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Eye-Tracking During Reading (EyeLink 1000 Plus)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Eye-tracking methodologies (such as the EyeLink 1000 Plus system) record fixations, regressions, and saccades as readers navigate natural text. Early measures (e.g., <em>First Fixation Duration</em>, <em>Gaze Duration</em>) index automated lexical access and early perceptual processes, whereas late measures (e.g., <em>Regression Path Duration</em>, <em>Total Time</em>) reflect strategic re-analysis, conflict resolution, and situation model updating (Rayner, 1998; Scholl &amp; Schwartz, 2026).
+                                        Eye-tracking provides an ecologically valid window into cognitive processing, operating on the eye-mind assumption (Rayner, 1998, 2009). We measure early-stage measures (first fixation duration, gaze duration) reflecting lexical access and word recognition difficulty, alongside late-stage measures (go-past time, total reading time, regression path duration) reflecting semantic integration difficulties, repair processes, and situation model updating.
                                     </p>
                                 </div>
 
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Electroencephalography (EEG)</h3>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Electroencephalography (EEG) Event-Related Potentials (ERPs)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Complementing eye-tracking, event-related potentials (ERPs) offer high temporal resolution to track distinct electrophysiological signatures of comprehension. For example, the <em>N400</em> component indexes semantic integration difficulty, while the <em>P600</em> reflects syntactic reanalysis or structural repair—providing a direct window into bilingual morphosyntactic processing and expectancy violations.
-                                    </p>
-                                </div>
-
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">3. Future Horizons in Pupillometry</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        Looking forward, I aim to integrate <strong>task-evoked pupillary responses (TEPRs)</strong> alongside standard eye-tracking in my future research Baseline-corrected pupil dilation serves as a sensitive, continuous physiological index of central nervous system arousal and transient cognitive load (Kahneman, 1973), enabling precise tracking of attentional allocation and effort during demanding linguistic processing tasks.
+                                        Complementing behavioral tracking, EEG records millisecond-resolution electrical brain activity. We analyze specific ERP components such as the N400 (sensitive to semantic expectancy and lexical integration difficulty) and the P600 (reflecting syntactic reanalysis, structural repair, and conflict resolution), providing neural converging evidence for bilingual discourse processing models.
                                     </p>
                                 </div>
                             </div>
@@ -457,9 +443,8 @@
                             <div class="pt-4 border-t border-slate-200">
                                 <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
                                 <ul class="text-xs text-slate-600 space-y-1.5 italic">
-                                    <li>Kahneman, D. (1973). <em>Attention and effort</em>. Prentice-Hall.</li>
                                     <li>Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. <em>Psychological Bulletin</em>, <em>124</em>(3), 372–422. https://doi.org/10.1037/0033-2909.124.3.372</li>
-                                    <li>Scholl, C., &amp; Schwartz, A. (2025). The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements. <em>Bilingualism: Language and Cognition</em>, <em>28</em>(2), 415–426. https://doi.org/10.1017/S1366728924000567</li>
+                                    <li>Rayner, K. (2009). The eye and voice in reading: Eye movements and reading times. <em>Vision Research</em>, <em>49</em>(21), 2488–2517. https://doi.org/10.1016/j.visres.2009.07.005</li>
                                 </ul>
                             </div>
                         </div>
@@ -467,29 +452,6 @@
 
                 </div>
             </div>
-
-            <!-- TAB SWITCHING SCRIPT -->
-            <script>
-                function switchResearchTab(tabId) {
-                    // Hide all tab contents
-                    document.querySelectorAll('.research-tab-content').forEach(el => {
-                        el.classList.add('hidden');
-                    });
-                    // Show selected tab content
-                    document.getElementById(tabId).classList.remove('hidden');
-
-                    // Reset all tab buttons to inactive state
-                    document.querySelectorAll('.research-tab-btn').forEach(btn => {
-                        btn.classList.remove('bg-utep-blue', 'text-white', 'shadow-sm');
-                        btn.classList.add('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
-                    });
-
-                    // Set active tab button style
-                    const activeBtn = document.getElementById('btn-' + tabId);
-                    activeBtn.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
-                    activeBtn.classList.add('bg-utep-blue', 'text-white', 'shadow-sm');
-                }
-            </script>
         </section>
 
 <!-- ================================================================= -->
@@ -1007,14 +969,14 @@
             { text: "library.", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 350 }
         ];
         const sentence3 = [
-            { text: "The", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 270 },
-            { text: "student", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 300 },
-            { text: "read", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 290 },
-            { text: "the", lang: "English (Non-Switch)", class: "text-blue-400", baseRt: 260 },
-            { text: "libro", lang: "Spanish (LANGUAGE SWITCH!)", class: "text-orange-400 font-bold", baseRt: 510, isSwitch: true },
-            { text: "durante", lang: "Spanish (Non-Switch)", class: "text-orange-400", baseRt: 330 },
-            { text: "la", lang: "Spanish (Non-Switch)", class: "text-orange-400", baseRt: 280 },
-            { text: "clase.", lang: "Spanish (Non-Switch)", class: "text-orange-400", baseRt: 360 }
+            { text: "El", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 270 },
+            { text: "estudiante", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 300 },
+            { text: "leyó", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 290 },
+            { text: "el", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 260 },
+            { text: "book", lang: "English (LANGUAGE SWITCH!)", class: "text-orange-400 font-bold", baseRt: 510, isSwitch: true },
+            { text: "during", lang: "English (Non-Switch)", class: "text-orange-400", baseRt: 330 },
+            { text: "the", lang: "English (Non-Switch)", class: "text-orange-400", baseRt: 280 },
+            { text: "class.", lang: "English (Non-Switch)", class: "text-orange-400", baseRt: 360 }
         ];
 
         let currentSentenceNum = 1;
