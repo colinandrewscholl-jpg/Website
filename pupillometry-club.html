@@ -25,7 +25,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-utep-orange selection:text-white">
 
-    <!-- HEADER (same look as main site; links return to index.html views) -->
+    <!-- HEADER -->
     <header class="sticky top-0 z-50 bg-[#041E42]/95 backdrop-blur-md border-b border-slate-800 text-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html#home" class="flex items-center gap-3 group">
@@ -87,8 +87,6 @@
                     </a>
                 </div>
 
-                <!-- Sections are filled from the RESOURCES array in the script below.
-                     A section heading only appears if it has at least one entry. -->
                 <div id="section-slides"></div>
                 <div id="section-video"></div>
                 <div id="section-code"></div>
@@ -108,23 +106,9 @@
     </footer>
 
     <script>
-        /* ====================================================================
-           EDIT HERE. One object per resource, shown in the order listed.
-
-           kind: "slides" | "video" | "code" | "reading"
-
-           SLIDES  - set slidesId to the long ID from Google Slides:
-                     File → Share → Publish to web → Embed → Publish, then copy
-                     the part of the iframe src between /d/e/ and /pubembed
-                     (it starts with 2PACX-). Until then a placeholder shows.
-           VIDEO   - set youtubeId (the part after ?v= in the YouTube URL).
-           CODE    - paste R code into the `code` field (template below).
-           ==================================================================== */
-
         const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link";
 
         const RESOURCES = [
-
             /* ---------------------------- SLIDES ---------------------------- */
             {
                 kind: "slides",
@@ -173,7 +157,6 @@
             }
         ];
 
-        /* ================== rendering (no need to edit below) ================== */
         const SECTIONS = {
             slides:  { title: "Workshop Slides", icon: "fa-chalkboard-user", badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange", label: "Slides" },
             video:   { title: "Videos",          icon: "fa-video",            badge: "bg-rose-100 text-rose-700",     border: "border-l-rose-500",    label: "Video" },
@@ -195,13 +178,6 @@
                         </div>
                     </div>`;
                 }
-                return `
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
-                        <div class="w-full rounded-lg border-2 border-dashed border-slate-300 bg-white flex flex-col items-center justify-center text-center text-slate-400 text-xs gap-1 px-4" style="aspect-ratio: 16 / 9;">
-                            <i class="fa-solid fa-chalkboard-user text-2xl"></i>
-                            <span>Slides coming soon</span>
-                        </div>
-                    </div>`;
             }
             if (r.kind === "video" && r.youtubeId) {
                 return `
@@ -216,11 +192,20 @@
             }
             if (r.kind === "reading" && r.pdfUrl) {
                 return `
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
-                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner bg-slate-900" style="padding-top: 75%;">
-                            <iframe src="${r.pdfUrl}#view=FitH" title="${esc(r.title)}"
-                                    class="absolute top-0 left-0 w-full h-full rounded-lg border-0"
-                                    loading="lazy"></iframe>
+                    <div class="bg-slate-900 text-white p-5 rounded-xl border border-slate-800 shadow-inner flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-regular fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Schmidtke (2014) — PDF Document</h4>
+                                <p class="text-xs text-slate-400">Frontiers in Psychology Original Research Article</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto">
+                            <a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-utep-orange text-white text-xs font-bold rounded-lg hover:bg-orange-600 transition shadow">
+                                <i class="fa-solid fa-book-open-reader"></i> Open PDF Reader
+                            </a>
                         </div>
                     </div>`;
             }
@@ -236,10 +221,10 @@
                 links.push(`<a href="https://www.youtube.com/watch?v=${r.youtubeId}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-brands fa-youtube mr-1"></i> Watch on YouTube</a>`);
             }
             if (r.kind === "reading" && r.pdfUrl) {
-                links.push(`<a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-file-pdf mr-1 text-red-500"></i> Open PDF in new tab</a>`);
+                links.push(`<a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-file-pdf mr-1 text-red-500"></i> Open PDF directly</a>`);
             }
             if (r.link) {
-                const text = r.kind === "slides" ? "Open in Drive" : r.kind === "code" ? "Download script" : r.kind === "reading" ? "Open Drive Folder" : "Open";
+                const text = r.kind === "slides" ? "Open in Drive" : r.kind === "reading" ? "Open Pupillometry Club Drive Folder" : "Open";
                 links.push(`<a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> ${text}</a>`);
             }
             return links.length ? `<div class="flex flex-wrap gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
