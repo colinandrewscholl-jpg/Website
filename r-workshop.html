@@ -86,8 +86,11 @@
                     </a>
                 </div>
 
-                <div id="section-overview"></div>
-                <div id="section-cheatsheet"></div>
+                <!-- UNIFIED INTERLEAVED FEED -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Workshop Sessions &amp; Materials</h2>
+                    <div id="workshop-timeline" class="space-y-6"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -112,16 +115,14 @@
                 description: "Learn the basics of R Studio, including how to install and reference packages and how to customize the global environment.",
                 credit: "Colin Scholl & Jayce Owens-Boone"
             },
-
-              {
+            {
                 kind: "overview",
                 session: "Session 2",
                 title: "R Studio Workshop: Data Manipulation",
                 description: "Overview of the tidyverse package, with special emphasis on dplyr functions for data manipulation.",
                 credit: "Colin Scholl & Jayce Owens-Boone"
             },
-              /* --------------------------- CHEAT SHEETS & HANDOUTS --------------------------- */
-                        {
+            {
                 kind: "cheatsheet",
                 session: "Workshop Handout",
                 title: "Dplyr Example for R Workshop (July 10, 2026)",
@@ -129,7 +130,6 @@
                 credit: "Colin Scholl",
                 fileUrl: "rworkshophandout.pdf"
             },
-            
             {
                 kind: "cheatsheet",
                 session: "Reference Material",
@@ -139,14 +139,14 @@
                 fileUrl: "data_wranglingcheatsheet (1).webp",
                 isImage: true
             },
-              {
+            {
                 kind: "overview",
                 session: "Session 3",
                 title: "R Studio Workshop: Data Visualization (pt. 1)",
                 description: "Overview of the ggplot2 package and how to create color-blind friendly graphs using additional color palettes.",
                 credit: "Colin Scholl & Jayce Owens-Boone"
             },
-                        {
+            {
                 kind: "cheatsheet",
                 session: "Reference Material",
                 title: "Data Visualization with ggplot2 Cheat Sheet",
@@ -154,15 +154,13 @@
                 credit: "RStudio / Posit",
                 fileUrl: "data-visualization.pdf"
             },
-
-              {
+            {
                 kind: "overview",
                 session: "Session 4",
                 title: "R Studio Workshop: Data Visualization (pt. 2)",
-                description: "Extension of Session 3 using the gganimate package to bring plots to life and increase their visual impact impact.",
+                description: "Extension of Session 3 using the gganimate package to bring plots to life and increase their visual impact.",
                 credit: "Colin Scholl & Jayce Owens-Boone"
             },
-
             {
                 kind: "cheatsheet",
                 session: "Reference Material",
@@ -171,8 +169,7 @@
                 credit: "Karl Hailperin / gganimate",
                 fileUrl: "gganimate.pdf"
             },
-            
-              {
+            {
                 kind: "overview",
                 session: "Session 5",
                 title: "R Studio Workshop: Data Analysis",
@@ -181,9 +178,9 @@
             }
         ];
 
-        const SECTIONS = {
-            overview:    { title: "Workshop Overview", icon: "fa-chalkboard-user", badge: "bg-purple-100 text-purple-700", border: "border-l-purple-500", label: "Series Overview" },
-            cheatsheet:  { title: "Cheat Sheets & Workshop Handouts", icon: "fa-file-pdf", badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange", label: "Handout / Cheat Sheet" }
+        const CONFIGS = {
+            overview:    { icon: "fa-chalkboard-user", badge: "bg-purple-100 text-purple-700", border: "border-l-purple-500", label: "Series Overview" },
+            cheatsheet:  { icon: "fa-file-pdf", badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange", label: "Handout / Cheat Sheet" }
         };
 
         const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -212,15 +209,15 @@
         }
 
         function card(r) {
-            const s = SECTIONS[r.kind];
+            const cfg = CONFIGS[r.kind];
             const credit = r.credit
                 ? `<p class="text-sm text-slate-600 italic mb-1">Co-hosts / Credit: <strong>${esc(r.credit)}</strong></p>` : "";
             const embed = embedBlock(r);
             return `
-            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${s.border}">
+            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${cfg.border}">
                 <div class="flex items-center gap-2 mb-2">
-                    <span class="px-2.5 py-0.5 ${s.badge} text-xs font-semibold rounded flex items-center gap-1">
-                        <i class="fa-solid ${s.icon}"></i> ${s.label}
+                    <span class="px-2.5 py-0.5 ${cfg.badge} text-xs font-semibold rounded flex items-center gap-1">
+                        <i class="fa-solid ${cfg.icon}"></i> ${cfg.label}
                     </span>
                     <span class="text-xs text-slate-400">${esc(r.session || "")}</span>
                 </div>
@@ -231,14 +228,8 @@
             </div>`;
         }
 
-        Object.keys(SECTIONS).forEach(kind => {
-            const items = RESOURCES.filter(r => r.kind === kind);
-            const el = document.getElementById("section-" + kind);
-            if (!items.length) { el.remove(); return; }
-            el.innerHTML = `
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">${SECTIONS[kind].title}</h2>
-                <div class="space-y-6">${items.map(card).join("")}</div>`;
-        });
+        // Render directly in the exact order written in the RESOURCES array
+        document.getElementById("workshop-timeline").innerHTML = RESOURCES.map(card).join("");
     </script>
 </body>
 </html>
