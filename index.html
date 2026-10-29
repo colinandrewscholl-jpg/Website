@@ -306,7 +306,7 @@
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">2. The Landscape Model</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Developed by van den Broek and colleagues (1999), the Landscape Model shifts the focus of discourse processing onto the dynamic cognitive activation that occurs during reading. This model conceptualizes comprehension as a landscape where cyclical reading processes activate concepts based on <em>coherence relations</em> (causality, intentionality, space, and time). Therefore, highly connected causal nodes receive sustained activation and are easily retrieved from memory, whereas unlinked or poorly integrated episodic events fade rapidly. This model predicts differential eye-movement reading patterns (e.g., regressions and increased total viewing times) when readers must update their situation models.
+                                        Developed by van den Broek and colleagues (1999), the Landscape Model shifts the focus of discourse processing onto the dynamic cognitive activation that occurs during reading. This model conceptualizes comprehension as a landscape where cyclical reading processes activate concepts based on <em>propositional overlap</em> with previous textual input or the reader's general background knowledge. Therefore, highly connected causal nodes receive sustained activation and are easily retrieved from memory, whereas unlinked or poorly integrated episodic events of a text fade rapidly from memory. The Landscape Model predicts different patterns of eye-movement during reading (e.g., number of regressions to prior text and overall total reading times) when readers must update their situation models.
                                     </p>
                                 </div>
                             </div>
@@ -327,7 +327,7 @@
                                                 <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-orange space-y-6 flex flex-col justify-between">
                                                     <div>
                                                         <div class="flex items-center justify-between mb-3">
-                                                            <h3 class="text-lg font-bold text-slate-900">2. Experimental Passage Explorer</h3>
+                                                            <h3 class="text-lg font-bold text-slate-900">Inconsistency Effect Explorer</h3>
                                                             <span class="text-xs bg-slate-200 text-slate-700 px-2.5 py-1 rounded font-semibold">Bilingual Inconsistency Effect</span>
                                                         </div>
 
@@ -352,10 +352,10 @@
                                                             <div>
                                                                 <label class="block text-xs font-semibold text-slate-700 mb-1">Experimental Version / Condition:</label>
                                                                 <select id="condition-select" onchange="updatePassageView()" class="w-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg p-2.5 focus:ring-utep-orange focus:border-utep-orange">
-                                                                    <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Meat)</option>
-                                                                    <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Meat)</option>
-                                                                    <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Carne)</option>
-                                                                    <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Carne)</option>
+                                                                    <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Eating Meat)</option>
+                                                                    <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Eating Meat)</option>
+                                                                    <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Comer Carne)</option>
+                                                                    <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Comer Carne)</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -414,7 +414,7 @@
 
                                                                 <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-600 leading-snug">
                                                                     <span class="font-semibold text-slate-800">Finding:</span>
-                                                                    <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
+                                                                    <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English (dominant language of participants).</span>
                                                                 </div>
                                                             </div>
 
@@ -469,7 +469,7 @@
                                                 <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-blue-600 space-y-6 flex flex-col justify-between">
                                                     <div>
                                                         <div class="flex items-center justify-between mb-4">
-                                                            <h3 class="text-lg font-bold text-slate-900">1. Bilingual Language-Switching Task</h3>
+                                                            <h3 class="text-lg font-bold text-slate-900">Bilingual Language-Switching Task</h3>
                                                             <span class="text-xs bg-orange-100 text-utep-orange px-2.5 py-1 rounded font-semibold">Schwartz et al. (2025)</span>
                                                         </div>
                                                         <p class="text-xs sm:text-sm text-slate-600 mb-4">
@@ -567,14 +567,14 @@
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">1. Eye-Tracking During Reading (EyeLink 1000 Plus)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Eye-tracking provides an ecologically valid window into cognitive processing (Rayner, 1998). I measure early-stage measures (first fixation duration, gaze duration) reflecting lexical access and word recognition difficulty, alongside late-stage measures (go-past time, total reading time, regression path duration) reflecting semantic integration difficulties, repair processes, and situation model updating.
+                                        Eye-tracking provides a highly ecologically valid window into cognitive processing (Rayner, 1998). I measure early-stage measures (first fixation duration, gaze duration), which reflect lexical access and word recognition difficulty, along with late-stage measures (go-past time, total reading time, regression path duration), which reflect semantic integration difficulties, repair processes, and situation model updating.
                                     </p>
                                 </div>
 
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">2. Electroencephalography (EEG) Event-Related Potentials (ERPs)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Complementing behavioral tracking, EEG records millisecond-resolution electrical brain activity. I analyze specific ERP components such as the N2 (sensitive to conflict and expectancy violations) and the P300b (indexing unexpected language membership categorization for code-switched sentences), to assess the comprehensiveness of bilingual word recognition models.
+                                        Complementing behavioral tracking, EEG records millisecond-resolution electrical brain activity. I analyze specific ERP components such as the N2 and the P300b. These components index participants' sensitivity to conflict and expectancy violations during language-switch trials, and language membership categorization for the critical words in the code-switched sentences. This work aims to assess the accuracy of widely accepted bilingual word recognition models (BIA+) (Dijkstra and van Heuven, 2002).
                                     </p>
                                 </div>
 
