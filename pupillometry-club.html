@@ -126,16 +126,16 @@
         const RESOURCES = [
 
             /* ---------------------------- SLIDES ---------------------------- */
-{
-    kind: "slides",
-    session: "Session 1",
-    title: "Introduction to Pupillometry",
-    description: "Physiology of the pupil, the LC-NE system, and what task-evoked pupillary responses can tell us about cognitive effort.",
-    slidesId: "https://docs.google.com/presentation/d/1p0t4XtYCvk7Ye2UzgPnBYtNeodYk5FU10_yC97_fJ1U/edit?usp=drive_link",  
-    https: "2PACX-1vQcHXHkDacrL3FFgdt0lfqPPmQGI5X8ou-OWJMowzkB4wFBC-O97DM-SVScl5klV467SIz5c5_bpMPr", // Isolate just the ID here
-    link: DRIVE_FOLDER
-},
-                        /* ---------------------------- VIDEOS ---------------------------- */
+            {
+                kind: "slides",
+                session: "Session 1",
+                title: "Introduction to Pupillometry",
+                description: "Physiology of the pupil, the LC-NE system, and what task-evoked pupillary responses can tell us about cognitive effort.",
+                slidesId: "2PACX-1vQcHXHkDacrL3FFgdt0lfqPPmQGI5X8ou-OWJMowzkB4wFBC-O97DM-SVScl5klV467SIz5c5_bpMPr",
+                link: DRIVE_FOLDER
+            },
+
+            /* ---------------------------- VIDEOS ---------------------------- */
             {
                 kind: "video",
                 session: "Lecture",
@@ -161,39 +161,14 @@
                 youtubeId: "B0pygawVAD0"
             },
 
-            /* ------------------------------ CODE ------------------------------
-               R code sections are commented out for now. To add one, remove the
-               surrounding comment markers and paste your script into `code`.
-               (Backticks inside the code must be escaped as \`.)
-
-            {
-                kind: "code",
-                session: "Session 3",
-                title: "Preprocessing Pipeline (R)",
-                description: "Blink interpolation, smoothing, and baseline correction.",
-                code: `# Paste R code here
-library(tidyverse)
-`,
-                link: DRIVE_FOLDER      // optional: link to the .R file
-            },
-            {
-                kind: "code",
-                session: "Session 4",
-                title: "Statistical Analysis (R)",
-                description: "Growth-curve models and GAMMs for pupil time courses.",
-                code: `# Paste R code here
-library(lme4)
-`,
-                link: DRIVE_FOLDER
-            },
-            ----------------------------------------------------------------- */
-
             /* ---------------------------- READINGS ---------------------------- */
             {
                 kind: "reading",
                 session: "Readings",
-                title: "Core Readings",
-                description: "Beatty (1982), Winn et al. (2018), and other papers discussed in the club.",
+                title: "Language experience modulates retrieval effort: Evidence from task-evoked pupillary responses",
+                description: "Schmidtke, D. (2014). Investigating how individual differences in language experience modulate cognitive retrieval effort using task-evoked pupillary responses in bilingual word recognition.",
+                credit: "Daniel Schmidtke",
+                pdfUrl: "Schmidtke (2014).pdf",
                 link: DRIVE_FOLDER
             }
         ];
@@ -201,9 +176,9 @@ library(lme4)
         /* ================== rendering (no need to edit below) ================== */
         const SECTIONS = {
             slides:  { title: "Workshop Slides", icon: "fa-chalkboard-user", badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange", label: "Slides" },
-            video:   { title: "Videos",          icon: "fa-video",           badge: "bg-rose-100 text-rose-700",      border: "border-l-rose-500",    label: "Video" },
-            code:    { title: "R Code",          icon: "fa-code",            badge: "bg-purple-100 text-purple-700",  border: "border-l-purple-500",  label: "R Code" },
-            reading: { title: "Readings",        icon: "fa-book-open",       badge: "bg-blue-100 text-blue-700",      border: "border-l-blue-600",    label: "Reading" }
+            video:   { title: "Videos",          icon: "fa-video",            badge: "bg-rose-100 text-rose-700",     border: "border-l-rose-500",    label: "Video" },
+            code:    { title: "R Code",          icon: "fa-code",             badge: "bg-purple-100 text-purple-700", border: "border-l-purple-500",  label: "R Code" },
+            reading: { title: "Readings",        icon: "fa-book-open",        badge: "bg-blue-100 text-blue-700",     border: "border-l-blue-600",    label: "Reading" }
         };
 
         const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -239,6 +214,16 @@ library(lme4)
                         </div>
                     </div>`;
             }
+            if (r.kind === "reading" && r.pdfUrl) {
+                return `
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner bg-slate-900" style="padding-top: 75%;">
+                            <iframe src="${r.pdfUrl}#view=FitH" title="${esc(r.title)}"
+                                    class="absolute top-0 left-0 w-full h-full rounded-lg border-0"
+                                    loading="lazy"></iframe>
+                        </div>
+                    </div>`;
+            }
             if (r.kind === "code" && r.code) {
                 return `<pre class="bg-slate-900 text-slate-100 text-xs rounded-xl p-4 overflow-x-auto"><code>${esc(r.code)}</code></pre>`;
             }
@@ -250,17 +235,20 @@ library(lme4)
             if (r.kind === "video" && r.youtubeId) {
                 links.push(`<a href="https://www.youtube.com/watch?v=${r.youtubeId}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-brands fa-youtube mr-1"></i> Watch on YouTube</a>`);
             }
+            if (r.kind === "reading" && r.pdfUrl) {
+                links.push(`<a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-file-pdf mr-1 text-red-500"></i> Open PDF in new tab</a>`);
+            }
             if (r.link) {
-                const text = r.kind === "slides" ? "Open in Drive" : r.kind === "code" ? "Download script" : "Open";
+                const text = r.kind === "slides" ? "Open in Drive" : r.kind === "code" ? "Download script" : r.kind === "reading" ? "Open Drive Folder" : "Open";
                 links.push(`<a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> ${text}</a>`);
             }
-            return links.length ? `<div class="flex gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
+            return links.length ? `<div class="flex flex-wrap gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
         }
 
         function card(r) {
             const s = SECTIONS[r.kind];
             const credit = r.credit
-                ? `<p class="text-sm text-slate-600 italic mb-1">Credit: <strong>${esc(r.credit)}</strong></p>` : "";
+                ? `<p class="text-sm text-slate-600 italic mb-1">Author / Credit: <strong>${esc(r.credit)}</strong></p>` : "";
             const embed = embedBlock(r);
             return `
             <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${s.border}">
