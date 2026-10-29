@@ -223,24 +223,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Academic Profile & Quick Highlights -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div class="lg:col-span-3 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                        <h2 class="text-2xl font-bold text-slate-900 mb-4">About Colin</h2>
-                        <div class="prose prose-slate max-w-none text-slate-600 space-y-4 text-sm sm:text-base leading-relaxed">
-                            <p>
-                                Colin Scholl is a Ph.D. Candidate in Experimental Psychology at the University of Texas at El Paso (UTEP), specializing in psycholinguistics, cognitive psychology, and discourse processing.
-                            </p>
-                            <p>
-                                His primary research examines how readers construct, update, and maintain mental representations (situation models) when reading passages containing evolving character behaviors or unexpected event sequences. By comparing behavioral paradigms with millisecond-accurate eye-tracking metrics, Colin identifies the precise temporal dynamics of memory updating and cognitive conflict resolution.
-                            </p>
-                            <p>
-                                In addition to discourse comprehension, Colin leads empirical projects investigating sentence-level language switching in Spanish-English bilinguals in the El Paso / Juárez border region, evaluating how executive control mechanisms adapt to high-frequency code-switching environments.
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -280,7 +262,7 @@
             <div class="py-12 bg-slate-50 min-h-[600px]">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-                    <!-- ================= TAB 1: DISCOURSE (INCLUDES DEMO 2) ================= -->
+                    <!-- ================= TAB 1: DISCOURSE (WITH EMBEDDED PASSAGE EXPLORER DEMO) ================= -->
                     <div id="tab-discourse" class="research-tab-content space-y-8">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-orange space-y-6">
                             <div>
@@ -311,22 +293,20 @@
                             </div>
                         </div>
 
-                        <!-- DEMO 2 RELOCATED HERE -->
+                        <!-- EMBEDDED PASSAGE EXPLORER DEMO -->
                         <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-utep-orange space-y-6">
                             <div>
                                 <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
                                     <i class="fa-solid fa-flask"></i> Interactive Demonstration
                                 </span>
                                 <h3 class="text-xl font-bold text-slate-900">Experimental Passage Explorer</h3>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-semibold mt-1 inline-block">Bilingual Inconsistency Effect</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded font-semibold mt-1 inline-block">Bilingual Inconsistency Effect</span>
                             </div>
                             
-                            <!-- Dynamic Description Text -->
                             <p id="tool2-description" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                                 Select a paradigm and condition below to explore the four experimental versions of the <strong>"Mary the Vegan"</strong> passages. Key <span class="bg-amber-200 text-amber-900 px-1 py-0.5 rounded font-medium">trait manipulation</span> and <span class="bg-rose-200 text-rose-900 px-1 py-0.5 rounded font-medium">target behavior</span> words are highlighted.
                             </p>
                             
-                            <!-- Paradigm & Condition Selectors -->
                             <div class="space-y-4">
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-700 mb-1">Experiment Paradigm:</label>
@@ -350,9 +330,7 @@
                                 </div>
                             </div>
 
-                            <!-- SIDE-BY-SIDE CONTAINER: PASSAGE + RT VISUALIZATION CHART -->
                             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch pt-2">
-                                <!-- Left Side: Passage Display Box (7 Cols) -->
                                 <div class="lg:col-span-7 bg-slate-50 p-5 sm:p-6 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-inner flex flex-col justify-between">
                                     <div id="passage-content-text" class="space-y-2"></div>
                                     <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
@@ -364,7 +342,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Right Side: Inconsistency Effect RT Visualization (5 Cols) -->
                                 <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-inner flex flex-col justify-between">
                                     <div>
                                         <div class="flex items-center justify-between mb-2">
@@ -404,7 +381,7 @@
                         </div>
                     </div>
 
-                    <!-- ================= TAB 2: BILINGUAL CONTROL (INCLUDES DEMO 1) ================= -->
+                    <!-- ================= TAB 2: BILINGUAL CONTROL (WITH EMBEDDED SPR DEMO) ================= -->
                     <div id="tab-bilingual" class="research-tab-content space-y-8 hidden">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-blue-600 space-y-6">
                             <div>
@@ -422,19 +399,20 @@
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">1. The Bilingual Interactive Activation+ (BIA+) Model</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Formulated by Dijkstra and van Heuven (2002), the BIA+ model accounts for non-selective lexical access during visual word recognition. It separates a <em>word recognition system</em> from a <em>task/decision system</em>.
+                                        Formulated by Dijkstra and van Heuven (2002), the BIA+ model accounts for non-selective lexical access during visual word recognition. It separates a <em>word recognition system</em> (sub-lexical, lexical, and orthographic representations across languages interacting via bottom-up and lateral inhibition) from a <em>task/decision system</em> (responsible for task demands, explicit response strategies, and socio-cultural context). Crucially, the BIA+ model dictates that bilingual language activation is largely stimulus-driven and impervious to top-down voluntary control over lexical access itself, though task demands modulate output behaviors.
                                     </p>
                                 </div>
+
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">2. The Adaptive Control Hypothesis (ACH)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Proposed by Green and colleagues, this framework addresses how bilinguals adapt their executive control network based on habitual language interaction contexts.
+                                        Proposed by Green and colleagues (Abutalebi &amp; Green, 2008; Green &amp; Abutalebi, 2013), this framework addresses how bilinguals adapt their executive control network based on habitual language interaction contexts (e.g., single-language environments versus dense code-switching communities like the El Paso–Juárez border). The ACH posits that different interactional contexts engage distinct sub-components of cognitive control—such as goal maintenance, task switching, selective inhibition, and monitoring, which ultimately reshapes both domain-general and linguistic executive functioning.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- DEMO 1 RELOCATED HERE -->
+                        <!-- EMBEDDED SPR DEMO -->
                         <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-blue-600 space-y-6">
                             <div>
                                 <span class="px-2.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
@@ -445,10 +423,9 @@
                             </div>
                             
                             <p class="text-xs sm:text-sm text-slate-600 mb-4">
-                                Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
+                                Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word across all 3 trials. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
                             </p>
                             
-                            <!-- Display Box -->
                             <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl font-mono text-center min-h-[140px] flex flex-col justify-center items-center shadow-inner my-4">
                                 <div id="spr-sentence-num" class="text-xs text-orange-400 font-semibold mb-1 hidden">Sentence 1 of 3</div>
                                 <div id="spr-sentence" class="text-lg sm:text-xl tracking-wide text-slate-300 min-h-[40px] flex items-center justify-center">
@@ -470,7 +447,7 @@
                         </div>
                     </div>
 
-                    <!-- ================= TAB 3: QUANTITATIVE METHODS ================= -->
+                    <!-- ================= TAB 3: QUANTITATIVE METHODS (RESTORED) ================= -->
                     <div id="tab-quant" class="research-tab-content space-y-8 hidden">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-purple-500 space-y-6">
                             <div>
@@ -481,12 +458,28 @@
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
-                                Psycholinguistic data present complex hierarchical structures with crossed random effects of participants and items. I utilize advanced statistical techniques to ensure robust, reproducible inferences about my data.
+                                Psycholinguistic data, particularly eye-tracking fixations and discourse comprehension accuracy, present complex hierarchical structures with crossed random effects of participants and items. I utilize advanced statistical techniques to ensure robust, reproducible inferences about my data:
                             </p>
+
+                            <div class="space-y-4">
+                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Linear Mixed-Effects Models (LMMs) &amp; Generalized LMMs</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        Standard ANOVA approaches often fail to simultaneously account for subject and item variability, leading to inflated Type I error rates (Baayen et al., 2008). Using R (lme4 and lmerTest packages), I fit maximal random-effects structures to estimate fixed experimental manipulations while controlling for individual baseline reading proficiency and passage-specific characteristics.
+                                    </p>
+                                </div>
+
+                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Bayesian Cumulative Probit &amp; Credible Intervals</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        For metacognitive confidence ratings of comprehension, accuracy, and eye-movement fixation durations, I implement Bayesian regression models using Stan (via the brms package). Bayesian frameworks provide direct probabilistic interpretations of parameter estimates via Posterior Credible Intervals, avoiding dichotomous p-value thresholds and allowing the integration of informed priors based on prior psycholinguistic literature.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- ================= TAB 4: NEUROCOGNITIVE METHODS ================= -->
+                    <!-- ================= TAB 4: NEUROCOGNITIVE METHODS (RESTORED) ================= -->
                     <div id="tab-neuro" class="research-tab-content space-y-8 hidden">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-emerald-500 space-y-6">
                             <div>
@@ -497,8 +490,31 @@
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
-                                To capture the real-time temporal dynamics of reading comprehension and language control, I employ high-precision neurocognitive methods including eye-tracking (EyeLink 1000 Plus), EEG, and pupillometry.
+                                To capture the real-time temporal dynamics of reading comprehension and language control, I employ high-precision neurocognitive methods:
                             </p>
+
+                            <div class="space-y-4">
+                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Eye-Tracking During Reading (EyeLink 1000 Plus)</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        Eye-tracking provides an ecologically valid window into cognitive processing (Rayner, 1998). I measure early-stage measures (first fixation duration, gaze duration) reflecting lexical access and word recognition difficulty, alongside late-stage measures (go-past time, total reading time, regression path duration) reflecting semantic integration difficulties, repair processes, and situation model updating.
+                                    </p>
+                                </div>
+
+                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Electroencephalography (EEG) Event-Related Potentials (ERPs)</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        Complementing behavioral tracking, EEG records millisecond-resolution electrical brain activity. I analyze specific ERP components such as the N2 (sensitive to conflict and expectancy violations) and the P300b (indexing unexpected language membership categorization for code-switched sentences), to assess the comprehensiveness of bilingual word recognition models.
+                                    </p>
+                                </div>
+
+                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">3. Pupillometry &amp; Task-Evoked Pupillary Responses (TEPR)</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">
+                                        In addition to eye-tracking, pupillometry captures attentional allocation differences in language comprehension via autonomic nervous system modulation. Task-Evoked Pupillary Responses (TEPRs), driven primarily by locus coeruleus-norepinephrine (LC-NE) system activation, serve as a sensitive index of cognitive effort, processing load, and surprisal during word recognition and situation model updating (Kahneman, 1973; Beatty, 1982; Winn et al., 2018).
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -518,17 +534,19 @@
             </div>
 
             <div class="py-12 bg-slate-50">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-                    <div>
-                        <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Publications</h2>
-                        <div class="space-y-6">
-                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
-                                <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                    The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements
-                                </h3>
-                                <p class="text-sm text-slate-600 italic mb-3">
-                                    Schwartz, A., Negron, J., & <strong>Scholl, C.</strong> (2025). <em>Bilingualism: Language & Cognition</em>, 28(2), 415-426.
-                                </p>
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="space-y-12">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Publications</h2>
+                            <div class="space-y-6">
+                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
+                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                        The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements
+                                    </h3>
+                                    <p class="text-sm text-slate-600 italic mb-3">
+                                        Schwartz, A., Negron, J., & <strong>Scholl, C.</strong> (2025). <em>Bilingualism: Language & Cognition</em>, 28(2), 415-426.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -571,7 +589,7 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT CONTROLLER -->
+    <!-- INTERACTIVE JAVASCRIPT CONTROLLER -->
     <script>
         const PAGE_IDS = ['home', 'research', 'publications', 'contact'];
 
@@ -646,7 +664,7 @@
             menu.classList.toggle('hidden');
         }
 
-        // TOOL 1: Bilingual Language-Switching SPR Logic
+        // TOOL 1: Bilingual Language-Switching SPR Logic (Fixed for all 3 sentences & looping)
         const sentence1 = [
             { text: "The", lang: "English", class: "text-slate-100", baseRt: 270 },
             { text: "girl", lang: "English", class: "text-slate-100", baseRt: 300 },
@@ -656,6 +674,26 @@
             { text: "fruta", lang: "Spanish (SWITCH)", class: "text-amber-400 font-bold", baseRt: 600, isSwitch: true },
             { text: "que", lang: "Spanish", class: "text-slate-100", baseRt: 270 },
             { text: "habían.", lang: "Spanish", class: "text-slate-100", baseRt: 350 }
+        ];
+        const sentence2 = [
+            { text: "La", lang: "Spanish", class: "text-slate-100", baseRt: 270 },
+            { text: "profesora", lang: "Spanish", class: "text-slate-100", baseRt: 310 },
+            { text: "vio", lang: "Spanish", class: "text-slate-100", baseRt: 280 },
+            { text: "al", lang: "Spanish", class: "text-slate-100", baseRt: 260 },
+            { text: "student", lang: "English (SWITCH)", class: "text-orange-400 font-bold", baseRt: 670, isSwitch: true },
+            { text: "in", lang: "English", class: "text-slate-100", baseRt: 270 },
+            { text: "the", lang: "English", class: "text-slate-100", baseRt: 260 },
+            { text: "library.", lang: "English", class: "text-slate-100", baseRt: 350 }
+        ];
+        const sentence3 = [
+            { text: "El", lang: "Spanish", class: "text-slate-100", baseRt: 270 },
+            { text: "estudiante", lang: "Spanish", class: "text-slate-100", baseRt: 300 },
+            { text: "leyó", lang: "Spanish", class: "text-slate-100", baseRt: 290 },
+            { text: "el", lang: "Spanish", class: "text-slate-100", baseRt: 260 },
+            { text: "book", lang: "English (SWITCH)", class: "text-orange-400 font-bold", baseRt: 510, isSwitch: true },
+            { text: "during", lang: "English", class: "text-slate-100", baseRt: 330 },
+            { text: "the", lang: "English", class: "text-slate-100", baseRt: 280 },
+            { text: "class.", lang: "English", class: "text-slate-100", baseRt: 360 }
         ];
 
         let currentSentenceNum = 1;
@@ -668,18 +706,26 @@
         const sprNextBtn = document.getElementById('spr-next-btn');
         const sprResetBtn = document.getElementById('spr-reset-btn');
 
+        function getActiveSentence() {
+            if (currentSentenceNum === 1) return sentence1;
+            if (currentSentenceNum === 2) return sentence2;
+            return sentence3;
+        }
+
         function advanceSPR() {
+            const activeSentence = getActiveSentence();
             sprIndex++;
-            if (sprIndex < sentence1.length) {
-                const currentWord = sentence1[sprIndex];
+            if (sprIndex < activeSentence.length) {
+                const currentWord = activeSentence[sprIndex];
                 const rt = Math.round(currentWord.baseRt + (Math.random() * 40 - 20));
                 sprRtEl.innerText = rt;
                 sprLangEl.innerText = currentWord.lang;
                 sprLangEl.className = currentWord.class;
                 sprStatsEl.classList.remove('hidden');
                 sprSentenceNumEl.classList.remove('hidden');
+                sprSentenceNumEl.innerText = `Sentence ${currentSentenceNum} of 3`;
 
-                let displayHtml = sentence1.map((item, idx) => {
+                let displayHtml = activeSentence.map((item, idx) => {
                     if (idx === sprIndex) {
                         return `<span class="${item.class} underline decoration-2">${item.text}</span>`;
                     }
@@ -689,14 +735,23 @@
                 sprSentenceEl.innerHTML = displayHtml;
                 sprNextBtn.innerText = "Advance Word (Space)";
             } else {
-                sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice increased RT for the switch word.</span>';
-                sprNextBtn.innerText = "Finished";
-                sprNextBtn.disabled = true;
-                sprStatsEl.classList.add('hidden');
+                if (currentSentenceNum < 3) {
+                    currentSentenceNum++;
+                    sprIndex = -1;
+                    sprSentenceEl.innerHTML = `<span class="text-slate-400 text-base">Trial Complete! Click to start Sentence ${currentSentenceNum}.</span>`;
+                    sprNextBtn.innerText = `Start Sentence ${currentSentenceNum}`;
+                    sprStatsEl.classList.add('hidden');
+                } else {
+                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">All Trials Complete! Notice asymmetric switch costs.</span>';
+                    sprNextBtn.innerText = "Finished";
+                    sprNextBtn.disabled = true;
+                    sprStatsEl.classList.add('hidden');
+                }
             }
         }
 
         function resetSPR() {
+            currentSentenceNum = 1;
             sprIndex = -1;
             sprSentenceNumEl.classList.add('hidden');
             sprSentenceEl.innerText = "Click Start Trial to Begin";
@@ -708,39 +763,63 @@
         if (sprNextBtn) sprNextBtn.addEventListener('click', advanceSPR);
         if (sprResetBtn) sprResetBtn.addEventListener('click', resetSPR);
 
-        // TOOL 2: Experimental Passage Explorer Data & Controller
+        // TOOL 2: Experimental Passage Explorer Data & Controller (Restored Full Passages)
         const paradigmDescriptions = {
-            exp1: `In the <strong>1-Character Paradigm (Experiment 1)</strong>, character traits (e.g., <em>strict vegan</em>) are attributed directly to the primary protagonist (Mary).`,
-            exp2: `In the <strong>Secondary Protagonist Paradigm (Experiment 2)</strong>, the key trait is attributed to secondary characters (Mary's friends).`
+            exp1: `In the <strong>1-Character Paradigm (Experiment 1)</strong>, character traits (e.g., <em>strict vegan</em>) are attributed directly to the primary protagonist (Mary). Readers construct a situation model where Mary eating meat creates a cognitive conflict, yielding a robust <strong>Inconsistency Effect</strong>.`,
+            exp2: `In the <strong>Secondary Protagonist Paradigm (Experiment 2)</strong>, the key trait is attributed to secondary characters (Mary's friends), eliminating the inconsistency cost.`
         };
 
         const rtVisualizationData = {
             exp1: {
-                "eng-incon": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "+80 ms Penalty", inconWidth: "80%", conWidth: "70%", summary: "Moderate Total Reading Time slowdown at 'hamburger'." },
-                "eng-con": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "Baseline TRT", inconWidth: "80%", conWidth: "70%", summary: "Baseline reading processing when protagonist action aligns." },
-                "spa-incon": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "+240 ms Penalty", inconWidth: "96%", conWidth: "75%", summary: "Greatest Total Reading Time inconsistency effect in Spanish." },
+                "eng-incon": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "+80 ms Penalty", inconWidth: "80%", conWidth: "70%", summary: "Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English." },
+                "eng-con": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "Baseline TRT", inconWidth: "80%", conWidth: "70%", summary: "Baseline reading processing when protagonist action aligns in English." },
+                "spa-incon": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "+240 ms Penalty", inconWidth: "96%", conWidth: "75%", summary: "Greatest Total Reading Time inconsistency effect observed during Spanish processing." },
                 "spa-con": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "Baseline TRT", inconWidth: "96%", conWidth: "75%", summary: "Spanish consistent baseline." }
             },
             exp2: {
-                "eng-incon": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "+10 ms (No Penalty)", inconWidth: "71%", conWidth: "70%", summary: "Secondary protagonist trait eliminates inconsistency slowdown." },
-                "eng-con": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "Baseline TRT", inconWidth: "71%", conWidth: "70%", summary: "Equivalent processing speeds." },
-                "spa-incon": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "+15 ms (No Penalty)", inconWidth: "76%", conWidth: "75%", summary: "Secondary protagonist prevents inconsistency costs." },
+                "eng-incon": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "+10 ms (No Penalty)", inconWidth: "71%", conWidth: "70%", summary: "Secondary protagonist trait eliminates inconsistency slowdown in English." },
+                "eng-con": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "Baseline TRT", inconWidth: "71%", conWidth: "70%", summary: "Equivalent processing speeds in English." },
+                "spa-incon": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "+15 ms (No Penalty)", inconWidth: "76%", conWidth: "75%", summary: "Secondary protagonist boundary prevents Spanish inconsistency costs." },
                 "spa-con": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "Baseline TRT", inconWidth: "76%", conWidth: "75%", summary: "Spanish consistent baseline maintained." }
             }
         };
 
         const passageData = {
             exp1: {
-                "eng-incon": { badge: "Exp 1 • English Inconsistent", html: `Mary is a strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegan</span>. She orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
-                "eng-con": { badge: "Exp 1 • English Consistent", html: `Mary supports <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches</span>. She orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
-                "spa-incon": { badge: "Exp 1 • Spanish Inconsistent", html: `Mary es una <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegana</span> estricta. Pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` },
-                "spa-con": { badge: "Exp 1 • Spanish Consistent", html: `Mary defiende el <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado</span>. Pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` }
+                "eng-incon": {
+                    badge: "Exp 1 • English Inconsistent",
+                    html: `Mary is a recent college graduate. Through her college years she found herself becoming more dedicated to activism. For example, Mary is a strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegan</span> and attends <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animal rights’</span> meetings. It is noon and Mary is arriving at a local restaurant. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span> Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span>`
+                },
+                "eng-con": {
+                    badge: "Exp 1 • English Consistent",
+                    html: `Mary is a recent college graduate. Through her college years she found herself supporting <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">farmers’ rights</span> and protection of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches.</span> It is noon and Mary is arriving at a local restaurant. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span> Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span>`
+                },
+                "spa-incon": {
+                    badge: "Exp 1 • Spanish Inconsistent",
+                    html: `Mary se graduó recientemente. Por ejemplo, Mary es una <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegana</span> estricta y defiende los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animales.</span> Es el mediodía y Mary llega a un restaurante. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span> Mary también agrega <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span>`
+                },
+                "spa-con": {
+                    badge: "Exp 1 • Spanish Consistent",
+                    html: `Mary se graduó recientemente. Por ejemplo, Mary apoya a los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> Es el mediodía y Mary llega a un restaurante. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span> Mary también agrega <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span>`
+                }
             },
             exp2: {
-                "eng-incon": { badge: "Exp 2 • English Inconsistent", html: `<span class="underline decoration-utep-orange">Mary’s friends</span> are strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegans</span>. Mary orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
-                "eng-con": { badge: "Exp 2 • English Consistent", html: `<span class="underline decoration-utep-orange">Mary’s friends</span> support <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches</span>. Mary orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
-                "spa-incon": { badge: "Exp 2 • Spanish Inconsistent", html: `<span class="underline decoration-utep-orange">Los amigos de Mary</span> son <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">veganos</span>. Mary pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` },
-                "spa-con": { badge: "Exp 2 • Spanish Consistent", html: `<span class="underline decoration-utep-orange">Los amigos de Mary</span> apoyan el <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado</span>. Mary pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` }
+                "eng-incon": {
+                    badge: "Exp 2 • English Inconsistent",
+                    html: `Mary is a recent college graduate. <span class="underline decoration-utep-orange font-medium">Her friends</span> are strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegans</span> and attend <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animal rights’</span> meetings. It is noon and Mary arrives at a restaurant. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span>`
+                },
+                "eng-con": {
+                    badge: "Exp 2 • English Consistent",
+                    html: `Mary is a recent college graduate. <span class="underline decoration-utep-orange font-medium">Her friends</span> support <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">farmers’ rights</span> and <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches.</span> It is noon and Mary arrives at a restaurant. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span>`
+                },
+                "spa-incon": {
+                    badge: "Exp 2 • Spanish Inconsistent",
+                    html: `Mary se graduó recientemente. <span class="underline decoration-utep-orange font-medium">Los amigos de Mary</span> son <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">veganos</span> estrictos y defienden a los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animales.</span> Es mediodía y Mary llega a un restaurante. Mary pide: "Una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span>`
+                },
+                "spa-con": {
+                    badge: "Exp 2 • Spanish Consistent",
+                    html: `Mary se graduó recientemente. <span class="underline decoration-utep-orange font-medium">Los amigos de Mary</span> apoyan a los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> Es mediodía y Mary llega a un restaurante. Mary pide: "Una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span>`
+                }
             }
         };
 
