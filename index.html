@@ -62,7 +62,8 @@
             <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
                 <a href="#home" id="nav-home" onclick="navigateTo('home'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Home</a>
                 <a href="#research" id="nav-research" onclick="navigateTo('research'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Research Areas</a>
-                <a href="#publications" id="nav-publications" onclick="navigateTo('publications'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications &amp; Talks</a>
+                <a href="#publications" id="nav-publications" onclick="navigateTo('publications'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications & Talks</a>
+                <a href="#demos" id="nav-demos" onclick="navigateTo('demos'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition flex items-center gap-1.5">Interactive Demos</a>
                 <a href="#contact" id="nav-contact" onclick="navigateTo('contact'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Contact</a>
             </nav>
 
@@ -76,7 +77,8 @@
         <div id="mobile-menu" class="hidden md:hidden bg-utep-darkblue border-b border-slate-800 px-4 pt-2 pb-4 space-y-1">
             <a href="#home" onclick="navigateTo('home'); toggleMobileMenu(); return false;" id="mob-nav-home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Home</a>
             <a href="#research" onclick="navigateTo('research'); toggleMobileMenu(); return false;" id="mob-nav-research" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Research Areas</a>
-            <a href="#publications" onclick="navigateTo('publications'); toggleMobileMenu(); return false;" id="mob-nav-publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications &amp; Talks</a>
+            <a href="#publications" onclick="navigateTo('publications'); toggleMobileMenu(); return false;" id="mob-nav-publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications & Talks</a>
+            <a href="#demos" onclick="navigateTo('demos'); toggleMobileMenu(); return false;" id="mob-nav-demos" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Interactive Demos</a>
             <a href="#contact" onclick="navigateTo('contact'); toggleMobileMenu(); return false;" id="mob-nav-contact" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Contact</a>
         </div>
     </header>
@@ -88,7 +90,7 @@
         <!-- PAGE 1: HOME PAGE (#home) -->
         <!-- ================================================================= -->
         <section id="page-home" class="page-section active">
-            <!-- HEADER / HERO SECTION -->
+            <!-- HEADER / HERO SECTION (FULL WIDTH MATCHING MAX-W-7XL) -->
             <header id="about" class="py-12 sm:py-16 bg-gradient-to-b from-slate-100/70 to-slate-50 border-b border-slate-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12 w-full">
@@ -102,7 +104,7 @@
                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/041E42/ffffff?text=Colin+Scholl';"
                             >
                         </div>
-                        <!-- BIO & TITLE SECTION -->
+                        <!-- BIO & TITLE SECTION (EXPANDED TO FULL AVAILABLE WIDTH) -->
                         <div class="text-center md:text-left space-y-4 flex-1 w-full">
                             <div>
                                 <span class="inline-block px-3 py-1 bg-orange-100 text-utep-orange text-xs font-semibold tracking-wider uppercase rounded-full mb-2">
@@ -146,6 +148,7 @@
 
             <!-- Home Content Overview Grid -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- Core Research Areas Grid on Main Page -->
                 <div class="mb-14">
                     <div class="flex items-center justify-between mb-8">
                         <div>
@@ -175,20 +178,20 @@
                         </div>
 
                         <!-- Card 2: Bilingualism -->
-                        <div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all cursor-pointer flex flex-col justify-between group">
-                            <div>
-                                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-sliders"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                    Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
-                                </p>
-                            </div>
-                            <span class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
-                            </span>
-                        </div>
+<div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+    <div>
+        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-sliders"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
+        </p>
+    </div>
+    <span class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+        Deep dive research <i class="fa-solid fa-arrow-right"></i>
+    </span>
+</div>
 
                         <!-- Card 3: Quantitative Methods -->
                         <div onclick="navigateTo('research', 'tab-quant')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between group">
@@ -224,7 +227,7 @@
                     </div>
                 </div>
 
-                <!-- Academic Profile & Quick Highlights -->
+                 <!-- Academic Profile & Quick Highlights (Exact 7xl Width Constraints) -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-3 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
                         <h2 class="text-2xl font-bold text-slate-900 mb-4">About Colin</h2>
@@ -278,9 +281,9 @@
 
             <!-- TAB CONTENT CONTAINER -->
             <div class="py-12 bg-slate-50 min-h-[600px]">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <!-- ================= TAB 1: DISCOURSE (WITH EMBEDDED PASSAGE EXPLORER DEMO) ================= -->
+                    <!-- ================= TAB 1: DISCOURSE ================= -->
                     <div id="tab-discourse" class="research-tab-content space-y-8">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-orange space-y-6">
                             <div>
@@ -321,96 +324,9 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- EMBEDDED PASSAGE EXPLORER DEMO -->
-                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-utep-orange space-y-6">
-                            <div>
-                                <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
-                                    <i class="fa-solid fa-flask"></i> Interactive Demonstration
-                                </span>
-                                <h3 class="text-xl font-bold text-slate-900">Experimental Passage Explorer</h3>
-                                <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded font-semibold mt-1 inline-block">Bilingual Inconsistency Effect</span>
-                            </div>
-                            
-                            <p id="tool2-description" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Select a paradigm and condition below to explore the four experimental versions of the <strong>"Mary the Vegan"</strong> passages. Key <span class="bg-amber-200 text-amber-900 px-1 py-0.5 rounded font-medium">trait manipulation</span> and <span class="bg-rose-200 text-rose-900 px-1 py-0.5 rounded font-medium">target behavior</span> words are highlighted.
-                            </p>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Experiment Paradigm:</label>
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                        <button id="btn-exp1" onclick="setParadigm('exp1')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all">
-                                            1-Character Paradigm (Exp. 1)
-                                        </button>
-                                        <button id="btn-exp2" onclick="setParadigm('exp2')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all">
-                                            Secondary Protagonist Paradigm (Exp. 2)
-                                        </button>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Experimental Version / Condition:</label>
-                                    <select id="condition-select" onchange="updatePassageView()" class="w-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg p-2.5 focus:ring-utep-orange focus:border-utep-orange">
-                                        <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Meat)</option>
-                                        <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Meat)</option>
-                                        <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Carne)</option>
-                                        <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Carne)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch pt-2">
-                                <div class="lg:col-span-7 bg-slate-50 p-5 sm:p-6 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-inner flex flex-col justify-between">
-                                    <div id="passage-content-text" class="space-y-2"></div>
-                                    <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
-                                        <div class="flex items-center gap-3">
-                                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-amber-200 border border-amber-400 rounded-sm inline-block"></span> Key Trait</span>
-                                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-rose-200 border border-rose-400 rounded-sm inline-block"></span> Target Behavior</span>
-                                        </div>
-                                        <span id="passage-badge" class="font-mono text-slate-400">Exp 1 • Eng-Incon</span>
-                                    </div>
-                                </div>
-
-                                <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-inner flex flex-col justify-between">
-                                    <div>
-                                        <div class="flex items-center justify-between mb-2">
-                                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">Total Reading Time (TRT)</h4>
-                                            <span id="rt-delta-badge" class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">+80 ms Penalty</span>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500 mb-4">Target sentence reading time latency at <em>"hamburger & fries"</em> comparing Consistent vs. Inconsistent conditions.</p>
-                                        
-                                        <div class="space-y-3 font-mono text-xs pt-1">
-                                            <div>
-                                                <div class="flex justify-between text-[11px] text-slate-600 mb-1">
-                                                    <span>Inconsistent</span>
-                                                    <span id="rt-val-incon" class="font-bold text-slate-900">1,760 ms</span>
-                                                </div>
-                                                <div class="w-full bg-white rounded-full h-3 overflow-hidden border border-slate-200">
-                                                    <div id="bar-incon" class="bg-rose-500 h-3 rounded-full transition-all duration-500" style="width: 80%;"></div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="flex justify-between text-[11px] text-slate-600 mb-1">
-                                                    <span>Consistent</span>
-                                                    <span id="rt-val-con" class="font-bold text-slate-900">1,680 ms</span>
-                                                </div>
-                                                <div class="w-full bg-white rounded-full h-3 overflow-hidden border border-slate-200">
-                                                    <div id="bar-con" class="bg-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 70%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-600 leading-snug">
-                                        <span class="font-semibold text-slate-800">Finding:</span>
-                                        <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    <!-- ================= TAB 2: BILINGUAL CONTROL (WITH EMBEDDED SPR DEMO) ================= -->
+                    <!-- ================= TAB 2: BILINGUAL CONTROL ================= -->
                     <div id="tab-bilingual" class="research-tab-content space-y-8 hidden">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-blue-600 space-y-6">
                             <div>
@@ -450,40 +366,6 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- EMBEDDED SPR DEMO -->
-                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-blue-600 space-y-6">
-                            <div>
-                                <span class="px-2.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
-                                    <i class="fa-solid fa-flask"></i> Interactive Demonstration
-                                </span>
-                                <h3 class="text-xl font-bold text-slate-900">Bilingual Language-Switching Task</h3>
-                                <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded font-semibold mt-1 inline-block">Schwartz et al. (2025)</span>
-                            </div>
-                            
-                            <p class="text-xs sm:text-sm text-slate-600 mb-4">
-                                Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word across all 3 trials. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
-                            </p>
-                            
-                            <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl font-mono text-center min-h-[140px] flex flex-col justify-center items-center shadow-inner my-4">
-                                <div id="spr-sentence-num" class="text-xs text-orange-400 font-semibold mb-1 hidden">Sentence 1 of 3</div>
-                                <div id="spr-sentence" class="text-lg sm:text-xl tracking-wide text-slate-300 min-h-[40px] flex items-center justify-center">
-                                    Click Start Trial to Begin
-                                </div>
-                                <div id="spr-stats" class="text-xs text-slate-400 mt-3 hidden">
-                                    Word RT: <span id="spr-rt" class="text-amber-400 font-bold">0</span> ms | Language: <span id="spr-lang" class="font-bold">--</span>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-3 mt-4">
-                                <button id="spr-next-btn" class="flex-1 bg-blue-600 text-white py-2.5 rounded-lg font-medium text-sm hover:bg-blue-700 active:scale-[0.99] transition-all">
-                                    Start Trial (Space)
-                                </button>
-                                <button id="spr-reset-btn" class="px-5 bg-slate-200 text-slate-700 py-2.5 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">
-                                    Reset
-                                </button>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- ================= TAB 3: QUANTITATIVE METHODS ================= -->
@@ -516,13 +398,13 @@
                                 </div>
 
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">3. R Studio Workshop</h3>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. R Studio Workshop</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
                                         Over Summer 2026, I co-hosted a 5-session R Studio workshop with Jayce Owens-Boone M.A. to teach coding in R to the UTEP Psychology department faculty and staff.
-                                    </p>
-                                    <a href="r-workshop.html" class="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-purple-600 text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-purple-700 transition-colors">
-                                        <i class="fa-solid fa-folder-open"></i> R Workshop Resources <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                    </a>
+                                      </p>
+                                        <a href="r-workshop.html" class="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-emerald-600 text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-emerald-700 transition-colors">
+    <i class="fa-solid fa-folder-open"></i> R Workshop Resources <i class="fa-solid fa-arrow-right text-[10px]"></i>
+</a>
                                 </div>
                             </div>
 
@@ -569,11 +451,11 @@
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">3. Pupillometry &amp; Task-Evoked Pupillary Responses (TEPR)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        In addition to eye-tracking, pupillometry captures attentional allocation differences in language comprehension via autonomic nervous system modulation. Task-Evoked Pupillary Responses (TEPRs), driven primarily by locus coeruleus-norepinephrine (LC-NE) system activation, serve as a sensitive index of cognitive effort, processing load, and surprisal during word recognition and situation model updating (Kahneman, 1973; Beatty, 1982; Winn et al., 2018).
+                                        In addition to eye-tracking, pupillometry captures attentional allocation differences in language comprehension via autonomic nervous system modulation. Task-Evoked Pupillary Responses (TEPRs), driven primarily by locus coeruleus-norepinephrine (LC-NE) system activation, serve as a sensitive index of cognitive effort, processing load, and surprisal during word recognition and situation model updating (Kahneman, 1973; Beatty, 1982; Winn et al., 2018). In the future, I aim to quantify the immediate attentional and inhibitory demands imposed by bilingual sentence processing by measuring pupil dilations time-locked to code-switched critical words.
                                     </p>
                                     <a href="pupillometry-club.html" class="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-emerald-600 text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-emerald-700 transition-colors">
-                                        <i class="fa-solid fa-folder-open"></i> Pupillometry Club Resources <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                    </a>
+    <i class="fa-solid fa-folder-open"></i> Pupillometry Club Resources <i class="fa-solid fa-arrow-right text-[10px]"></i>
+</a>
                                 </div>
                             </div>
 
@@ -584,8 +466,7 @@
                                     <li>Beatty, J. (1982). Task-evoked pupillary responses, processing load, and the structure of processing resources. <em>Psychological Bulletin</em>, <em>91</em>(2), 276–292. https://doi.org/10.1037/0033-2909.91.2.276</li>
                                     <li>Kahneman, D. (1973). <em>Attention and effort</em>. Prentice-Hall.</li>
                                     <li>Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. <em>Psychological Bulletin</em>, <em>124</em>(3), 372–422. https://doi.org/10.1037/0033-2909.124.3.372</li>
-                                    <li>Winn, M. B., Wendt, D., Koelewijn, T., &amp; Kuchinsky, S. E. (2018). Best practices and recommendations for pupillometry in psycholinguistics and listener acoustics. <em>Trends in Hearing</em>, <em>22</em>, 1–13. https://doi.org/10.1177/2331216518818187</li>
-                                </ul>
+                                 </ul>
                             </div>
                         </div>
                     </div>
@@ -598,6 +479,7 @@
         <!-- PAGE 3: PUBLICATIONS & TALKS (#publications) -->
         <!-- ================================================================= -->
         <section id="page-publications" class="page-section">
+            <!-- CENTER-ALIGNED BANNER -->
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
                 <div class="max-w-4xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Publications & Presentations</h1>
@@ -608,10 +490,12 @@
             <div class="py-12 bg-slate-50">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="space-y-12">
+                        
                         <!-- SUBHEADER: PUBLICATIONS -->
                         <div>
                             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Publications</h2>
                             <div class="space-y-6">
+                                <!-- Publication 1 -->
                                 <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
                                     <div class="flex items-center gap-2 mb-2">
                                         <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded flex items-center gap-1">
@@ -632,6 +516,7 @@
                                     </div>
                                 </div>
                                 
+                                <!-- Publication 2 (Master's Thesis) -->
                                 <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
                                     <div class="flex items-center gap-2 mb-2">
                                         <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded flex items-center gap-1">
@@ -656,6 +541,7 @@
                         <div>
                             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Presentations</h2>
                             <div class="space-y-6">
+                                <!-- Presentation 1 -->
                                 <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
                                     <div class="flex items-center gap-2 mb-2">
                                         <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
@@ -683,6 +569,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Presentation 2 -->
                                 <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
                                     <div class="flex items-center gap-2 mb-2">
                                         <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
@@ -710,6 +597,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Presentation 3 -->
                                 <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
                                     <div class="flex items-center gap-2 mb-2">
                                         <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
@@ -737,6 +625,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Presentation 4 -->
                                 <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
                                     <div class="flex items-center gap-2 mb-2">
                                         <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
@@ -771,12 +660,164 @@
         </section>
 
         <!-- ================================================================= -->
-        <!-- PAGE 4: CONTACT PAGE (#contact) -->
+        <!-- PAGE 4: INTERACTIVE DEMOS (#demos) -->
+        <!-- ================================================================= -->
+        <section id="page-demos" class="page-section">
+            <!-- CENTER-ALIGNED BANNER -->
+            <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+                <div class="max-w-6xl mx-auto text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Interactive Psycholinguistic Demonstrations</h1>
+                    <p class="text-slate-400 text-base max-w-xl mx-auto">Demonstrations of sentence processing and psycholinguistic research paradigms.</p>
+                </div>
+            </div>
+
+            <div class="py-12 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- STACKED WIDGET LAYOUT -->
+                    <div class="grid grid-cols-1 space-y-8">
+                        
+                        <!-- TOOL 1: Bilingual Language-Switching SPR Simulator -->
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-lg font-bold text-slate-900">1. Bilingual Language-Switching Task</h3>
+                                    <span class="text-xs bg-orange-100 text-utep-orange px-2.5 py-1 rounded font-semibold">Schwartz et al. (2025)</span>
+                                </div>
+                                <p class="text-xs sm:text-sm text-slate-600 mb-4">
+                                    Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
+                                </p>
+                                <!-- Display Box -->
+                                <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl font-mono text-center min-h-[140px] flex flex-col justify-center items-center shadow-inner my-4">
+                                    <div id="spr-sentence-num" class="text-xs text-orange-400 font-semibold mb-1 hidden">Sentence 1 of 3</div>
+                                    <div id="spr-sentence" class="text-lg sm:text-xl tracking-wide text-slate-300 min-h-[40px] flex items-center justify-center">
+                                        Click Start Trial to Begin
+                                    </div>
+                                    <div id="spr-stats" class="text-xs text-slate-400 mt-3 hidden">
+                                        Word RT: <span id="spr-rt" class="text-amber-400 font-bold">0</span> ms | Language: <span id="spr-lang" class="font-bold">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mt-4">
+                                <button id="spr-next-btn" class="flex-1 bg-utep-orange text-white py-2.5 rounded-lg font-medium text-sm hover:bg-orange-600 active:scale-[0.99] transition-all">
+                                    Start Trial (Space)
+                                </button>
+                                <button id="spr-reset-btn" class="px-5 bg-slate-200 text-slate-700 py-2.5 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- TOOL 2: Experimental Passage Explorer -->
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-lg font-bold text-slate-900">2. Experimental Passage Explorer</h3>
+                                    <span class="text-xs bg-slate-200 text-slate-700 px-2.5 py-1 rounded font-semibold">Bilingual Inconsistency Effect</span>
+                                </div>
+                                
+                                <!-- Dynamic Description Text -->
+                                <p id="tool2-description" class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed">
+                                    Select a paradigm and condition below to explore the four experimental versions of the <strong>"Mary the Vegan"</strong> passages. Key <span class="bg-amber-200 text-amber-900 px-1 py-0.5 rounded font-medium">trait manipulation</span> and <span class="bg-rose-200 text-rose-900 px-1 py-0.5 rounded font-medium">target behavior</span> words are highlighted.
+                                </p>
+                                
+                                <!-- Paradigm & Condition Selectors -->
+                                <div class="space-y-4 mb-6">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Experiment Paradigm:</label>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                            <button id="btn-exp1" onclick="setParadigm('exp1')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all">
+                                                1-Character Paradigm (Exp. 1)
+                                            </button>
+                                            <button id="btn-exp2" onclick="setParadigm('exp2')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all">
+                                                Secondary Protagonist Paradigm (Exp. 2)
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Experimental Version / Condition:</label>
+                                        <select id="condition-select" onchange="updatePassageView()" class="w-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg p-2.5 focus:ring-utep-orange focus:border-utep-orange">
+                                            <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Meat)</option>
+                                            <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Meat)</option>
+                                            <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Carne)</option>
+                                            <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Carne)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- SIDE-BY-SIDE CONTAINER: PASSAGE + RT VISUALIZATION CHART -->
+                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                                    
+                                    <!-- Left Side: Passage Display Box (7 Cols) -->
+                                    <div class="lg:col-span-7 bg-white p-5 sm:p-6 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-inner flex flex-col justify-between">
+                                        <div id="passage-content-text" class="space-y-2">
+                                            <!-- Injected via JavaScript -->
+                                        </div>
+                                        
+                                        <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
+                                            <div class="flex items-center gap-3">
+                                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-amber-200 border border-amber-400 rounded-sm inline-block"></span> Key Trait</span>
+                                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-rose-200 border border-rose-400 rounded-sm inline-block"></span> Target Behavior</span>
+                                            </div>
+                                            <span id="passage-badge" class="font-mono text-slate-400">Exp 1 • Eng-Incon</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Side: Inconsistency Effect RT Visualization (5 Cols) -->
+                                    <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-slate-200 shadow-inner flex flex-col justify-between">
+                                        <div>
+                                            <div class="flex items-center justify-between mb-2">
+                                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">Total Reading Time (TRT)</h4>
+                                                <span id="rt-delta-badge" class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">+80 ms Penalty</span>
+                                            </div>
+                                            <p class="text-[11px] text-slate-500 mb-4">
+                                                Target sentence reading time latency at <em>"hamburger & fries"</em> comparing Consistent vs. Inconsistent conditions.
+                                            </p>
+                                            
+                                            <!-- Bar Chart Visual Container -->
+                                            <div class="space-y-3 font-mono text-xs pt-1">
+                                                <div>
+                                                    <div class="flex justify-between text-[11px] text-slate-600 mb-1">
+                                                        <span>Inconsistent</span>
+                                                        <span id="rt-val-incon" class="font-bold text-slate-900">1,760 ms</span>
+                                                    </div>
+                                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                                                        <div id="bar-incon" class="bg-rose-500 h-3 rounded-full transition-all duration-500" style="width: 80%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="flex justify-between text-[11px] text-slate-600 mb-1">
+                                                        <span>Consistent</span>
+                                                        <span id="rt-val-con" class="font-bold text-slate-900">1,680 ms</span>
+                                                    </div>
+                                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                                                        <div id="bar-con" class="bg-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 70%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-600 leading-snug">
+                                            <span class="font-semibold text-slate-800">Finding:</span>
+                                            <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- PAGE 5: CONTACT PAGE (#contact) -->
         <!-- ================================================================= -->
         <section id="page-contact" class="page-section">
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Contact &amp; Collaboration</h1>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Contact & Collaboration</h1>
                     <p class="text-slate-400 text-base max-w-xl mx-auto">Get in touch regarding psycholinguistic research, manuscripts, or academic inquiries.</p>
                 </div>
             </div>
@@ -854,7 +895,7 @@
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC & STATE MANAGEMENT -->
     <script>
-        const PAGE_IDS = ['home', 'research', 'publications', 'contact'];
+        const PAGE_IDS = ['home', 'research', 'publications', 'demos', 'contact'];
 
         function navigateTo(pageId, anchorId = null) {
             if (!PAGE_IDS.includes(pageId)) return;
@@ -895,39 +936,39 @@
             if (menuIcon) menuIcon.className = 'fa-solid fa-bars text-xl';
 
             if (anchorId && anchorId.startsWith('tab-')) {
-                switchResearchTab(anchorId);
-            }
+    switchResearchTab(anchorId);
+}
 
-            requestAnimationFrame(() => {
-                const anchor = anchorId && !anchorId.startsWith('tab-') ? document.getElementById(anchorId) : null;
-                if (anchor) {
-                    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            });
+requestAnimationFrame(() => {
+    const anchor = anchorId && !anchorId.startsWith('tab-') ? document.getElementById(anchorId) : null;
+    if (anchor) {
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
         }
 
         // Helper function for Research Tab switching
         const TAB_ACTIVE_STYLES = {
-            'tab-discourse': 'bg-utep-orange text-white',
-            'tab-bilingual': 'bg-blue-600 text-white',
-            'tab-quant':     'bg-purple-600 text-white',
-            'tab-neuro':     'bg-emerald-600 text-white'
-        };
+    'tab-discourse': 'bg-utep-orange text-white',
+    'tab-bilingual': 'bg-blue-600 text-white',
+    'tab-quant':     'bg-purple-600 text-white',
+    'tab-neuro':     'bg-emerald-600 text-white'
+};
 
-        function switchResearchTab(tabId) {
-            document.querySelectorAll('.research-tab-content').forEach(c => c.classList.add('hidden'));
-            document.querySelectorAll('.research-tab-btn').forEach(btn => {
-                btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
-            });
+function switchResearchTab(tabId) {
+    document.querySelectorAll('.research-tab-content').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.research-tab-btn').forEach(btn => {
+        btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
+    });
 
-            const targetContent = document.getElementById(tabId);
-            const targetBtn = document.getElementById('btn-' + tabId);
+    const targetContent = document.getElementById(tabId);
+    const targetBtn = document.getElementById('btn-' + tabId);
 
-            if (targetContent) targetContent.classList.remove('hidden');
-            if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg transition-all shadow-sm ' + (TAB_ACTIVE_STYLES[tabId] || 'bg-utep-blue text-white');
-        }
+    if (targetContent) targetContent.classList.remove('hidden');
+    if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg transition-all shadow-sm ' + (TAB_ACTIVE_STYLES[tabId] || 'bg-utep-blue text-white');
+}
 
         function navigateFromHash() {
             const hash = decodeURIComponent(window.location.hash.slice(1));
@@ -958,7 +999,7 @@
             { text: "ate", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 290 },
             { text: "all", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 260 },
             { text: "the", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
-            { text: "fruta", lang: "Spanish (LANGUAGE SWITCH!)", class: "text-amber-400 font-bold", baseRt: 600, isSwitch: true },
+            { text: "fruta", lang: "Spanish (LANGUAGE SWITCH!)", class: "text-slate-100 font-bold", baseRt: 600, isSwitch: true },
             { text: "que", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 270 },
             { text: "habían.", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 350 }
         ];
@@ -967,7 +1008,7 @@
             { text: "profesora", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 310 },
             { text: "vio", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 280 },
             { text: "al", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 260 },
-            { text: "student", lang: "English (LANGUAGE SWITCH!)", class: "text-orange-400 font-bold", baseRt: 670, isSwitch: true },
+            { text: "student", lang: "English (LANGUAGE SWITCH!)", class: "text-slate-100 font-bold", baseRt: 670, isSwitch: true },
             { text: "in", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
             { text: "the", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 260 },
             { text: "library.", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 350 }
@@ -1006,11 +1047,24 @@
                 const currentWord = activeSentence[sprIndex];
                 const rt = Math.round(currentWord.baseRt + (Math.random() * 40 - 20));
                 sprRtEl.innerText = rt;
-                sprLangEl.innerText = currentWord.lang;
-                sprLangEl.className = currentWord.class;
+                if (currentWord.isSwitch) {
+    const toLang = currentWord.lang.startsWith('English') ? 'ENGLISH' : 'SPANISH';
+    sprLangEl.innerText = toLang + ' — LANGUAGE SWITCH';
+    sprLangEl.className = toLang === 'ENGLISH' && currentSentenceNum === 3 ? "text-orange-400 font-bold" : "text-amber-400 font-bold";
+} else {
+    sprLangEl.innerText = currentWord.lang;
+    sprLangEl.className = currentWord.class;
+}
                 sprStatsEl.classList.remove('hidden');
                 sprSentenceNumEl.classList.remove('hidden');
-                sprSentenceNumEl.innerText = `Sentence ${currentSentenceNum} of 3`;
+                
+                if (currentSentenceNum === 1) {
+                    sprSentenceNumEl.innerText = "Sentence 1 of 3: English → Spanish Switch";
+                } else if (currentSentenceNum === 2) {
+                    sprSentenceNumEl.innerText = "Sentence 2 of 3: Spanish → English Switch";
+                } else {
+                    sprSentenceNumEl.innerText = "Sentence 3 of 3: Spanish → English Switch Paradigm";
+                }
 
                 let displayHtml = activeSentence.map((item, idx) => {
                     if (idx === sprIndex) {
@@ -1022,17 +1076,23 @@
                 sprSentenceEl.innerHTML = displayHtml;
                 sprNextBtn.innerText = "Advance Word (Space)";
             } else {
-                if (currentSentenceNum < 3) {
-                    currentSentenceNum++;
+                if (currentSentenceNum === 1) {
+                    currentSentenceNum = 2;
                     sprIndex = -1;
-                    sprSentenceEl.innerHTML = `<span class="text-slate-400 text-base">Trial Complete! Click to start Sentence ${currentSentenceNum}.</span>`;
-                    sprNextBtn.innerText = `Start Sentence ${currentSentenceNum}`;
+                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice increased RT for the switch word.</span>';
+                    sprNextBtn.innerText = "Start Sentence 2 (Spanish → English)";
+                    sprStatsEl.classList.add('hidden');
+                } else if (currentSentenceNum === 2) {
+                    currentSentenceNum = 3;
+                    sprIndex = -1;
+                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the largest RT spike when switching back into English (asymmetric switch cost).</span>';
+                    sprNextBtn.innerText = "Start Sentence 3 (Spanish → English)";
                     sprStatsEl.classList.add('hidden');
                 } else {
-                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">All Trials Complete! Notice asymmetric switch costs.</span>';
-                    sprNextBtn.innerText = "Finished";
+                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the asymmetric cost of switching back into English in sentence structure.</span>';
+                    sprNextBtn.innerText = "Trial Finished";
                     sprNextBtn.disabled = true;
-                    sprStatsEl.classList.add('hidden');
+                    sprNextBtn.classList.add('opacity-50');
                 }
             }
         }
@@ -1045,6 +1105,7 @@
             sprStatsEl.classList.add('hidden');
             sprNextBtn.innerText = "Start Trial (Space)";
             sprNextBtn.disabled = false;
+            sprNextBtn.classList.remove('opacity-50');
         }
 
         if (sprNextBtn) sprNextBtn.addEventListener('click', advanceSPR);
@@ -1052,9 +1113,8 @@
 
         window.addEventListener('keydown', (e) => {
             if (e.code === 'Space' && e.target === document.body) {
-                const researchPage = document.getElementById('page-research');
-                const bilingualTab = document.getElementById('tab-bilingual');
-                if (researchPage && researchPage.classList.contains('active') && bilingualTab && !bilingualTab.classList.contains('hidden') && sprNextBtn && !sprNextBtn.disabled) {
+                const demosPage = document.getElementById('page-demos');
+                if (demosPage && demosPage.classList.contains('active') && sprNextBtn && !sprNextBtn.disabled) {
                     e.preventDefault();
                     advanceSPR();
                 }
