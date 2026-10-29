@@ -63,7 +63,6 @@
                 <a href="#home" id="nav-home" onclick="navigateTo('home'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Home</a>
                 <a href="#research" id="nav-research" onclick="navigateTo('research'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Research Areas</a>
                 <a href="#publications" id="nav-publications" onclick="navigateTo('publications'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications & Talks</a>
-                <a href="#demos" id="nav-demos" onclick="navigateTo('demos'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition flex items-center gap-1.5">Interactive Demos</a>
                 <a href="#contact" id="nav-contact" onclick="navigateTo('contact'); return false;" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Contact</a>
             </nav>
 
@@ -78,7 +77,6 @@
             <a href="#home" onclick="navigateTo('home'); toggleMobileMenu(); return false;" id="mob-nav-home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Home</a>
             <a href="#research" onclick="navigateTo('research'); toggleMobileMenu(); return false;" id="mob-nav-research" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Research Areas</a>
             <a href="#publications" onclick="navigateTo('publications'); toggleMobileMenu(); return false;" id="mob-nav-publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications & Talks</a>
-            <a href="#demos" onclick="navigateTo('demos'); toggleMobileMenu(); return false;" id="mob-nav-demos" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Interactive Demos</a>
             <a href="#contact" onclick="navigateTo('contact'); toggleMobileMenu(); return false;" id="mob-nav-contact" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Contact</a>
         </div>
     </header>
@@ -90,7 +88,7 @@
         <!-- PAGE 1: HOME PAGE (#home) -->
         <!-- ================================================================= -->
         <section id="page-home" class="page-section active">
-            <!-- HEADER / HERO SECTION (FULL WIDTH MATCHING MAX-W-7XL) -->
+            <!-- HEADER / HERO SECTION -->
             <header id="about" class="py-12 sm:py-16 bg-gradient-to-b from-slate-100/70 to-slate-50 border-b border-slate-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12 w-full">
@@ -104,7 +102,7 @@
                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/041E42/ffffff?text=Colin+Scholl';"
                             >
                         </div>
-                        <!-- BIO & TITLE SECTION (EXPANDED TO FULL AVAILABLE WIDTH) -->
+                        <!-- BIO & TITLE SECTION -->
                         <div class="text-center md:text-left space-y-4 flex-1 w-full">
                             <div>
                                 <span class="inline-block px-3 py-1 bg-orange-100 text-utep-orange text-xs font-semibold tracking-wider uppercase rounded-full mb-2">
@@ -148,7 +146,6 @@
 
             <!-- Home Content Overview Grid -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <!-- Core Research Areas Grid on Main Page -->
                 <div class="mb-14">
                     <div class="flex items-center justify-between mb-8">
                         <div>
@@ -178,20 +175,20 @@
                         </div>
 
                         <!-- Card 2: Bilingualism -->
-<div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all cursor-pointer flex flex-col justify-between group">
-    <div>
-        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-sliders"></i>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
-        <p class="text-sm text-slate-600 leading-relaxed mb-4">
-            Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
-        </p>
-    </div>
-    <span class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-        Deep dive research <i class="fa-solid fa-arrow-right"></i>
-    </span>
-</div>
+                        <div onclick="navigateTo('research', 'tab-bilingual')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500/50 transition-all cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-sliders"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Bilingual Language Control</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                    Investigating executive inhibition, language switching costs, and non-target language suppression in comprehension.
+                                </p>
+                            </div>
+                            <span class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Deep dive research <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
 
                         <!-- Card 3: Quantitative Methods -->
                         <div onclick="navigateTo('research', 'tab-quant')" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between group">
@@ -227,7 +224,7 @@
                     </div>
                 </div>
 
-                 <!-- Academic Profile & Quick Highlights (Exact 7xl Width Constraints) -->
+                <!-- Academic Profile & Quick Highlights -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-3 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
                         <h2 class="text-2xl font-bold text-slate-900 mb-4">About Colin</h2>
@@ -281,9 +278,9 @@
 
             <!-- TAB CONTENT CONTAINER -->
             <div class="py-12 bg-slate-50 min-h-[600px]">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-                    <!-- ================= TAB 1: DISCOURSE ================= -->
+                    <!-- ================= TAB 1: DISCOURSE (INCLUDES DEMO 2) ================= -->
                     <div id="tab-discourse" class="research-tab-content space-y-8">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-utep-orange space-y-6">
                             <div>
@@ -312,21 +309,102 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Footnote References -->
-                            <div class="pt-4 border-t border-slate-200">
-                                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
-                                <ul class="text-xs text-slate-600 space-y-1.5 italic">
-                                    <li>Kintsch, W. (1988). The role of knowledge in discourse comprehension: A construction-integration model. <em>Psychological Review</em>, <em>95</em>(2), 163–182. https://doi.org/10.1037/0033-295X.95.2.163</li>
-                                    <li>Kintsch, W. (1998). <em>Comprehension: A paradigm for cognition</em>. Cambridge University Press.</li>
-                                    <li>Scholl, C., &amp; Schwartz, A. (2026). Bilingual inconsistency effect [Conference presentation]. Society for Text and Discourse Conference, Charlotte, NC.</li>
-                                    <li>van den Broek, P., Young, M. J., Tzeng, Y., &amp; Linderholm, T. (1999). The landscape model of reading: Inferences and the on-line construction of a memory representation. In H. van Oostendorp &amp; S. R. Goldman (Eds.), <em>The construction of mental representations during reading</em> (pp. 71–98). Lawrence Erlbaum Associates.</li>
-                                </ul>
+                        <!-- DEMO 2 RELOCATED HERE -->
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-utep-orange space-y-6">
+                            <div>
+                                <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
+                                    <i class="fa-solid fa-flask"></i> Interactive Demonstration
+                                </span>
+                                <h3 class="text-xl font-bold text-slate-900">Experimental Passage Explorer</h3>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-semibold mt-1 inline-block">Bilingual Inconsistency Effect</span>
+                            </div>
+                            
+                            <!-- Dynamic Description Text -->
+                            <p id="tool2-description" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Select a paradigm and condition below to explore the four experimental versions of the <strong>"Mary the Vegan"</strong> passages. Key <span class="bg-amber-200 text-amber-900 px-1 py-0.5 rounded font-medium">trait manipulation</span> and <span class="bg-rose-200 text-rose-900 px-1 py-0.5 rounded font-medium">target behavior</span> words are highlighted.
+                            </p>
+                            
+                            <!-- Paradigm & Condition Selectors -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Experiment Paradigm:</label>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                        <button id="btn-exp1" onclick="setParadigm('exp1')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all">
+                                            1-Character Paradigm (Exp. 1)
+                                        </button>
+                                        <button id="btn-exp2" onclick="setParadigm('exp2')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all">
+                                            Secondary Protagonist Paradigm (Exp. 2)
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Experimental Version / Condition:</label>
+                                    <select id="condition-select" onchange="updatePassageView()" class="w-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg p-2.5 focus:ring-utep-orange focus:border-utep-orange">
+                                        <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Meat)</option>
+                                        <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Meat)</option>
+                                        <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Carne)</option>
+                                        <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Carne)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- SIDE-BY-SIDE CONTAINER: PASSAGE + RT VISUALIZATION CHART -->
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch pt-2">
+                                <!-- Left Side: Passage Display Box (7 Cols) -->
+                                <div class="lg:col-span-7 bg-slate-50 p-5 sm:p-6 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-inner flex flex-col justify-between">
+                                    <div id="passage-content-text" class="space-y-2"></div>
+                                    <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
+                                        <div class="flex items-center gap-3">
+                                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-amber-200 border border-amber-400 rounded-sm inline-block"></span> Key Trait</span>
+                                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-rose-200 border border-rose-400 rounded-sm inline-block"></span> Target Behavior</span>
+                                        </div>
+                                        <span id="passage-badge" class="font-mono text-slate-400">Exp 1 • Eng-Incon</span>
+                                    </div>
+                                </div>
+
+                                <!-- Right Side: Inconsistency Effect RT Visualization (5 Cols) -->
+                                <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-inner flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">Total Reading Time (TRT)</h4>
+                                            <span id="rt-delta-badge" class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">+80 ms Penalty</span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500 mb-4">Target sentence reading time latency at <em>"hamburger & fries"</em> comparing Consistent vs. Inconsistent conditions.</p>
+                                        
+                                        <div class="space-y-3 font-mono text-xs pt-1">
+                                            <div>
+                                                <div class="flex justify-between text-[11px] text-slate-600 mb-1">
+                                                    <span>Inconsistent</span>
+                                                    <span id="rt-val-incon" class="font-bold text-slate-900">1,760 ms</span>
+                                                </div>
+                                                <div class="w-full bg-white rounded-full h-3 overflow-hidden border border-slate-200">
+                                                    <div id="bar-incon" class="bg-rose-500 h-3 rounded-full transition-all duration-500" style="width: 80%;"></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex justify-between text-[11px] text-slate-600 mb-1">
+                                                    <span>Consistent</span>
+                                                    <span id="rt-val-con" class="font-bold text-slate-900">1,680 ms</span>
+                                                </div>
+                                                <div class="w-full bg-white rounded-full h-3 overflow-hidden border border-slate-200">
+                                                    <div id="bar-con" class="bg-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 70%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-600 leading-snug">
+                                        <span class="font-semibold text-slate-800">Finding:</span>
+                                        <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- ================= TAB 2: BILINGUAL CONTROL ================= -->
+                    <!-- ================= TAB 2: BILINGUAL CONTROL (INCLUDES DEMO 1) ================= -->
                     <div id="tab-bilingual" class="research-tab-content space-y-8 hidden">
                         <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-blue-600 space-y-6">
                             <div>
@@ -344,26 +422,50 @@
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">1. The Bilingual Interactive Activation+ (BIA+) Model</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Formulated by Dijkstra and van Heuven (2002), the BIA+ model accounts for non-selective lexical access during visual word recognition. It separates a <em>word recognition system</em> (sub-lexical, lexical, and orthographic representations across languages interacting via bottom-up and lateral inhibition) from a <em>task/decision system</em> (responsible for task demands, explicit response strategies, and socio-cultural context). Crucially, the BIA+ model dictates that bilingual language activation is largely stimulus-driven and impervious to top-down voluntary control over lexical access itself, though task demands modulate output behaviors.
+                                        Formulated by Dijkstra and van Heuven (2002), the BIA+ model accounts for non-selective lexical access during visual word recognition. It separates a <em>word recognition system</em> from a <em>task/decision system</em>.
                                     </p>
                                 </div>
-
                                 <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
                                     <h3 class="text-base font-semibold text-slate-900 mb-2">2. The Adaptive Control Hypothesis (ACH)</h3>
                                     <p class="text-sm text-slate-700 leading-relaxed">
-                                        Proposed by Green and colleagues (Abutalebi &amp; Green, 2008; Green &amp; Abutalebi, 2013), this framework addresses how bilinguals adapt their executive control network based on habitual language interaction contexts (e.g., single-language environments versus dense code-switching communities like the El Paso–Juárez border). The ACH posits that different interactional contexts engage distinct sub-components of cognitive control—such as goal maintenance, task switching, selective inhibition, and monitoring, which ultimately reshapes both domain-general and linguistic executive functioning.
+                                        Proposed by Green and colleagues, this framework addresses how bilinguals adapt their executive control network based on habitual language interaction contexts.
                                     </p>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Footnote References -->
-                            <div class="pt-4 border-t border-slate-200">
-                                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
-                                <ul class="text-xs text-slate-600 space-y-1.5 italic">
-                                    <li>Abutalebi, J., &amp; Green, D. W. (2008). Control mechanisms in bilingual language production: Neural evidence from language switching studies. <em>Language and Cognitive Processes</em>, <em>23</em>(4), 557–582. https://doi.org/10.1080/01690960801920675</li>
-                                    <li>Dijkstra, T., &amp; van Heuven, W. J. B. (2002). The architecture of the bilingual word recognition system: From BIA to BIA+. <em>Bilingualism: Language and Cognition</em>, <em>5</em>(3), 175–197.</li>
-                                    <li>Green, D. W., &amp; Abutalebi, J. (2013). Language control in bilinguals: The adaptive control hypothesis. <em>Journal of Cognitive Psychology</em>, <em>25</em>(5), 515–530. https://doi.org/10.1080/20445911.2013.795784</li>
-                                </ul>
+                        <!-- DEMO 1 RELOCATED HERE -->
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-blue-600 space-y-6">
+                            <div>
+                                <span class="px-2.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded inline-flex items-center gap-1 mb-2">
+                                    <i class="fa-solid fa-flask"></i> Interactive Demonstration
+                                </span>
+                                <h3 class="text-xl font-bold text-slate-900">Bilingual Language-Switching Task</h3>
+                                <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded font-semibold mt-1 inline-block">Schwartz et al. (2025)</span>
+                            </div>
+                            
+                            <p class="text-xs sm:text-sm text-slate-600 mb-4">
+                                Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
+                            </p>
+                            
+                            <!-- Display Box -->
+                            <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl font-mono text-center min-h-[140px] flex flex-col justify-center items-center shadow-inner my-4">
+                                <div id="spr-sentence-num" class="text-xs text-orange-400 font-semibold mb-1 hidden">Sentence 1 of 3</div>
+                                <div id="spr-sentence" class="text-lg sm:text-xl tracking-wide text-slate-300 min-h-[40px] flex items-center justify-center">
+                                    Click Start Trial to Begin
+                                </div>
+                                <div id="spr-stats" class="text-xs text-slate-400 mt-3 hidden">
+                                    Word RT: <span id="spr-rt" class="text-amber-400 font-bold">0</span> ms | Language: <span id="spr-lang" class="font-bold">--</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 mt-4">
+                                <button id="spr-next-btn" class="flex-1 bg-blue-600 text-white py-2.5 rounded-lg font-medium text-sm hover:bg-blue-700 active:scale-[0.99] transition-all">
+                                    Start Trial (Space)
+                                </button>
+                                <button id="spr-reset-btn" class="px-5 bg-slate-200 text-slate-700 py-2.5 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">
+                                    Reset
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -379,43 +481,8 @@
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
-                                Psycholinguistic data, particularly eye-tracking fixations and discourse comprehension accuracy, present complex hierarchical structures with crossed random effects of participants and items. I utilize advanced statistical techniques to ensure robust, reproducible inferences about my data:
+                                Psycholinguistic data present complex hierarchical structures with crossed random effects of participants and items. I utilize advanced statistical techniques to ensure robust, reproducible inferences about my data.
                             </p>
-
-                            <div class="space-y-4">
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Linear Mixed-Effects Models (LMMs) &amp; Generalized LMMs</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        Standard ANOVA approaches often fail to simultaneously account for subject and item variability, leading to inflated Type I error rates (Baayen et al., 2008). Using R (lme4 and lmerTest packages), I fit maximal random-effects structures to estimate fixed experimental manipulations while controlling for individual baseline reading proficiency and passage-specific characteristics.
-                                    </p>
-                                </div>
-
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Bayesian Cumulative Probit &amp; Credible Intervals</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        For metacognitive confidence ratings of comprehension, accuracy, and eye-movement fixation durations, I implement Bayesian regression models using Stan (via the brms package). Bayesian frameworks provide direct probabilistic interpretations of parameter estimates via Posterior Credible Intervals, avoiding dichotomous p-value thresholds and allowing the integration of informed priors based on prior psycholinguistic literature.
-                                    </p>
-                                </div>
-
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. R Studio Workshop</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        Over Summer 2026, I co-hosted a 5-session R Studio workshop with Jayce Owens-Boone M.A. to teach coding in R to the UTEP Psychology department faculty and staff.
-                                      </p>
-                                        <a href="r-workshop.html" class="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-emerald-600 text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-emerald-700 transition-colors">
-    <i class="fa-solid fa-folder-open"></i> R Workshop Resources <i class="fa-solid fa-arrow-right text-[10px]"></i>
-</a>
-                                </div>
-                            </div>
-
-                            <!-- Footnote References -->
-                            <div class="pt-4 border-t border-slate-200">
-                                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
-                                <ul class="text-xs text-slate-600 space-y-1.5 italic">
-                                    <li>Baayen, R. H., Davidson, D. J., &amp; Bates, D. (2008). Mixed-effects modeling with crossed random effects for subjects and items. <em>Journal of Memory and Language</em>, <em>59</em>(4), 390–412. https://doi.org/10.1016/j.jml.2007.12.005</li>
-                                    <li>Bürkner, P.-C. (2017). brms: An R package for Bayesian multilevel models using Stan. <em>Journal of Statistical Software</em>, <em>80</em>(1), 1–28. https://doi.org/10.18637/jss.v080.i01</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 
@@ -430,44 +497,8 @@
                             </div>
                             
                             <p class="text-slate-700 leading-relaxed">
-                                To capture the real-time temporal dynamics of reading comprehension and language control, I employ high-precision neurocognitive methods:
+                                To capture the real-time temporal dynamics of reading comprehension and language control, I employ high-precision neurocognitive methods including eye-tracking (EyeLink 1000 Plus), EEG, and pupillometry.
                             </p>
-
-                            <div class="space-y-4">
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">1. Eye-Tracking During Reading (EyeLink 1000 Plus)</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        Eye-tracking provides an ecologically valid window into cognitive processing (Rayner, 1998). I measure early-stage measures (first fixation duration, gaze duration) reflecting lexical access and word recognition difficulty, alongside late-stage measures (go-past time, total reading time, regression path duration) reflecting semantic integration difficulties, repair processes, and situation model updating.
-                                    </p>
-                                </div>
-
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">2. Electroencephalography (EEG) Event-Related Potentials (ERPs)</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        Complementing behavioral tracking, EEG records millisecond-resolution electrical brain activity. I analyze specific ERP components such as the N2 (sensitive to conflict and expectancy violations) and the P300b (indexing unexpected language membership categorization for code-switched sentences), to assess the comprehensiveness of bilingual word recognition models.
-                                    </p>
-                                </div>
-
-                                <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                    <h3 class="text-base font-semibold text-slate-900 mb-2">3. Pupillometry &amp; Task-Evoked Pupillary Responses (TEPR)</h3>
-                                    <p class="text-sm text-slate-700 leading-relaxed">
-                                        In addition to eye-tracking, pupillometry captures attentional allocation differences in language comprehension via autonomic nervous system modulation. Task-Evoked Pupillary Responses (TEPRs), driven primarily by locus coeruleus-norepinephrine (LC-NE) system activation, serve as a sensitive index of cognitive effort, processing load, and surprisal during word recognition and situation model updating (Kahneman, 1973; Beatty, 1982; Winn et al., 2018). In the future, I aim to quantify the immediate attentional and inhibitory demands imposed by bilingual sentence processing by measuring pupil dilations time-locked to code-switched critical words.
-                                    </p>
-                                    <a href="pupillometry-club.html" class="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-emerald-600 text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-emerald-700 transition-colors">
-    <i class="fa-solid fa-folder-open"></i> Pupillometry Club Resources <i class="fa-solid fa-arrow-right text-[10px]"></i>
-</a>
-                                </div>
-                            </div>
-
-                            <!-- Footnote References -->
-                            <div class="pt-4 border-t border-slate-200">
-                                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">References</h4>
-                                <ul class="text-xs text-slate-600 space-y-1.5 italic">
-                                    <li>Beatty, J. (1982). Task-evoked pupillary responses, processing load, and the structure of processing resources. <em>Psychological Bulletin</em>, <em>91</em>(2), 276–292. https://doi.org/10.1037/0033-2909.91.2.276</li>
-                                    <li>Kahneman, D. (1973). <em>Attention and effort</em>. Prentice-Hall.</li>
-                                    <li>Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. <em>Psychological Bulletin</em>, <em>124</em>(3), 372–422. https://doi.org/10.1037/0033-2909.124.3.372</li>
-                                 </ul>
-                            </div>
                         </div>
                     </div>
 
@@ -479,7 +510,6 @@
         <!-- PAGE 3: PUBLICATIONS & TALKS (#publications) -->
         <!-- ================================================================= -->
         <section id="page-publications" class="page-section">
-            <!-- CENTER-ALIGNED BANNER -->
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
                 <div class="max-w-4xl mx-auto text-center">
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Publications & Presentations</h1>
@@ -488,170 +518,17 @@
             </div>
 
             <div class="py-12 bg-slate-50">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="space-y-12">
-                        
-                        <!-- SUBHEADER: PUBLICATIONS -->
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Publications</h2>
-                            <div class="space-y-6">
-                                <!-- Publication 1 -->
-                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded flex items-center gap-1">
-                                            <i class="fa-solid fa-book-open"></i> Journal Article
-                                        </span>
-                                        <span class="text-xs text-slate-400">2025</span>
-                                    </div>
-                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                        The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements
-                                    </h3>
-                                    <p class="text-sm text-slate-600 italic mb-3">
-                                        Schwartz, A., Negron, J., & <strong>Scholl, C.</strong> (2025). <em>Bilingualism: Language & Cognition</em>, 28(2), 415-426.
-                                    </p>
-                                    <div class="flex gap-4 text-xs font-medium text-utep-orange">
-                                        <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/271ED4EC4B49BD3A16A355CD739E9CEB/S1366728924000567a.pdf/recruitment_of_global_language_inhibitory_control_and_cognitivegeneral_control_mechanisms_in_comprehending_language_switches_evidence_from_eye_movements.pdf" class="hover:underline" target="_blank"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
-                                        <a href="https://osf.io/m4ay2/overview" class="hover:underline" target="_blank"><i class="fa-solid fa-database mr-1"></i> Data & Code (OSF)</a>
-                                        <a href="http://doi.org/10.1017/S1366728924000567" class="hover:underline" target="_blank"><i class="fa-solid fa-link mr-1"></i> DOI</a>
-                                    </div>
-                                </div>
-                                
-                                <!-- Publication 2 (Master's Thesis) -->
-                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="px-2.5 py-0.5 bg-blue-100 text-utep-blue text-xs font-semibold rounded flex items-center gap-1">
-                                            <i class="fa-solid fa-graduation-cap"></i> Master's Thesis
-                                        </span>
-                                        <span class="text-xs text-slate-400">2025</span>
-                                    </div>
-                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                        Bilingual Inconsistency Effect
-                                    </h3>
-                                    <p class="text-sm text-slate-600 italic mb-3">
-                                        <strong>Scholl, C.</strong> (2025). <em>Bilingual Inconsistency Effect</em> (Master's thesis, University of Texas at El Paso).
-                                    </p>
-                                    <div class="flex gap-4 text-xs font-medium text-utep-orange">
-                                        <a href="https://share.google/doNwVilU4SPUU7y62" class="hover:underline" target="_blank"><i class="fa-solid fa-file-pdf mr-1"></i> PDF</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- SUBHEADER: PRESENTATIONS -->
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Presentations</h2>
-                            <div class="space-y-6">
-                                <!-- Presentation 1 -->
-                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
-                                            <i class="fa-solid fa-chalkboard-user"></i> Quant Talk
-                                        </span>
-                                        <span class="text-xs text-slate-400">2026</span>
-                                    </div>
-                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                        Modelling Ordinal Data
-                                    </h3>
-                                    <p class="text-sm text-slate-600 italic mb-4">
-                                        <strong>Scholl, C.</strong> (2026). UTEP Psychology Department Colloquium.
-                                    </p>
-                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
-                                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
-                                            <iframe 
-                                                src="https://docs.google.com/presentation/d/e/2PACX-1vRdbQK_A7KgRo1Gdr93U-swfooQmrO7yAVkA03fAuzH9C24c5lOGyDXVRX1pQbxEA/pubembed?start=true&loop=false&delayms=3000" 
-                                                frameborder="0" 
-                                                class="absolute top-0 left-0 w-full h-full rounded-lg" 
-                                                allowfullscreen="true" 
-                                                mozallowfullscreen="true" 
-                                                webkitallowfullscreen="true">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Presentation 2 -->
-                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
-                                            <i class="fa-solid fa-person-chalkboard"></i> Conference Presentation
-                                        </span>
-                                        <span class="text-xs text-slate-400">2026</span>
-                                    </div>
-                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                        Bilingual Inconsistency Effect
-                                    </h3>
-                                    <p class="text-sm text-slate-600 italic mb-4">
-                                        <strong>Scholl, C.</strong>, & Schwartz, A. (2026). Society for Text and Discourse Conference. Charlotte, NC.
-                                    </p>
-                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
-                                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
-                                            <iframe 
-                                                src="https://docs.google.com/presentation/d/e/2PACX-1vTl2NEhgQTICNt-FZXMKuDKxQzHi-QqdlLnzCjhKRfOGsajYipOewG1uDloQseLLg/pubembed?start=true&loop=false&delayms=3000" 
-                                                frameborder="0" 
-                                                class="absolute top-0 left-0 w-full h-full rounded-lg" 
-                                                allowfullscreen="true" 
-                                                mozallowfullscreen="true" 
-                                                webkitallowfullscreen="true">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Presentation 3 -->
-                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
-                                            <i class="fa-solid fa-person-chalkboard"></i> Conference Presentation
-                                        </span>
-                                        <span class="text-xs text-slate-400">2026</span>
-                                    </div>
-                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                        Survey of Academic Language Experiences (SALE)
-                                    </h3>
-                                    <p class="text-sm text-slate-600 italic mb-4">
-                                        Huynh, A., <strong>Scholl, C.</strong>, Morera, O., & Schwartz, A. (2026). Survey of Academic Language Experiences (SALE). BRIDGES Symposium, NYC, NY.
-                                    </p>
-                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
-                                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
-                                            <iframe 
-                                                src="https://docs.google.com/presentation/d/e/2PACX-1vR3SAp8qQUesZXlqmS7kiI4wVSR-AMWdd0QXRMr0c5_SPSeb9uSODsezIneJgFsYA/pubembed?start=true&loop=false&delayms=3000" 
-                                                frameborder="0" 
-                                                class="absolute top-0 left-0 w-full h-full rounded-lg" 
-                                                allowfullscreen="true" 
-                                                mozallowfullscreen="true" 
-                                                webkitallowfullscreen="true">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Presentation 4 -->
-                                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-orange">
-                                    <div class="flex items-center gap-2 mb-2">
-                                        <span class="px-2.5 py-0.5 bg-orange-100 text-utep-orange text-xs font-semibold rounded flex items-center gap-1">
-                                            <i class="fa-solid fa-bolt"></i> Data Blitz
-                                        </span>
-                                        <span class="text-xs text-slate-400">2026</span>
-                                    </div>
-                                    <h3 class="text-base font-semibold text-slate-900 mb-1">
-                                        Foreign Language Anxiety-General Scale (FLAGS)
-                                    </h3>
-                                    <p class="text-sm text-slate-600 italic mb-4">
-                                        <strong>Scholl, C.</strong> (2026). Foreign Language Anxiety-General Scale (FLAGS). Graduate Student Data Blitz, El Paso, TX.
-                                    </p>
-                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
-                                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
-                                            <iframe 
-                                                src="https://docs.google.com/presentation/d/e/2PACX-1vTm7Fwg8WnXP9TwCqlLU5kXkG23QpZdHMjDHGCF7znVUV5EvG7Yzx1NuXwcO3xm-g/pubembed?start=true&loop=false&delayms=3000" 
-                                                frameborder="0" 
-                                                class="absolute top-0 left-0 w-full h-full rounded-lg" 
-                                                allowfullscreen="true" 
-                                                mozallowfullscreen="true" 
-                                                webkitallowfullscreen="true">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Publications</h2>
+                        <div class="space-y-6">
+                            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-utep-blue">
+                                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                                    The recruitment of global language inhibitory control and cognitive-general control mechanisms in comprehending language switches: Evidence from eye movements
+                                </h3>
+                                <p class="text-sm text-slate-600 italic mb-3">
+                                    Schwartz, A., Negron, J., & <strong>Scholl, C.</strong> (2025). <em>Bilingualism: Language & Cognition</em>, 28(2), 415-426.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -660,159 +537,7 @@
         </section>
 
         <!-- ================================================================= -->
-        <!-- PAGE 4: INTERACTIVE DEMOS (#demos) -->
-        <!-- ================================================================= -->
-        <section id="page-demos" class="page-section">
-            <!-- CENTER-ALIGNED BANNER -->
-            <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
-                <div class="max-w-6xl mx-auto text-center">
-                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Interactive Psycholinguistic Demonstrations</h1>
-                    <p class="text-slate-400 text-base max-w-xl mx-auto">Demonstrations of sentence processing and psycholinguistic research paradigms.</p>
-                </div>
-            </div>
-
-            <div class="py-12 bg-white">
-                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <!-- STACKED WIDGET LAYOUT -->
-                    <div class="grid grid-cols-1 space-y-8">
-                        
-                        <!-- TOOL 1: Bilingual Language-Switching SPR Simulator -->
-                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between mb-4">
-                                    <h3 class="text-lg font-bold text-slate-900">1. Bilingual Language-Switching Task</h3>
-                                    <span class="text-xs bg-orange-100 text-utep-orange px-2.5 py-1 rounded font-semibold">Schwartz et al. (2025)</span>
-                                </div>
-                                <p class="text-xs sm:text-sm text-slate-600 mb-4">
-                                    Click <strong>Start Trial</strong> or press <strong>SPACEBAR</strong> to advance word-by-word. Notice how reaction times (<span class="text-amber-600 font-bold">RT</span>) spike at language-switch words.
-                                </p>
-                                <!-- Display Box -->
-                                <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-xl font-mono text-center min-h-[140px] flex flex-col justify-center items-center shadow-inner my-4">
-                                    <div id="spr-sentence-num" class="text-xs text-orange-400 font-semibold mb-1 hidden">Sentence 1 of 3</div>
-                                    <div id="spr-sentence" class="text-lg sm:text-xl tracking-wide text-slate-300 min-h-[40px] flex items-center justify-center">
-                                        Click Start Trial to Begin
-                                    </div>
-                                    <div id="spr-stats" class="text-xs text-slate-400 mt-3 hidden">
-                                        Word RT: <span id="spr-rt" class="text-amber-400 font-bold">0</span> ms | Language: <span id="spr-lang" class="font-bold">--</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-3 mt-4">
-                                <button id="spr-next-btn" class="flex-1 bg-utep-orange text-white py-2.5 rounded-lg font-medium text-sm hover:bg-orange-600 active:scale-[0.99] transition-all">
-                                    Start Trial (Space)
-                                </button>
-                                <button id="spr-reset-btn" class="px-5 bg-slate-200 text-slate-700 py-2.5 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">
-                                    Reset
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- TOOL 2: Experimental Passage Explorer -->
-                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between mb-3">
-                                    <h3 class="text-lg font-bold text-slate-900">2. Experimental Passage Explorer</h3>
-                                    <span class="text-xs bg-slate-200 text-slate-700 px-2.5 py-1 rounded font-semibold">Bilingual Inconsistency Effect</span>
-                                </div>
-                                
-                                <!-- Dynamic Description Text -->
-                                <p id="tool2-description" class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed">
-                                    Select a paradigm and condition below to explore the four experimental versions of the <strong>"Mary the Vegan"</strong> passages. Key <span class="bg-amber-200 text-amber-900 px-1 py-0.5 rounded font-medium">trait manipulation</span> and <span class="bg-rose-200 text-rose-900 px-1 py-0.5 rounded font-medium">target behavior</span> words are highlighted.
-                                </p>
-                                
-                                <!-- Paradigm & Condition Selectors -->
-                                <div class="space-y-4 mb-6">
-                                    <div>
-                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Experiment Paradigm:</label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                            <button id="btn-exp1" onclick="setParadigm('exp1')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-utep-orange bg-utep-orange text-white shadow-sm transition-all">
-                                                1-Character Paradigm (Exp. 1)
-                                            </button>
-                                            <button id="btn-exp2" onclick="setParadigm('exp2')" class="py-2 px-3 text-xs font-semibold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition-all">
-                                                Secondary Protagonist Paradigm (Exp. 2)
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Experimental Version / Condition:</label>
-                                        <select id="condition-select" onchange="updatePassageView()" class="w-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm rounded-lg p-2.5 focus:ring-utep-orange focus:border-utep-orange">
-                                            <option value="eng-incon">English — Inconsistent (Trait: Vegan | Behavior: Meat)</option>
-                                            <option value="eng-con">English — Consistent (Trait: Cattle Supporter | Behavior: Meat)</option>
-                                            <option value="spa-incon">Spanish — Inconsistent (Trait: Vegana | Behavior: Carne)</option>
-                                            <option value="spa-con">Spanish — Consistent (Trait: Ganaderos | Behavior: Carne)</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- SIDE-BY-SIDE CONTAINER: PASSAGE + RT VISUALIZATION CHART -->
-                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                                    
-                                    <!-- Left Side: Passage Display Box (7 Cols) -->
-                                    <div class="lg:col-span-7 bg-white p-5 sm:p-6 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-inner flex flex-col justify-between">
-                                        <div id="passage-content-text" class="space-y-2">
-                                            <!-- Injected via JavaScript -->
-                                        </div>
-                                        
-                                        <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500">
-                                            <div class="flex items-center gap-3">
-                                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-amber-200 border border-amber-400 rounded-sm inline-block"></span> Key Trait</span>
-                                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 bg-rose-200 border border-rose-400 rounded-sm inline-block"></span> Target Behavior</span>
-                                            </div>
-                                            <span id="passage-badge" class="font-mono text-slate-400">Exp 1 • Eng-Incon</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Right Side: Inconsistency Effect RT Visualization (5 Cols) -->
-                                    <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-slate-200 shadow-inner flex flex-col justify-between">
-                                        <div>
-                                            <div class="flex items-center justify-between mb-2">
-                                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">Total Reading Time (TRT)</h4>
-                                                <span id="rt-delta-badge" class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">+80 ms Penalty</span>
-                                            </div>
-                                            <p class="text-[11px] text-slate-500 mb-4">
-                                                Target sentence reading time latency at <em>"hamburger & fries"</em> comparing Consistent vs. Inconsistent conditions.
-                                            </p>
-                                            
-                                            <!-- Bar Chart Visual Container -->
-                                            <div class="space-y-3 font-mono text-xs pt-1">
-                                                <div>
-                                                    <div class="flex justify-between text-[11px] text-slate-600 mb-1">
-                                                        <span>Inconsistent</span>
-                                                        <span id="rt-val-incon" class="font-bold text-slate-900">1,760 ms</span>
-                                                    </div>
-                                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
-                                                        <div id="bar-incon" class="bg-rose-500 h-3 rounded-full transition-all duration-500" style="width: 80%;"></div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="flex justify-between text-[11px] text-slate-600 mb-1">
-                                                        <span>Consistent</span>
-                                                        <span id="rt-val-con" class="font-bold text-slate-900">1,680 ms</span>
-                                                    </div>
-                                                    <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
-                                                        <div id="bar-con" class="bg-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 70%;"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-600 leading-snug">
-                                            <span class="font-semibold text-slate-800">Finding:</span>
-                                            <span id="finding-summary-text">Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English.</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- PAGE 5: CONTACT PAGE (#contact) -->
+        <!-- PAGE 4: CONTACT PAGE (#contact) -->
         <!-- ================================================================= -->
         <section id="page-contact" class="page-section">
             <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
@@ -823,59 +548,12 @@
             </div>
             
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-6">
-                        <h2 class="text-xl font-bold text-slate-900">Contact Information</h2>
-                        
-                        <div class="space-y-4 text-sm">
-                            <div class="flex items-start gap-4">
-                                <div class="p-3 bg-orange-50 text-utep-orange rounded-xl"><i class="fa-solid fa-envelope"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-500 font-medium">Email Address</p>
-                                    <a href="mailto:cascholl@miners.utep.edu" class="font-bold text-slate-800 hover:text-utep-orange transition">cascholl@miners.utep.edu</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="p-3 bg-blue-50 text-utep-blue rounded-xl"><i class="fa-solid fa-location-dot"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-500 font-medium">Office Location</p>
-                                    <p class="font-semibold text-slate-800">Psychology Building, Room 215</p>
-                                    <p class="text-xs text-slate-500">University of Texas at El Paso</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="p-3 bg-purple-50 text-purple-600 rounded-xl"><i class="fa-solid fa-clock"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-500 font-medium">Office Hours</p>
-                                    <p class="font-semibold text-slate-800">Mondays: 2:00 PM - 3:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WORKING CONTACT FORM (INTEGRATED WITH FORMSPREE) -->
-                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                        <h2 class="text-xl font-bold text-slate-900 mb-4">Send a Message</h2>
-                        <form action="https://formspree.io/f/xoeeargr" method="POST" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
-                                <input type="text" name="name" required placeholder="Dr. Jane Doe" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-utep-orange">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Email</label>
-                                <input type="email" name="email" required placeholder="jdoe@university.edu" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-utep-orange">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message</label>
-                                <textarea name="message" rows="4" required placeholder="Inquiry regarding psycholinguistic data collaboration..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-utep-orange"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-utep-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl shadow transition text-sm">
-                                Send Inquiry
-                            </button>
-                        </form>
-                    </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-6 text-center max-w-xl mx-auto">
+                    <h2 class="text-xl font-bold text-slate-900">Contact Information</h2>
+                    <p class="text-slate-600 text-sm">University of Texas at El Paso (UTEP)<br>Department of Psychology</p>
+                    <a href="mailto:cascholl@miners.utep.edu" class="inline-flex items-center gap-2 px-6 py-3 bg-utep-blue text-white font-medium rounded-xl shadow hover:bg-slate-800 transition-colors">
+                        <i class="fa-regular fa-envelope"></i> cascholl@miners.utep.edu
+                    </a>
                 </div>
             </div>
         </section>
@@ -893,13 +571,12 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT LOGIC & STATE MANAGEMENT -->
+    <!-- JAVASCRIPT CONTROLLER -->
     <script>
-        const PAGE_IDS = ['home', 'research', 'publications', 'demos', 'contact'];
+        const PAGE_IDS = ['home', 'research', 'publications', 'contact'];
 
         function navigateTo(pageId, anchorId = null) {
             if (!PAGE_IDS.includes(pageId)) return;
-            
             const targetSection = document.getElementById('page-' + pageId);
             if (!targetSection) return;
 
@@ -912,71 +589,48 @@
 
             PAGE_IDS.forEach(id => {
                 const desktopLink = document.getElementById('nav-' + id);
-                const mobileLink = document.getElementById('mob-nav-' + id);
                 if (desktopLink) {
                     desktopLink.className = 'px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition';
-                }
-                if (mobileLink) {
-                    mobileLink.className = 'block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800';
                 }
             });
 
             const activeDesktop = document.getElementById('nav-' + pageId);
-            const activeMobile = document.getElementById('mob-nav-' + pageId);
             if (activeDesktop) {
                 activeDesktop.className = 'px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold shadow-inner transition';
             }
-            if (activeMobile) {
-                activeMobile.className = 'block px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold';
-            }
-
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            if (mobileMenu) mobileMenu.classList.add('hidden');
-            if (menuIcon) menuIcon.className = 'fa-solid fa-bars text-xl';
 
             if (anchorId && anchorId.startsWith('tab-')) {
-    switchResearchTab(anchorId);
-}
+                switchResearchTab(anchorId);
+            }
 
-requestAnimationFrame(() => {
-    const anchor = anchorId && !anchorId.startsWith('tab-') ? document.getElementById(anchorId) : null;
-    if (anchor) {
-        anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Helper function for Research Tab switching
         const TAB_ACTIVE_STYLES = {
-    'tab-discourse': 'bg-utep-orange text-white',
-    'tab-bilingual': 'bg-blue-600 text-white',
-    'tab-quant':     'bg-purple-600 text-white',
-    'tab-neuro':     'bg-emerald-600 text-white'
-};
+            'tab-discourse': 'bg-utep-orange text-white',
+            'tab-bilingual': 'bg-blue-600 text-white',
+            'tab-quant':     'bg-purple-600 text-white',
+            'tab-neuro':     'bg-emerald-600 text-white'
+        };
 
-function switchResearchTab(tabId) {
-    document.querySelectorAll('.research-tab-content').forEach(c => c.classList.add('hidden'));
-    document.querySelectorAll('.research-tab-btn').forEach(btn => {
-        btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
-    });
+        function switchResearchTab(tabId) {
+            document.querySelectorAll('.research-tab-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('.research-tab-btn').forEach(btn => {
+                btn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all';
+            });
 
-    const targetContent = document.getElementById(tabId);
-    const targetBtn = document.getElementById('btn-' + tabId);
+            const targetContent = document.getElementById(tabId);
+            const targetBtn = document.getElementById('btn-' + tabId);
 
-    if (targetContent) targetContent.classList.remove('hidden');
-    if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg transition-all shadow-sm ' + (TAB_ACTIVE_STYLES[tabId] || 'bg-utep-blue text-white');
-}
+            if (targetContent) targetContent.classList.remove('hidden');
+            if (targetBtn) targetBtn.className = 'research-tab-btn px-4 py-2 text-sm font-semibold rounded-lg transition-all shadow-sm ' + (TAB_ACTIVE_STYLES[tabId] || 'bg-utep-blue text-white');
+        }
 
         function navigateFromHash() {
             const hash = decodeURIComponent(window.location.hash.slice(1));
             if (hash.startsWith('tab-')) {
                 navigateTo('research', hash);
                 switchResearchTab(hash);
-            } else if (hash.startsWith('research-') && document.getElementById(hash)) {
-                navigateTo('research', hash);
             } else if (PAGE_IDS.includes(hash)) {
                 navigateTo(hash, null);
             } else {
@@ -992,36 +646,16 @@ function switchResearchTab(tabId) {
             menu.classList.toggle('hidden');
         }
 
-        // TOOL 1: Bilingual Language-Switching SPR Logic (Schwartz et al., 2025)
+        // TOOL 1: Bilingual Language-Switching SPR Logic
         const sentence1 = [
-            { text: "The", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
-            { text: "girl", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 300 },
-            { text: "ate", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 290 },
-            { text: "all", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 260 },
-            { text: "the", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
-            { text: "fruta", lang: "Spanish (LANGUAGE SWITCH!)", class: "text-slate-100 font-bold", baseRt: 600, isSwitch: true },
-            { text: "que", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 270 },
-            { text: "habían.", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 350 }
-        ];
-        const sentence2 = [
-            { text: "La", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 270 },
-            { text: "profesora", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 310 },
-            { text: "vio", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 280 },
-            { text: "al", lang: "Spanish (Non-Switch)", class: "text-slate-100", baseRt: 260 },
-            { text: "student", lang: "English (LANGUAGE SWITCH!)", class: "text-slate-100 font-bold", baseRt: 670, isSwitch: true },
-            { text: "in", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 270 },
-            { text: "the", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 260 },
-            { text: "library.", lang: "English (Non-Switch)", class: "text-slate-100", baseRt: 350 }
-        ];
-        const sentence3 = [
-            { text: "El", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 270 },
-            { text: "estudiante", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 300 },
-            { text: "leyó", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 290 },
-            { text: "el", lang: "Spanish (Non-Switch)", class: "text-blue-400", baseRt: 260 },
-            { text: "book", lang: "English (LANGUAGE SWITCH!)", class: "text-orange-400 font-bold", baseRt: 510, isSwitch: true },
-            { text: "during", lang: "English (Non-Switch)", class: "text-orange-400", baseRt: 330 },
-            { text: "the", lang: "English (Non-Switch)", class: "text-orange-400", baseRt: 280 },
-            { text: "class.", lang: "English (Non-Switch)", class: "text-orange-400", baseRt: 360 }
+            { text: "The", lang: "English", class: "text-slate-100", baseRt: 270 },
+            { text: "girl", lang: "English", class: "text-slate-100", baseRt: 300 },
+            { text: "ate", lang: "English", class: "text-slate-100", baseRt: 290 },
+            { text: "all", lang: "English", class: "text-slate-100", baseRt: 260 },
+            { text: "the", lang: "English", class: "text-slate-100", baseRt: 270 },
+            { text: "fruta", lang: "Spanish (SWITCH)", class: "text-amber-400 font-bold", baseRt: 600, isSwitch: true },
+            { text: "que", lang: "Spanish", class: "text-slate-100", baseRt: 270 },
+            { text: "habían.", lang: "Spanish", class: "text-slate-100", baseRt: 350 }
         ];
 
         let currentSentenceNum = 1;
@@ -1034,39 +668,18 @@ function switchResearchTab(tabId) {
         const sprNextBtn = document.getElementById('spr-next-btn');
         const sprResetBtn = document.getElementById('spr-reset-btn');
 
-        function getActiveSentence() {
-            if (currentSentenceNum === 1) return sentence1;
-            if (currentSentenceNum === 2) return sentence2;
-            return sentence3;
-        }
-
         function advanceSPR() {
-            const activeSentence = getActiveSentence();
             sprIndex++;
-            if (sprIndex < activeSentence.length) {
-                const currentWord = activeSentence[sprIndex];
+            if (sprIndex < sentence1.length) {
+                const currentWord = sentence1[sprIndex];
                 const rt = Math.round(currentWord.baseRt + (Math.random() * 40 - 20));
                 sprRtEl.innerText = rt;
-                if (currentWord.isSwitch) {
-    const toLang = currentWord.lang.startsWith('English') ? 'ENGLISH' : 'SPANISH';
-    sprLangEl.innerText = toLang + ' — LANGUAGE SWITCH';
-    sprLangEl.className = toLang === 'ENGLISH' && currentSentenceNum === 3 ? "text-orange-400 font-bold" : "text-amber-400 font-bold";
-} else {
-    sprLangEl.innerText = currentWord.lang;
-    sprLangEl.className = currentWord.class;
-}
+                sprLangEl.innerText = currentWord.lang;
+                sprLangEl.className = currentWord.class;
                 sprStatsEl.classList.remove('hidden');
                 sprSentenceNumEl.classList.remove('hidden');
-                
-                if (currentSentenceNum === 1) {
-                    sprSentenceNumEl.innerText = "Sentence 1 of 3: English → Spanish Switch";
-                } else if (currentSentenceNum === 2) {
-                    sprSentenceNumEl.innerText = "Sentence 2 of 3: Spanish → English Switch";
-                } else {
-                    sprSentenceNumEl.innerText = "Sentence 3 of 3: Spanish → English Switch Paradigm";
-                }
 
-                let displayHtml = activeSentence.map((item, idx) => {
+                let displayHtml = sentence1.map((item, idx) => {
                     if (idx === sprIndex) {
                         return `<span class="${item.class} underline decoration-2">${item.text}</span>`;
                     }
@@ -1076,108 +689,58 @@ function switchResearchTab(tabId) {
                 sprSentenceEl.innerHTML = displayHtml;
                 sprNextBtn.innerText = "Advance Word (Space)";
             } else {
-                if (currentSentenceNum === 1) {
-                    currentSentenceNum = 2;
-                    sprIndex = -1;
-                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice increased RT for the switch word.</span>';
-                    sprNextBtn.innerText = "Start Sentence 2 (Spanish → English)";
-                    sprStatsEl.classList.add('hidden');
-                } else if (currentSentenceNum === 2) {
-                    currentSentenceNum = 3;
-                    sprIndex = -1;
-                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the largest RT spike when switching back into English (asymmetric switch cost).</span>';
-                    sprNextBtn.innerText = "Start Sentence 3 (Spanish → English)";
-                    sprStatsEl.classList.add('hidden');
-                } else {
-                    sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice the asymmetric cost of switching back into English in sentence structure.</span>';
-                    sprNextBtn.innerText = "Trial Finished";
-                    sprNextBtn.disabled = true;
-                    sprNextBtn.classList.add('opacity-50');
-                }
+                sprSentenceEl.innerHTML = '<span class="text-slate-400 text-base">Trial Complete! Notice increased RT for the switch word.</span>';
+                sprNextBtn.innerText = "Finished";
+                sprNextBtn.disabled = true;
+                sprStatsEl.classList.add('hidden');
             }
         }
 
         function resetSPR() {
-            currentSentenceNum = 1;
             sprIndex = -1;
             sprSentenceNumEl.classList.add('hidden');
             sprSentenceEl.innerText = "Click Start Trial to Begin";
             sprStatsEl.classList.add('hidden');
             sprNextBtn.innerText = "Start Trial (Space)";
             sprNextBtn.disabled = false;
-            sprNextBtn.classList.remove('opacity-50');
         }
 
         if (sprNextBtn) sprNextBtn.addEventListener('click', advanceSPR);
         if (sprResetBtn) sprResetBtn.addEventListener('click', resetSPR);
 
-        window.addEventListener('keydown', (e) => {
-            if (e.code === 'Space' && e.target === document.body) {
-                const demosPage = document.getElementById('page-demos');
-                if (demosPage && demosPage.classList.contains('active') && sprNextBtn && !sprNextBtn.disabled) {
-                    e.preventDefault();
-                    advanceSPR();
-                }
-            }
-        });
-
         // TOOL 2: Experimental Passage Explorer Data & Controller
         const paradigmDescriptions = {
-            exp1: `In the <strong>1-Character Paradigm (Experiment 1)</strong>, character traits (e.g., <em>strict vegan</em>) are attributed directly to the primary protagonist (Mary). Readers construct a situation model where Mary eating meat creates a cognitive conflict, yielding a robust <strong>Inconsistency Effect</strong> (elevated total reading times) that is especially pronounced in Spanish.`,
-            exp2: `In the <strong>Secondary Protagonist Paradigm (Experiment 2)</strong>, the key trait (e.g., <em>strict vegans</em>) is attributed to secondary characters (<span class="underline decoration-utep-orange decoration-2 font-medium">Mary's friends</span>). Because the trait model belongs to the friends rather than Mary, Mary's target behavior does not violate her personal trait representation, eliminating the inconsistency cost across both languages.`
+            exp1: `In the <strong>1-Character Paradigm (Experiment 1)</strong>, character traits (e.g., <em>strict vegan</em>) are attributed directly to the primary protagonist (Mary).`,
+            exp2: `In the <strong>Secondary Protagonist Paradigm (Experiment 2)</strong>, the key trait is attributed to secondary characters (Mary's friends).`
         };
 
         const rtVisualizationData = {
             exp1: {
-                "eng-incon": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "+80 ms Penalty", activeBar: "incon", inconWidth: "80%", conWidth: "70%", summary: "Moderate Total Reading Time slowdown at 'hamburger' due to protagonist trait violation in English." },
-                "eng-con": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "80%", conWidth: "70%", summary: "Baseline reading processing when protagonist action aligns with established trait in English." },
-                "spa-incon": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "+240 ms Penalty (Largest Effect)", activeBar: "incon", inconWidth: "96%", conWidth: "75%", summary: "Greatest Total Reading Time inconsistency effect observed during Spanish L2/bilingual discourse processing." },
-                "spa-con": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "96%", conWidth: "75%", summary: "Spanish consistent baseline is slightly longer than English consistent baseline, reflecting general cross-linguistic processing costs." }
+                "eng-incon": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "+80 ms Penalty", inconWidth: "80%", conWidth: "70%", summary: "Moderate Total Reading Time slowdown at 'hamburger'." },
+                "eng-con": { inconRt: "1,760 ms", conRt: "1,680 ms", delta: "Baseline TRT", inconWidth: "80%", conWidth: "70%", summary: "Baseline reading processing when protagonist action aligns." },
+                "spa-incon": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "+240 ms Penalty", inconWidth: "96%", conWidth: "75%", summary: "Greatest Total Reading Time inconsistency effect in Spanish." },
+                "spa-con": { inconRt: "1,980 ms", conRt: "1,740 ms", delta: "Baseline TRT", inconWidth: "96%", conWidth: "75%", summary: "Spanish consistent baseline." }
             },
             exp2: {
-                "eng-incon": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "+10 ms (No Penalty)", activeBar: "incon", inconWidth: "71%", conWidth: "70%", summary: "Attributing the trait to secondary protagonists (friends) eliminates the inconsistency slowdown for Mary in English." },
-                "eng-con": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "71%", conWidth: "70%", summary: "Equivalent processing speeds when secondary characters hold the trait model in English." },
-                "spa-incon": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "+15 ms (No Penalty)", activeBar: "incon", inconWidth: "76%", conWidth: "75%", summary: "Secondary protagonist trait boundary prevents cross-linguistic inconsistency costs in Spanish." },
-                "spa-con": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "Baseline TRT", activeBar: "con", inconWidth: "76%", conWidth: "75%", summary: "Spanish consistent baseline maintained across secondary protagonist conditions." }
+                "eng-incon": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "+10 ms (No Penalty)", inconWidth: "71%", conWidth: "70%", summary: "Secondary protagonist trait eliminates inconsistency slowdown." },
+                "eng-con": { inconRt: "1,690 ms", conRt: "1,680 ms", delta: "Baseline TRT", inconWidth: "71%", conWidth: "70%", summary: "Equivalent processing speeds." },
+                "spa-incon": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "+15 ms (No Penalty)", inconWidth: "76%", conWidth: "75%", summary: "Secondary protagonist prevents inconsistency costs." },
+                "spa-con": { inconRt: "1,755 ms", conRt: "1,740 ms", delta: "Baseline TRT", inconWidth: "76%", conWidth: "75%", summary: "Spanish consistent baseline maintained." }
             }
         };
 
         const passageData = {
             exp1: {
-                "eng-incon": {
-                    badge: "Exp 1 (1-Char) • English Inconsistent",
-                    html: `Mary is a recent college graduate. Through her college years she found herself becoming more concerned and dedicated to activism for good causes. For example, Mary is a strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegan</span> and attends <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animal rights’</span> advocacy meetings and protests. She even has a podcast on how to eat a <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plant-based</span> diet. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span> Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
-                },
-                "eng-con": {
-                    badge: "Exp 1 (1-Char) • English Consistent",
-                    html: `Mary is a recent college graduate. Through her college years she found herself becoming more concerned and dedicated to activism for good causes. For example, Mary is a devout supporter of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">farmers’ rights</span> and protection of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches.</span> She knows the importance of protecting the <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">beef</span> industry for those who depend on it. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">fries.”</span> Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
-                },
-                "spa-incon": {
-                    badge: "Exp 1 (1-Char) • Spanish Inconsistent",
-                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, Mary es una <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegana</span> estricta y asiste a juntas y protestas en defensa de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animales.</span> Incluso tiene un podcast sobre cómo llevar una dieta basada en <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plantas.</span> Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span> Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Los amigos se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
-                },
-                "spa-con": {
-                    badge: "Exp 1 (1-Char) • Spanish Consistent",
-                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, Mary es una defensora devota de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> Ella sabe la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">papas fritas".</span> Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Los amigos se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
-                }
+                "eng-incon": { badge: "Exp 1 • English Inconsistent", html: `Mary is a strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegan</span>. She orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
+                "eng-con": { badge: "Exp 1 • English Consistent", html: `Mary supports <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches</span>. She orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
+                "spa-incon": { badge: "Exp 1 • Spanish Inconsistent", html: `Mary es una <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegana</span> estricta. Pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` },
+                "spa-con": { badge: "Exp 1 • Spanish Consistent", html: `Mary defiende el <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado</span>. Pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` }
             },
             exp2: {
-                "eng-incon": {
-                    badge: "Exp 2 (Secondary Protagonist) • English Inconsistent",
-                    html: `Mary is a recent college graduate. Through her college years <span class="underline decoration-utep-orange decoration-2 font-medium">her friends</span> found themselves becoming more concerned and dedicated to activism for good causes. For example, <span class="underline decoration-utep-orange decoration-2 font-medium">Mary’s friends</span> are strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegans</span> and attend <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animal rights’</span> advocacy meetings and protests. <span class="underline decoration-utep-orange decoration-2 font-medium">They</span> even have a podcast on how to eat a <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plant-based</span> diet. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and fries.” Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
-                },
-                "eng-con": {
-                    badge: "Exp 2 (Secondary Protagonist) • English Consistent",
-                    html: `Mary is a recent college graduate. Through her college years <span class="underline decoration-utep-orange decoration-2 font-medium">her friends</span> found themselves becoming more concerned and dedicated to activism for good causes. For example, <span class="underline decoration-utep-orange decoration-2 font-medium">Mary’s friends</span> are devout supporters of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">farmers’ rights</span> and protection of <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">They</span> know the importance of protecting the <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">beef</span> industry for those who depend on it. It is noon and Mary is just arriving at a new local restaurant. Soon after Mary’s friends join her at the table. After a few minutes, the waiter comes to the table to take their order. Mary gives her order first, “I would like a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span> and fries.” Mary also adds a side of <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">bacon</span> and asks for <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">cheese.</span> Her friends order their food and then they discuss Mary’s upcoming protest. The friends agree to join her efforts and they plan how to recruit even more people.`
-                },
-                "spa-incon": {
-                    badge: "Exp 2 (Secondary Protagonist) • Spanish Inconsistent",
-                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">veganos</span> estrictos y asisten a juntas y protestas en defensa de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">animales.</span> Incluso <span class="underline decoration-utep-orange decoration-2 font-medium">ellos</span> tienen un podcast sobre cómo llevar una dieta basada en <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">plantas.</span> Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Los amigos se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
-                },
-                "spa-con": {
-                    badge: "Exp 2 (Secondary Protagonist) • Spanish Consistent",
-                    html: `Mary se graduó de la universidad recientemente. A través de sus años universitarios se dedicó al activismo por buenas causas. Por ejemplo, <span class="underline decoration-utep-orange decoration-2 font-medium">los amigos de Mary</span> son defensores de los derechos de los <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">agricultores</span> y la protección de los ranchos de <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado.</span> <span class="underline decoration-utep-orange decoration-2 font-medium">Ellos</span> saben la importancia de proteger la industria de la <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">carne</span> para aquellos que dependen de ello. Es el mediodía y Mary acaba de llegar a un nuevo restaurante local. Poco después, los amigos de Mary se unen a ella en la mesa. Después de unos minutos, el camarero llega a la mesa para tomar su pedido. Mary da su orden primero: "Me gustaría una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span> y papas fritas". Mary también agrega un lado de <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">tocino</span> y pide <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">queso.</span> Sus amigos ordenan su comida y luego discuten la próxima protesta de Mary. Les amis se pusieron de acuerdo a unirse a sus esfuerzos y planean en reclutar aún más personas.`
-                }
+                "eng-incon": { badge: "Exp 2 • English Inconsistent", html: `<span class="underline decoration-utep-orange">Mary’s friends</span> are strict <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">vegans</span>. Mary orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
+                "eng-con": { badge: "Exp 2 • English Consistent", html: `<span class="underline decoration-utep-orange">Mary’s friends</span> support <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">cattle ranches</span>. Mary orders a <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburger</span>.` },
+                "spa-incon": { badge: "Exp 2 • Spanish Inconsistent", html: `<span class="underline decoration-utep-orange">Los amigos de Mary</span> son <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">veganos</span>. Mary pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` },
+                "spa-con": { badge: "Exp 2 • Spanish Consistent", html: `<span class="underline decoration-utep-orange">Los amigos de Mary</span> apoyan el <span class="bg-amber-200 text-amber-900 font-semibold px-1 rounded">ganado</span>. Mary pide una <span class="bg-rose-200 text-rose-900 font-semibold px-1 rounded">hamburguesa</span>.` }
             }
         };
 
@@ -1223,15 +786,8 @@ function switchResearchTab(tabId) {
             barIncon.style.width = activeRt.inconWidth;
             barCon.style.width = activeRt.conWidth;
             summaryText.innerText = activeRt.summary;
-            
-            if (activeRt.delta.includes("Penalty")) {
-                rtDeltaBadge.className = "text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200";
-            } else {
-                rtDeltaBadge.className = "text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200";
-            }
         }
 
-        // INITIALIZATION ON PAGE LOAD
         window.addEventListener('DOMContentLoaded', () => {
             navigateFromHash();
             setParadigm('exp1');
