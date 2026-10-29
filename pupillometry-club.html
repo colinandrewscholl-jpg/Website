@@ -106,8 +106,6 @@
     </footer>
 
     <script>
-        const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link";
-
         const RESOURCES = [
             /* ---------------------------- SLIDES ---------------------------- */
             {
@@ -115,8 +113,7 @@
                 session: "Seminar",
                 title: "Introduction to Pupillometry",
                 description: "Physiology of the pupil, the LC-NE system, and what task-evoked pupillary responses can tell us about cognitive effort in bilingual psycholinguistic research.",
-                slidesId: "2PACX-1vQcHXHkDacrL3FFgdt0lfqPPmQGI5X8ou-OWJMowzkB4wFBC-O97DM-SVScl5klV467SIz5c5_bpMPr",
-                link: DRIVE_FOLDER
+                slidesId: "2PACX-1vQcHXHkDacrL3FFgdt0lfqPPmQGI5X8ou-OWJMowzkB4wFBC-O97DM-SVScl5klV467SIz5c5_bpMPr"
             },
 
             /* ---------------------------- VIDEOS ---------------------------- */
@@ -152,8 +149,7 @@
                 title: "Language experience modulates retrieval effort: Evidence from task-evoked pupillary responses",
                 description: "Schmidtke, D. (2014). Investigating how individual differences in language experience modulate cognitive retrieval effort using task-evoked pupillary responses in bilingual word recognition.",
                 credit: "Daniel Schmidtke",
-                pdfUrl: "Schmidtke (2014).pdf",
-                link: DRIVE_FOLDER
+                fileUrl: "Schmidtke (2014).pdf"
             }
         ];
 
@@ -190,37 +186,22 @@
                         </div>
                     </div>`;
             }
-            if (r.kind === "reading" && r.pdfUrl) {
+            if (r.kind === "reading" && r.fileUrl) {
                 return `
-                    <div class="bg-slate-900 text-white p-5 rounded-xl border border-slate-800 shadow-inner flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-xl shrink-0">
-                                <i class="fa-regular fa-file-pdf"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">Schmidtke (2014) — PDF Document</h4>
-                                <p class="text-xs text-slate-400">Frontiers in Psychology Original Research Article</p>
-                            </div>
+                    <details class="group mt-4 bg-slate-900 text-white rounded-xl border border-slate-800 shadow-inner overflow-hidden">
+                        <summary class="flex items-center justify-between p-4 cursor-pointer select-none font-semibold text-xs text-utep-orange hover:bg-slate-800/60 transition">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right group-open:rotate-90 transition-transform"></i>
+                                View PDF Document (Dropdown)
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-normal">Click to expand</span>
+                        </summary>
+                        <div class="p-4 bg-slate-950 border-t border-slate-800">
+                            <iframe src="${r.fileUrl}#view=FitH" class="w-full h-[500px] rounded-lg border-0 bg-white"></iframe>
                         </div>
-                        <div class="flex items-center gap-2 w-full sm:w-auto">
-                            <a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-utep-orange text-white text-xs font-bold rounded-lg hover:bg-orange-600 transition shadow">
-                                <i class="fa-solid fa-book-open-reader"></i> Open PDF Reader
-                            </a>
-                        </div>
-                    </div>`;
-            }
-            if (r.kind === "code" && r.code) {
-                return `<pre class="bg-slate-900 text-slate-100 text-xs rounded-xl p-4 overflow-x-auto"><code>${esc(r.code)}</code></pre>`;
+                    </details>`;
             }
             return "";
-        }
-
-        function footerLinks(r) {
-            const links = [];
-            if (r.kind === "video" && r.youtubeId) {
-                links.push(`<a href="https://www.youtube.com/watch?v=${r.youtubeId}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-brands fa-youtube mr-1"></i> Watch on YouTube</a>`);
-            }
-            return links.length ? `<div class="flex flex-wrap gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
         }
 
         function card(r) {
@@ -238,9 +219,8 @@
                 </div>
                 <h3 class="text-base font-semibold text-slate-900 mb-1">${esc(r.title)}</h3>
                 ${credit}
-                <p class="text-sm text-slate-600 ${embed ? "mb-4" : "mb-0"}">${esc(r.description)}</p>
+                <p class="text-sm text-slate-600 ${embed ? "" : "mb-0"}">${esc(r.description)}</p>
                 ${embed}
-                ${footerLinks(r)}
             </div>`;
         }
 
