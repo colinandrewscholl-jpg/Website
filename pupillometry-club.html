@@ -63,24 +63,23 @@
                     <i class="fa-solid fa-eye"></i> Neurocognitive Methods
                 </span>
                 <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Pupillometry Club Resources</h1>
-                <p class="text-slate-400 text-base max-w-xl mx-auto">Slides, code, readings, and materials from the semester-long pupillometry workshop.</p>
+                <p class="text-slate-400 text-base max-w-xl mx-auto">Slides, videos, code, and readings from the semester-long pupillometry workshop.</p>
             </div>
         </div>
 
         <div class="py-12 bg-slate-50">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-                <!-- BACK LINK -->
                 <a href="index.html#tab-neuro" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 hover:underline">
                     <i class="fa-solid fa-arrow-left text-xs"></i> Back to Neurocognitive Methods
                 </a>
 
-                <!-- ABOUT / DRIVE FOLDER -->
+                <!-- ABOUT -->
                 <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-emerald-500 space-y-4">
                     <h2 class="text-2xl font-bold text-slate-900">About the Club</h2>
                     <p class="text-slate-700 leading-relaxed">
                         The Pupillometry Club is a workshop series introducing the theory, collection, preprocessing, and analysis of pupil-size data, with a focus on
-                        task-evoked pupillary responses (TEPRs) in language comprehension. Materials below are organized by session; everything is also available in the shared folder.
+                        task-evoked pupillary responses (TEPRs) in language comprehension. Materials are organized below; everything is also available in the shared folder.
                     </p>
                     <a href="https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center gap-2 px-4 py-2 bg-utep-blue text-white text-sm font-medium rounded-lg shadow hover:bg-slate-800 transition-colors">
@@ -88,23 +87,12 @@
                     </a>
                 </div>
 
-                <!-- RESOURCES (rendered from the RESOURCES array in the script below) -->
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Resources</h2>
-                    <div id="resource-list" class="space-y-6"></div>
-                </div>
-
-                <!-- OPTIONAL: EMBEDDED DRIVE BROWSER -->
-                <details class="bg-white border border-slate-200 rounded-2xl shadow-sm">
-                    <summary class="cursor-pointer select-none px-6 py-4 text-sm font-semibold text-slate-800 flex items-center gap-2">
-                        <i class="fa-solid fa-folder-open text-emerald-600"></i> Browse all files in the folder
-                    </summary>
-                    <div class="px-6 pb-6">
-                        <iframe id="drive-embed" data-src="https://drive.google.com/embeddedfolderview?id=1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk#list"
-                                class="w-full rounded-lg border border-slate-200" style="height: 500px;" loading="lazy"></iframe>
-                        <p class="text-xs text-slate-500 mt-2">If the folder doesn't load, make sure sharing is set to "Anyone with the link can view."</p>
-                    </div>
-                </details>
+                <!-- Sections are filled from the RESOURCES array in the script below.
+                     A section heading only appears if it has at least one entry. -->
+                <div id="section-slides"></div>
+                <div id="section-video"></div>
+                <div id="section-code"></div>
+                <div id="section-reading"></div>
             </div>
         </div>
     </main>
@@ -120,85 +108,207 @@
     </footer>
 
     <script>
-        /* ==================================================================
-           EDIT HERE: one entry per resource, in the order you want them shown.
-           type: slides | code | reading | data | video | handout | other
-           link: Drive "Share → Copy link" URL (file set to "Anyone with the link")
-           Delete the placeholder entries and add your real files.
-           ================================================================== */
+        /* ====================================================================
+           EDIT HERE. One object per resource, shown in the order listed.
+
+           kind: "slides" | "video" | "code" | "reading"
+
+           SLIDES  - set slidesId to the long ID from Google Slides:
+                     File → Share → Publish to web → Embed → Publish, then copy
+                     the part of the iframe src between /d/e/ and /pubembed
+                     (it starts with 2PACX-). Until then a placeholder shows.
+           VIDEO   - set youtubeId (the part after ?v= in the YouTube URL).
+           CODE    - paste R code into the `code` field (template below).
+           ==================================================================== */
+
+        const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link";
+
         const RESOURCES = [
+
+            /* ---------------------------- SLIDES ---------------------------- */
             {
+                kind: "slides",
                 session: "Session 1",
                 title: "Introduction to Pupillometry",
                 description: "Physiology of the pupil, the LC-NE system, and what task-evoked pupillary responses can tell us about cognitive effort.",
-                type: "slides",
-                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+                slidesId: "",            // paste 2PACX-... ID here
+                link: DRIVE_FOLDER
             },
             {
+                kind: "slides",
                 session: "Session 2",
-                title: "Experimental Design &amp; Data Collection",
+                title: "Experimental Design & Data Collection",
                 description: "Luminance control, baselines, calibration, and trial structure for reading studies.",
-                type: "slides",
-                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+                slidesId: "",
+                link: DRIVE_FOLDER
             },
             {
+                kind: "slides",
                 session: "Session 3",
-                title: "Preprocessing Pipeline",
+                title: "Preprocessing Pupil Data",
                 description: "Blink detection and interpolation, smoothing, baseline correction, and downsampling.",
-                type: "code",
-                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+                slidesId: "",
+                link: DRIVE_FOLDER
             },
             {
+                kind: "slides",
                 session: "Session 4",
                 title: "Statistical Analysis of Pupil Data",
-                description: "Time-course analyses, growth-curve models, and GAMMs in R.",
-                type: "code",
-                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+                description: "Time-course analyses, growth-curve models, and GAMMs.",
+                slidesId: "",
+                link: DRIVE_FOLDER
+            },
+
+            /* ---------------------------- VIDEOS ---------------------------- */
+            {
+                kind: "video",
+                session: "Lecture",
+                title: "Video Lecture on Pupillometry",
+                description: "A lecture on pupillometry recorded for the 2019/2020 Cognition and Attention course at the University of Groningen.",
+                credit: "Sebastiaan Mathôt, University of Groningen",
+                youtubeId: "1mXkNJnxp6M"
             },
             {
+                kind: "video",
+                session: "Webinar",
+                title: "Recording and Analysing Pupil Data (Pupillometry)",
+                description: "A webinar covering pupil background, basic pupil physiology, non-cognitive influences on pupil size, and practical considerations for recording and analysing pupil data.",
+                credit: "SR Research",
+                youtubeId: "xaMc-8bU7Zc"
+            },
+            {
+                kind: "video",
+                session: "Webinar",
+                title: "Pupil Size & Eye Tracking: Data Collection, Preprocessing & Analysis Best Practices",
+                description: "Two experts walk through the complete pupillometry workflow, from collecting data to preprocessing and analysis.",
+                credit: "SR Research",
+                youtubeId: "B0pygawVAD0"
+            },
+
+            /* ------------------------------ CODE ------------------------------
+               R code sections are commented out for now. To add one, remove the
+               surrounding comment markers and paste your script into `code`.
+               (Backticks inside the code must be escaped as \`.)
+
+            {
+                kind: "code",
+                session: "Session 3",
+                title: "Preprocessing Pipeline (R)",
+                description: "Blink interpolation, smoothing, and baseline correction.",
+                code: `# Paste R code here
+library(tidyverse)
+`,
+                link: DRIVE_FOLDER      // optional: link to the .R file
+            },
+            {
+                kind: "code",
+                session: "Session 4",
+                title: "Statistical Analysis (R)",
+                description: "Growth-curve models and GAMMs for pupil time courses.",
+                code: `# Paste R code here
+library(lme4)
+`,
+                link: DRIVE_FOLDER
+            },
+            ----------------------------------------------------------------- */
+
+            /* ---------------------------- READINGS ---------------------------- */
+            {
+                kind: "reading",
                 session: "Readings",
                 title: "Core Readings",
                 description: "Beatty (1982), Winn et al. (2018), and other papers discussed in the club.",
-                type: "reading",
-                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+                link: DRIVE_FOLDER
             }
         ];
 
-        const TYPE_STYLES = {
-            slides:  { icon: "fa-chalkboard-user", label: "Slides",  badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange" },
-            code:    { icon: "fa-code",            label: "Code",    badge: "bg-purple-100 text-purple-700",  border: "border-l-purple-500" },
-            reading: { icon: "fa-book-open",       label: "Reading", badge: "bg-blue-100 text-blue-700",      border: "border-l-blue-600" },
-            data:    { icon: "fa-database",        label: "Data",    badge: "bg-emerald-100 text-emerald-700", border: "border-l-emerald-500" },
-            video:   { icon: "fa-video",           label: "Video",   badge: "bg-rose-100 text-rose-700",      border: "border-l-rose-500" },
-            handout: { icon: "fa-file-lines",      label: "Handout", badge: "bg-amber-100 text-amber-700",    border: "border-l-amber-500" },
-            other:   { icon: "fa-paperclip",       label: "File",    badge: "bg-slate-200 text-slate-700",    border: "border-l-slate-400" }
+        /* ================== rendering (no need to edit below) ================== */
+        const SECTIONS = {
+            slides:  { title: "Workshop Slides", icon: "fa-chalkboard-user", badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange", label: "Slides" },
+            video:   { title: "Videos",          icon: "fa-video",           badge: "bg-rose-100 text-rose-700",      border: "border-l-rose-500",    label: "Video" },
+            code:    { title: "R Code",          icon: "fa-code",            badge: "bg-purple-100 text-purple-700",  border: "border-l-purple-500",  label: "R Code" },
+            reading: { title: "Readings",        icon: "fa-book-open",       badge: "bg-blue-100 text-blue-700",      border: "border-l-blue-600",    label: "Reading" }
         };
 
-        const list = document.getElementById('resource-list');
-        list.innerHTML = RESOURCES.map(r => {
-            const t = TYPE_STYLES[r.type] || TYPE_STYLES.other;
-            return `
-            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${t.border}">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="px-2.5 py-0.5 ${t.badge} text-xs font-semibold rounded flex items-center gap-1">
-                        <i class="fa-solid ${t.icon}"></i> ${t.label}
-                    </span>
-                    <span class="text-xs text-slate-400">${r.session}</span>
-                </div>
-                <h3 class="text-base font-semibold text-slate-900 mb-1">${r.title}</h3>
-                <p class="text-sm text-slate-600 mb-3">${r.description}</p>
-                <div class="flex gap-4 text-xs font-medium text-utep-orange">
-                    <a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Open
-                    </a>
-                </div>
-            </div>`;
-        }).join('');
+        const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-        // Load the Drive embed only when the section is opened
-        document.querySelector('details').addEventListener('toggle', e => {
-            const f = document.getElementById('drive-embed');
-            if (e.target.open && !f.src) f.src = f.dataset.src;
+        function embedBlock(r) {
+            if (r.kind === "slides") {
+                if (r.slidesId) {
+                    return `
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
+                            <iframe src="https://docs.google.com/presentation/d/e/${r.slidesId}/pubembed?start=true&loop=false&delayms=3000"
+                                    frameborder="0" class="absolute top-0 left-0 w-full h-full rounded-lg"
+                                    allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                    </div>`;
+                }
+                return `
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                        <div class="w-full rounded-lg border-2 border-dashed border-slate-300 bg-white flex flex-col items-center justify-center text-center text-slate-400 text-xs gap-1 px-4" style="aspect-ratio: 16 / 9;">
+                            <i class="fa-solid fa-chalkboard-user text-2xl"></i>
+                            <span>Slides coming soon</span>
+                        </div>
+                    </div>`;
+            }
+            if (r.kind === "video" && r.youtubeId) {
+                return `
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-inner">
+                        <div class="relative w-full overflow-hidden rounded-lg shadow-inner" style="padding-top: 56.25%;">
+                            <iframe src="https://www.youtube-nocookie.com/embed/${r.youtubeId}" title="${esc(r.title)}"
+                                    frameborder="0" loading="lazy" class="absolute top-0 left-0 w-full h-full rounded-lg"
+                                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>`;
+            }
+            if (r.kind === "code" && r.code) {
+                return `<pre class="bg-slate-900 text-slate-100 text-xs rounded-xl p-4 overflow-x-auto"><code>${esc(r.code)}</code></pre>`;
+            }
+            return "";
+        }
+
+        function footerLinks(r) {
+            const links = [];
+            if (r.kind === "video" && r.youtubeId) {
+                links.push(`<a href="https://www.youtube.com/watch?v=${r.youtubeId}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-brands fa-youtube mr-1"></i> Watch on YouTube</a>`);
+            }
+            if (r.link) {
+                const text = r.kind === "slides" ? "Open in Drive" : r.kind === "code" ? "Download script" : "Open";
+                links.push(`<a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> ${text}</a>`);
+            }
+            return links.length ? `<div class="flex gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
+        }
+
+        function card(r) {
+            const s = SECTIONS[r.kind];
+            const credit = r.credit
+                ? `<p class="text-sm text-slate-600 italic mb-1">Credit: <strong>${esc(r.credit)}</strong></p>` : "";
+            const embed = embedBlock(r);
+            return `
+            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${s.border}">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2.5 py-0.5 ${s.badge} text-xs font-semibold rounded flex items-center gap-1">
+                        <i class="fa-solid ${s.icon}"></i> ${s.label}
+                    </span>
+                    <span class="text-xs text-slate-400">${esc(r.session || "")}</span>
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 mb-1">${esc(r.title)}</h3>
+                ${credit}
+                <p class="text-sm text-slate-600 ${embed ? "mb-4" : "mb-0"}">${esc(r.description)}</p>
+                ${embed}
+                ${footerLinks(r)}
+            </div>`;
+        }
+
+        Object.keys(SECTIONS).forEach(kind => {
+            const items = RESOURCES.filter(r => r.kind === kind);
+            const el = document.getElementById("section-" + kind);
+            if (!items.length) { el.remove(); return; }
+            el.innerHTML = `
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">${SECTIONS[kind].title}</h2>
+                <div class="space-y-6">${items.map(card).join("")}</div>`;
         });
     </script>
 </body>
