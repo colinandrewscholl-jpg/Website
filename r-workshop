@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Studio Workshop Resources | Colin Scholl, M.A.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utep: { blue: '#041E42', orange: '#FF8200', darkblue: '#021229', slate: '#0f172a' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-utep-orange selection:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-[#041E42]/95 backdrop-blur-md border-b border-slate-800 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-utep-orange shadow-md group-hover:scale-105 transition-transform shrink-0">
+                    <img src="https://lh3.googleusercontent.com/d/15Goxy2HJhApfxD2I8Cs66ewXMgFlLiKz" alt="Colin Scholl Headshot" class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/041E42/ffffff?text=CS';">
+                </div>
+                <span class="text-lg font-bold tracking-tight text-white group-hover:text-utep-orange transition-colors">Colin Scholl, M.A.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+                <a href="index.html#home" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Home</a>
+                <a href="index.html#research" class="px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold shadow-inner transition">Research Areas</a>
+                <a href="index.html#publications" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications &amp; Talks</a>
+                <a href="index.html#demos" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Interactive Demos</a>
+                <a href="index.html#contact" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Contact</a>
+            </nav>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-utep-darkblue border-b border-slate-800 px-4 pt-2 pb-4 space-y-1">
+            <a href="index.html#home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Home</a>
+            <a href="index.html#research" class="block px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold">Research Areas</a>
+            <a href="index.html#publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications &amp; Talks</a>
+            <a href="index.html#demos" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Interactive Demos</a>
+            <a href="index.html#contact" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- BANNER -->
+        <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-flex items-center gap-1 px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold tracking-wider uppercase rounded-full mb-3">
+                    <i class="fa-solid fa-chart-line"></i> Quantitative Methods
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">R Studio Workshop Resources</h1>
+                <p class="text-slate-400 text-base max-w-xl mx-auto">Materials, cheat sheets, and scripts from our summer-long, 5-session quantitative workshop series.</p>
+            </div>
+        </div>
+
+        <div class="py-12 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+                <a href="index.html#tab-quant" class="inline-flex items-center gap-2 text-sm font-semibold text-purple-600 hover:underline">
+                    <i class="fa-solid fa-arrow-left text-xs"></i> Back to Quantitative Methods
+                </a>
+
+                <!-- ABOUT -->
+                <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-purple-500 space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-900">About the Workshop Series</h2>
+                    <p class="text-slate-700 leading-relaxed">
+                        Co-hosted by <strong>Colin Scholl, M.A.</strong> and <strong>Jayce Owens-Boone, M.A.</strong>, this comprehensive summer-long, 5-session workshop series was designed to guide graduate researchers through modern statistical workflows, data visualization, animation, and Bayesian estimation in R. Access workshop files and cheat sheets below or directly via the shared Google Drive.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/1cspOmgbhqt0HFuZXvbAVP9q3ozYYvRVr?usp=drive_link" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-4 py-2 bg-utep-blue text-white text-sm font-medium rounded-lg shadow hover:bg-slate-800 transition-colors">
+                        <i class="fa-brands fa-google-drive"></i> Open full Google Drive folder
+                    </a>
+                </div>
+
+                <div id="section-overview"></div>
+                <div id="section-cheatsheet"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-utep-darkblue text-slate-400 border-t border-slate-800 text-xs py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-utep-orange inline-block"></span>
+                <span class="font-bold text-white">Colin Scholl, M.A.</span> - UTEP Psycholinguistics Portfolio
+            </div>
+            <p>&copy; 2026 Colin Scholl. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1cspOmgbhqt0HFuZXvbAVP9q3ozYYvRVr?usp=drive_link";
+
+        const RESOURCES = [
+            /* ------------------------- WORKSHOP SESSIONS ------------------------- */
+            {
+                kind: "overview",
+                session: "Summer Series",
+                title: "5-Session Summer R Studio Workshop",
+                description: "A comprehensive 5-session training series covering data wrangling, advanced visualization, dynamic animation with gganimate, and Bayesian modeling workflows co-hosted with Jayce Owens-Boone, M.A.",
+                credit: "Colin Scholl & Jayce Owens-Boone",
+                link: DRIVE_FOLDER
+            },
+
+            /* --------------------------- CHEAT SHEETS --------------------------- */
+            {
+                kind: "cheatsheet",
+                session: "Reference Material",
+                title: "ggplot2 Cheat Sheet",
+                description: "Comprehensive reference guide for building structured, layered data visualizations using the grammar of graphics in R.",
+                credit: "RStudio / Posit",
+                pdfUrl: "ggplot-cheatsheet.pdf", // Update filename if stored locally or link directly to Drive
+                link: DRIVE_FOLDER
+            },
+            {
+                kind: "cheatsheet",
+                session: "Reference Material",
+                title: "gganimate Cheat Sheet",
+                description: "Grammar of graphics extension for producing dynamic time-course and state-transition animations in ggplot2.",
+                credit: "Karl Hailperin / gganimate",
+                pdfUrl: "gganimate.pdf",
+                link: DRIVE_FOLDER
+            },
+            {
+                kind: "cheatsheet",
+                session: "Reference Material",
+                title: "Bayesian Estimation Cheat Sheet",
+                description: "Quick reference guide covering priors, posterior distributions, credible intervals, and multilevel modeling with brms and Stan.",
+                credit: "Workshop Reference",
+                pdfUrl: "bayesian-estimation.pdf", // Update filename if stored locally
+                link: DRIVE_FOLDER
+            }
+        ];
+
+        const SECTIONS = {
+            overview:    { title: "Workshop Overview", icon: "fa-chalkboard-user", badge: "bg-purple-100 text-purple-700", border: "border-l-purple-500", label: "Series Overview" },
+            cheatsheet:  { title: "Cheat Sheets & Handouts", icon: "fa-file-pdf", badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange", label: "Cheat Sheet" }
+        };
+
+        const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+        function embedBlock(r) {
+            if (r.kind === "cheatsheet" && r.pdfUrl) {
+                return `
+                    <div class="bg-slate-900 text-white p-4 rounded-xl border border-slate-800 shadow-inner flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-regular fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">${esc(r.title)}</h4>
+                                <p class="text-xs text-slate-400">PDF Reference Handout</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto">
+                            <a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-utep-orange text-white text-xs font-bold rounded-lg hover:bg-orange-600 transition shadow">
+                                <i class="fa-solid fa-book-open-reader"></i> Open PDF Reader
+                            </a>
+                        </div>
+                    </div>`;
+            }
+            return "";
+        }
+
+        function footerLinks(r) {
+            const links = [];
+            if (r.kind === "cheatsheet" && r.pdfUrl) {
+                links.push(`<a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-file-pdf mr-1 text-red-500"></i> Open PDF directly</a>`);
+            }
+            if (r.link) {
+                const text = r.kind === "cheatsheet" ? "Open Workshop Drive Folder" : "Open Drive Folder";
+                links.push(`<a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> ${text}</a>`);
+            }
+            return links.length ? `<div class="flex flex-wrap gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
+        }
+
+        function card(r) {
+            const s = SECTIONS[r.kind];
+            const credit = r.credit
+                ? `<p class="text-sm text-slate-600 italic mb-1">Co-hosts / Credit: <strong>${esc(r.credit)}</strong></p>` : "";
+            const embed = embedBlock(r);
+            return `
+            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${s.border}">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2.5 py-0.5 ${s.badge} text-xs font-semibold rounded flex items-center gap-1">
+                        <i class="fa-solid ${s.icon}"></i> ${s.label}
+                    </span>
+                    <span class="text-xs text-slate-400">${esc(r.session || "")}</span>
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 mb-1">${esc(r.title)}</h3>
+                ${credit}
+                <p class="text-sm text-slate-600 ${embed ? "mb-4" : "mb-0"}">${esc(r.description)}</p>
+                ${embed}
+                ${footerLinks(r)}
+            </div>`;
+        }
+
+        Object.keys(SECTIONS).forEach(kind => {
+            const items = RESOURCES.filter(r => r.kind === kind);
+            const el = document.getElementById("section-" + kind);
+            if (!items.length) { el.remove(); return; }
+            el.innerHTML = `
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">${SECTIONS[kind].title}</h2>
+                <div class="space-y-6">${items.map(card).join("")}</div>`;
+        });
+    </script>
+</body>
+</html>
