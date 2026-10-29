@@ -78,7 +78,7 @@
                 <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-purple-500 space-y-4">
                     <h2 class="text-2xl font-bold text-slate-900">About the Workshop Series</h2>
                     <p class="text-slate-700 leading-relaxed">
-                        Co-hosted by <strong>Colin Scholl, M.A.</strong> and <strong>Jayce Owens-Boone, M.A.</strong>, this comprehensive summer-long, 5-session workshop series was designed to guide graduate researchers through modern statistical workflows, data visualization, animation, and data wrangling in R. Access workshop files and cheat sheets below or directly via the shared Google Drive.
+                        Co-hosted by <strong>Colin Scholl, M.A.</strong> and <strong>Jayce Owens-Boone, M.A.</strong>, this comprehensive summer-long, 5-session workshop series was designed to guide graduate researchers through modern statistical workflows, data visualization, animation, and data wrangling in R.
                     </p>
                     <a href="https://drive.google.com/drive/folders/1cspOmgbhqt0HFuZXvbAVP9q3ozYYvRVr?usp=drive_link" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center gap-2 px-4 py-2 bg-utep-blue text-white text-sm font-medium rounded-lg shadow hover:bg-slate-800 transition-colors">
@@ -103,8 +103,6 @@
     </footer>
 
     <script>
-        const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1cspOmgbhqt0HFuZXvbAVP9q3ozYYvRVr?usp=drive_link";
-
         const RESOURCES = [
             /* ------------------------- WORKSHOP SESSIONS ------------------------- */
             {
@@ -112,8 +110,7 @@
                 session: "Summer Series",
                 title: "5-Session Summer R Studio Workshop",
                 description: "A comprehensive 5-session training series covering data wrangling with dplyr/tidyr, advanced visualization with ggplot2, and dynamic animation with gganimate co-hosted with Jayce Owens-Boone, M.A.",
-                credit: "Colin Scholl & Jayce Owens-Boone",
-                link: DRIVE_FOLDER
+                credit: "Colin Scholl & Jayce Owens-Boone"
             },
 
             /* --------------------------- CHEAT SHEETS & HANDOUTS --------------------------- */
@@ -123,8 +120,8 @@
                 title: "Data Wrangling with dplyr & tidyr Cheat Sheet",
                 description: "Core reference sheet for data wrangling conventions, reshaping data, and subsetting observations/variables in R.",
                 credit: "RStudio / Posit",
-                pdfUrl: "data_wranglingcheatsheet (1).jpg", // Image/PDF reference
-                link: DRIVE_FOLDER
+                fileUrl: "data_wranglingcheatsheet (1).webp",
+                isImage: true
             },
             {
                 kind: "cheatsheet",
@@ -132,8 +129,7 @@
                 title: "Data Visualization with ggplot2 Cheat Sheet",
                 description: "Comprehensive reference guide for building structured, layered data visualizations using the grammar of graphics in R.",
                 credit: "RStudio / Posit",
-                pdfUrl: "data-visualization.pdf",
-                link: DRIVE_FOLDER
+                fileUrl: "data-visualization.pdf"
             },
             {
                 kind: "cheatsheet",
@@ -141,8 +137,7 @@
                 title: "gganimate Cheat Sheet",
                 description: "Grammar of graphics extension for producing dynamic time-course and state-transition animations in ggplot2.",
                 credit: "Karl Hailperin / gganimate",
-                pdfUrl: "gganimate.pdf",
-                link: DRIVE_FOLDER
+                fileUrl: "gganimate.pdf"
             },
             {
                 kind: "cheatsheet",
@@ -150,8 +145,7 @@
                 title: "Dplyr Example for R Workshop (July 10, 2026)",
                 description: "Practical workshop handout demonstrating mutate functions, accuracy calculations for experimental trials across multiple conditions.",
                 credit: "Colin Scholl & Jayce Owens-Boone",
-                pdfUrl: "rworkshophandout (1).pdf",
-                link: DRIVE_FOLDER
+                fileUrl: "rworkshophandout.pdf"
             }
         ];
 
@@ -163,37 +157,26 @@
         const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
         function embedBlock(r) {
-            if (r.kind === "cheatsheet" && r.pdfUrl) {
+            if (r.kind === "cheatsheet" && r.fileUrl) {
+                const previewContent = r.isImage 
+                    ? `<img src="${r.fileUrl}" alt="${esc(r.title)}" class="w-full h-auto rounded-lg shadow-md">`
+                    : `<iframe src="${r.fileUrl}#view=FitH" class="w-full h-[500px] rounded-lg border-0 bg-white"></iframe>`;
+
                 return `
-                    <div class="bg-slate-900 text-white p-4 rounded-xl border border-slate-800 shadow-inner flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-xl shrink-0">
-                                <i class="fa-regular fa-file-pdf"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">${esc(r.title)}</h4>
-                                <p class="text-xs text-slate-400">Reference Document / Handout</p>
-                            </div>
+                    <details class="group mt-4 bg-slate-900 text-white rounded-xl border border-slate-800 shadow-inner overflow-hidden">
+                        <summary class="flex items-center justify-between p-4 cursor-pointer select-none font-semibold text-xs text-utep-orange hover:bg-slate-800/60 transition">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-chevron-right group-open:rotate-90 transition-transform"></i>
+                                View Document / Handout (Dropdown)
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-normal">Click to expand</span>
+                        </summary>
+                        <div class="p-4 bg-slate-950 border-t border-slate-800">
+                            ${previewContent}
                         </div>
-                        <div class="flex items-center gap-2 w-full sm:w-auto">
-                            <a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-utep-orange text-white text-xs font-bold rounded-lg hover:bg-orange-600 transition shadow">
-                                <i class="fa-solid fa-book-open-reader"></i> Open Document
-                            </a>
-                        </div>
-                    </div>`;
+                    </details>`;
             }
             return "";
-        }
-
-        function footerLinks(r) {
-            const links = [];
-            if (r.kind === "cheatsheet" && r.pdfUrl) {
-                links.push(`<a href="${r.pdfUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-file-pdf mr-1 text-red-500"></i> Open directly</a>`);
-            }
-            if (r.link) {
-                links.push(`<a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Open Workshop Drive Folder</a>`);
-            }
-            return links.length ? `<div class="flex flex-wrap gap-4 text-xs font-medium text-utep-orange mt-4">${links.join("")}</div>` : "";
         }
 
         function card(r) {
@@ -211,9 +194,8 @@
                 </div>
                 <h3 class="text-base font-semibold text-slate-900 mb-1">${esc(r.title)}</h3>
                 ${credit}
-                <p class="text-sm text-slate-600 ${embed ? "mb-4" : "mb-0"}">${esc(r.description)}</p>
+                <p class="text-sm text-slate-600 ${embed ? "" : "mb-0"}">${esc(r.description)}</p>
                 ${embed}
-                ${footerLinks(r)}
             </div>`;
         }
 
