@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupillometry Club Resources | Colin Scholl, M.A.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utep: { blue: '#041E42', orange: '#FF8200', darkblue: '#021229', slate: '#0f172a' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-utep-orange selection:text-white">
+
+    <!-- HEADER (same look as main site; links return to index.html views) -->
+    <header class="sticky top-0 z-50 bg-[#041E42]/95 backdrop-blur-md border-b border-slate-800 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-utep-orange shadow-md group-hover:scale-105 transition-transform shrink-0">
+                    <img src="https://lh3.googleusercontent.com/d/15Goxy2HJhApfxD2I8Cs66ewXMgFlLiKz" alt="Colin Scholl Headshot" class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/041E42/ffffff?text=CS';">
+                </div>
+                <span class="text-lg font-bold tracking-tight text-white group-hover:text-utep-orange transition-colors">Colin Scholl, M.A.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+                <a href="index.html#home" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Home</a>
+                <a href="index.html#research" class="px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold shadow-inner transition">Research Areas</a>
+                <a href="index.html#publications" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Publications &amp; Talks</a>
+                <a href="index.html#demos" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Interactive Demos</a>
+                <a href="index.html#contact" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Contact</a>
+            </nav>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-utep-darkblue border-b border-slate-800 px-4 pt-2 pb-4 space-y-1">
+            <a href="index.html#home" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Home</a>
+            <a href="index.html#research" class="block px-3 py-2 rounded-lg text-utep-orange bg-slate-800 font-bold">Research Areas</a>
+            <a href="index.html#publications" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Publications &amp; Talks</a>
+            <a href="index.html#demos" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Interactive Demos</a>
+            <a href="index.html#contact" class="block px-3 py-2 rounded-lg text-slate-200 hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- BANNER -->
+        <div class="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-wider uppercase rounded-full mb-3">
+                    <i class="fa-solid fa-eye"></i> Neurocognitive Methods
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Pupillometry Club Resources</h1>
+                <p class="text-slate-400 text-base max-w-xl mx-auto">Slides, code, readings, and materials from the semester-long pupillometry workshop.</p>
+            </div>
+        </div>
+
+        <div class="py-12 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+                <!-- BACK LINK -->
+                <a href="index.html#tab-neuro" class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 hover:underline">
+                    <i class="fa-solid fa-arrow-left text-xs"></i> Back to Neurocognitive Methods
+                </a>
+
+                <!-- ABOUT / DRIVE FOLDER -->
+                <div class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-emerald-500 space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-900">About the Club</h2>
+                    <p class="text-slate-700 leading-relaxed">
+                        The Pupillometry Club is a workshop series introducing the theory, collection, preprocessing, and analysis of pupil-size data, with a focus on
+                        task-evoked pupillary responses (TEPRs) in language comprehension. Materials below are organized by session; everything is also available in the shared folder.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-4 py-2 bg-utep-blue text-white text-sm font-medium rounded-lg shadow hover:bg-slate-800 transition-colors">
+                        <i class="fa-brands fa-google-drive"></i> Open full Google Drive folder
+                    </a>
+                </div>
+
+                <!-- RESOURCES (rendered from the RESOURCES array in the script below) -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2 border-slate-200">Resources</h2>
+                    <div id="resource-list" class="space-y-6"></div>
+                </div>
+
+                <!-- OPTIONAL: EMBEDDED DRIVE BROWSER -->
+                <details class="bg-white border border-slate-200 rounded-2xl shadow-sm">
+                    <summary class="cursor-pointer select-none px-6 py-4 text-sm font-semibold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open text-emerald-600"></i> Browse all files in the folder
+                    </summary>
+                    <div class="px-6 pb-6">
+                        <iframe id="drive-embed" data-src="https://drive.google.com/embeddedfolderview?id=1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk#list"
+                                class="w-full rounded-lg border border-slate-200" style="height: 500px;" loading="lazy"></iframe>
+                        <p class="text-xs text-slate-500 mt-2">If the folder doesn't load, make sure sharing is set to "Anyone with the link can view."</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-utep-darkblue text-slate-400 border-t border-slate-800 text-xs py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-utep-orange inline-block"></span>
+                <span class="font-bold text-white">Colin Scholl, M.A.</span> - UTEP Psycholinguistics Portfolio
+            </div>
+            <p>&copy; 2026 Colin Scholl. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* ==================================================================
+           EDIT HERE: one entry per resource, in the order you want them shown.
+           type: slides | code | reading | data | video | handout | other
+           link: Drive "Share → Copy link" URL (file set to "Anyone with the link")
+           Delete the placeholder entries and add your real files.
+           ================================================================== */
+        const RESOURCES = [
+            {
+                session: "Session 1",
+                title: "Introduction to Pupillometry",
+                description: "Physiology of the pupil, the LC-NE system, and what task-evoked pupillary responses can tell us about cognitive effort.",
+                type: "slides",
+                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+            },
+            {
+                session: "Session 2",
+                title: "Experimental Design &amp; Data Collection",
+                description: "Luminance control, baselines, calibration, and trial structure for reading studies.",
+                type: "slides",
+                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+            },
+            {
+                session: "Session 3",
+                title: "Preprocessing Pipeline",
+                description: "Blink detection and interpolation, smoothing, baseline correction, and downsampling.",
+                type: "code",
+                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+            },
+            {
+                session: "Session 4",
+                title: "Statistical Analysis of Pupil Data",
+                description: "Time-course analyses, growth-curve models, and GAMMs in R.",
+                type: "code",
+                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+            },
+            {
+                session: "Readings",
+                title: "Core Readings",
+                description: "Beatty (1982), Winn et al. (2018), and other papers discussed in the club.",
+                type: "reading",
+                link: "https://drive.google.com/drive/folders/1s0G2sn0EPld4yM5zNo26BATpOm6Al4Tk?usp=drive_link"
+            }
+        ];
+
+        const TYPE_STYLES = {
+            slides:  { icon: "fa-chalkboard-user", label: "Slides",  badge: "bg-orange-100 text-utep-orange", border: "border-l-utep-orange" },
+            code:    { icon: "fa-code",            label: "Code",    badge: "bg-purple-100 text-purple-700",  border: "border-l-purple-500" },
+            reading: { icon: "fa-book-open",       label: "Reading", badge: "bg-blue-100 text-blue-700",      border: "border-l-blue-600" },
+            data:    { icon: "fa-database",        label: "Data",    badge: "bg-emerald-100 text-emerald-700", border: "border-l-emerald-500" },
+            video:   { icon: "fa-video",           label: "Video",   badge: "bg-rose-100 text-rose-700",      border: "border-l-rose-500" },
+            handout: { icon: "fa-file-lines",      label: "Handout", badge: "bg-amber-100 text-amber-700",    border: "border-l-amber-500" },
+            other:   { icon: "fa-paperclip",       label: "File",    badge: "bg-slate-200 text-slate-700",    border: "border-l-slate-400" }
+        };
+
+        const list = document.getElementById('resource-list');
+        list.innerHTML = RESOURCES.map(r => {
+            const t = TYPE_STYLES[r.type] || TYPE_STYLES.other;
+            return `
+            <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 ${t.border}">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2.5 py-0.5 ${t.badge} text-xs font-semibold rounded flex items-center gap-1">
+                        <i class="fa-solid ${t.icon}"></i> ${t.label}
+                    </span>
+                    <span class="text-xs text-slate-400">${r.session}</span>
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 mb-1">${r.title}</h3>
+                <p class="text-sm text-slate-600 mb-3">${r.description}</p>
+                <div class="flex gap-4 text-xs font-medium text-utep-orange">
+                    <a href="${r.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Open
+                    </a>
+                </div>
+            </div>`;
+        }).join('');
+
+        // Load the Drive embed only when the section is opened
+        document.querySelector('details').addEventListener('toggle', e => {
+            const f = document.getElementById('drive-embed');
+            if (e.target.open && !f.src) f.src = f.dataset.src;
+        });
+    </script>
+</body>
+</html>
